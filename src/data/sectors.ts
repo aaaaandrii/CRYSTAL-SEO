@@ -1,0 +1,60 @@
+import { Sector } from '@/types';
+
+export const sectors: Sector[] = [
+  {
+    slug: 'personal',
+    title: 'Personal & Family',
+    description: 'Encode family photos, videos, and memories into a crystal keepsake — a permanent gift for generations to come.',
+    image: '/sectors/personal.png',
+    icon: '👨‍👩‍👧‍👦',
+  },
+  {
+    slug: 'corporate',
+    title: 'Corporate & Legal',
+    description: 'Regulatory archives, intellectual property, and compliance records that must remain immutable and retrievable indefinitely.',
+    image: '/sectors/corporate.png',
+    icon: '🏢',
+  },
+  {
+    slug: 'cultural',
+    title: 'Cultural Heritage',
+    description: "Partner with museums, libraries, and archives to preserve humanity's most irreplaceable documents and artworks.",
+    image: '/sectors/cultural.png',
+    icon: '🏛️',
+  },
+  {
+    slug: 'dna',
+    title: 'DNA & Genomics',
+    description: 'Encode entire human genomes and biological data sets into crystal — preserving the blueprint of life for billions of years.',
+    image: '/sectors/dna.png',
+    icon: '🧬',
+  },
+  {
+    slug: 'government',
+    title: 'Government & Defence',
+    description: 'Classified and mission-critical data stored offline, EMP-hardened, and fully air-gapped — no network required, ever.',
+    image: '/sectors/Space.png',
+    icon: '🛡️',
+  },
+  {
+    slug: 'luxury',
+    title: 'Luxury & Jewellery',
+    description: 'Crystal as a luxury object — bespoke data jewellery, commemorative pieces, and high-end collectibles with embedded meaning.',
+    image: '/sectors/luxury.png',
+    icon: '💎',
+  },
+  {
+    slug: 'crypto',
+    title: 'Crypto & Blockchain',
+    description: 'Cold storage for seed phrases, wallet keys, and smart contract records — offline, unhackable, and permanent.',
+    image: '/sectors/crypto.png',
+    icon: '₿',
+  },
+  {
+    slug: 'ip',
+    title: 'IP Protection',
+    description: 'Timestamped, tamper-proof records of intellectual property — patents, trade secrets, and creative works sealed in glass.',
+    image: '/sectors/ip.png',
+    icon: '🔒',
+  },
+];

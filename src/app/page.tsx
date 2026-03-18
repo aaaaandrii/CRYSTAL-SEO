@@ -1,65 +1,84 @@
-import Image from "next/image";
+import { Suspense } from 'react';
+import HeroSection from '@/components/sections/HeroSection';
+import TrustedByBar from '@/components/sections/TrustedByBar';
+import RecognitionBar from '@/components/sections/RecognitionBar';
+import BenefitsSection from '@/components/sections/BenefitsSection';
+import ComparisonSection from '@/components/sections/ComparisonSection';
+import SaveDataSection from '@/components/sections/SaveDataSection';
+import SectorsSection from '@/components/sections/SectorsSection';
+import ProcessSection from '@/components/sections/ProcessSection';
+import SwissMadeSection from '@/components/sections/SwissMadeSection';
+import SpaceProvenSection from '@/components/sections/SpaceProvenSection';
+import NewsSection from '@/components/sections/NewsSection';
+import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <HeroSection />
+      <TrustedByBar />
+      <RecognitionBar />
+      <BenefitsSection />
+      <ComparisonSection />
+      <SaveDataSection />
+      <SectorsSection />
+      <ProcessSection />
+      <SwissMadeSection />
+      <SpaceProvenSection />
+      <Suspense fallback={<CaseStudiesSkeleton />}>
+        <CaseStudiesSection />
+      </Suspense>
+      <Suspense fallback={<NewsSkeleton />}>
+        <NewsSection />
+      </Suspense>
+    </>
+  );
+}
+
+function NewsSkeleton() {
+  return (
+    <section className="bg-black py-20 md:py-[88px]">
+      <div className="mx-auto max-w-7xl px-6 sm:px-[50px]">
+        <div className="mb-10">
+          <div className="mb-3 h-4 w-24 animate-pulse rounded bg-white/10" />
+          <div className="h-10 w-64 animate-pulse rounded bg-white/10" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div key={i} className="overflow-hidden rounded-[22px] bg-[#1a1a1a]">
+              <div className="h-[200px] animate-pulse bg-white/5" />
+              <div className="flex flex-col gap-[10px] p-6">
+                <div className="h-3 w-24 animate-pulse rounded bg-white/10" />
+                <div className="h-6 w-full animate-pulse rounded bg-white/10" />
+                <div className="h-4 w-3/4 animate-pulse rounded bg-white/10" />
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
+  );
+}
+
+function CaseStudiesSkeleton() {
+  return (
+    <section className="bg-brand-white py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
+          <div className="mb-4 h-12 w-72 animate-pulse rounded bg-brand-light" />
+          <div className="h-6 w-96 animate-pulse rounded bg-brand-light" />
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="rounded-[40px] bg-white px-5 pb-[30px] pt-5">
+              <div className="mb-3 h-[282px] animate-pulse rounded-[22px] bg-brand-light" />
+              <div className="mb-2 h-4 w-24 animate-pulse rounded bg-brand-light" />
+              <div className="mb-2 h-8 w-32 animate-pulse rounded bg-brand-light" />
+              <div className="h-4 w-full animate-pulse rounded bg-brand-light" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

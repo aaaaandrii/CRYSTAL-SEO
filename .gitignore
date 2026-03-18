@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# Original source assets (not served)
+/ASSETS/
+
+# Temp files
+public/tmpozgmfq3y 1.png
+
+# Design mockup
+main-full-page.png
+
+# SQLite database
+prisma/dev.db
+prisma/dev.db-journal
