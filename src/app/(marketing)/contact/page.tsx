@@ -39,10 +39,10 @@ export default function ContactPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Contact Us
             </h1>
-            <p className="mx-auto mt-4 max-w-[500px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[500px] text-[14px] font-semibold leading-none text-[#555]">
               Have a question, need a quote, or want to learn more? We would love to hear from you.
             </p>
           </div>
@@ -66,22 +66,22 @@ export default function ContactPage() {
                 </h3>
                 <div className="mt-6 space-y-6">
                   <div>
-                    <h4 className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#5a72be]">
+                    <h4 className="text-xs font-semibold uppercase text-[#5a72be]">
                       Email
                     </h4>
                     <a
                       href={`mailto:${COMPANY_EMAIL}`}
-                      className="mt-1 block text-[17px] font-semibold text-[#1a1a1a] transition-colors hover:text-[#5a72be]"
+                      className="mt-1 block text-[14px] font-semibold text-[#1a1a1a] transition-colors hover:text-[#5a72be]"
                     >
                       {COMPANY_EMAIL}
                     </a>
                   </div>
 
                   <div>
-                    <h4 className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#5a72be]">
+                    <h4 className="text-xs font-semibold uppercase text-[#5a72be]">
                       Headquarters
                     </h4>
-                    <address className="mt-1 text-[17px] font-semibold not-italic leading-[22px] text-[#555]">
+                    <address className="mt-1 text-[14px] font-semibold not-italic leading-[22px] text-[#555]">
                       5D Memory Crystal AG
                       <br />
                       Zurich, Switzerland
@@ -89,19 +89,19 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#5a72be]">
+                    <h4 className="text-xs font-semibold uppercase text-[#5a72be]">
                       Business Hours
                     </h4>
-                    <p className="mt-1 text-[17px] font-semibold text-[#555]">
+                    <p className="mt-1 text-[14px] font-semibold text-[#555]">
                       Monday &ndash; Friday: 9:00 &ndash; 18:00 CET
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#5a72be]">
+                    <h4 className="text-xs font-semibold uppercase text-[#5a72be]">
                       Response Time
                     </h4>
-                    <p className="mt-1 text-[17px] font-semibold text-[#555]">
+                    <p className="mt-1 text-[14px] font-semibold text-[#555]">
                       We typically respond within one business day.
                     </p>
                   </div>

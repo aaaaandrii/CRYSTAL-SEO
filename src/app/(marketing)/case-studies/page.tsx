@@ -25,10 +25,10 @@ export default async function CaseStudiesPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Case Studies
             </h1>
-            <p className="mx-auto mt-4 max-w-[455px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[455px] text-[14px] font-semibold leading-none text-[#555]">
               Real-world stories of data preservation across industries.
             </p>
           </div>

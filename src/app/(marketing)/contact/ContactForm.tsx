@@ -48,7 +48,7 @@ export default function ContactForm() {
         <h3 className="text-[24px] font-bold text-[#1a1a1a]">
           Message Sent!
         </h3>
-        <p className="mt-4 text-[17px] font-semibold text-[#555]">
+        <p className="mt-4 text-[14px] font-semibold text-[#555]">
           Thank you for reaching out. We will get back to you within one
           business day.
         </p>

@@ -262,8 +262,8 @@ comparisonRows.forEach((r, i) => seedContentItem('comparison-row', r, i));
 
 // ── Lifespan Bars ──────────────────────────────────────────────────────
 const lifespanBars = [
-  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YRS', highlight: true },
-  { name: 'Silica Disc', years: '100,000,000', mobileYears: '100M', unit: 'YRS', highlight: false },
+  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YEARS', highlight: true },
+  { name: 'Silica Disc', years: '100,000,000', mobileYears: '100M', unit: 'YEARS', highlight: false },
   { name: 'Magnetic Tape (LTO)', years: '30', mobileYears: '30', unit: 'YEARS', highlight: false },
   { name: 'SSD', years: '5-10', mobileYears: '5-10', unit: 'YEARS', highlight: false },
   { name: 'HDD', years: '3-5', mobileYears: '3-5', unit: 'YEARS', highlight: false },

@@ -27,10 +27,10 @@ export default async function NewsSection() {
         {/* Heading */}
         <ScrollReveal>
           <div className="mb-10 md:mb-10">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               {content.label}
             </p>
-            <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+            <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
               {content.heading}
             </h2>
           </div>
@@ -59,10 +59,10 @@ export default async function NewsSection() {
                       {formatDate(article.publishedAt)}
                     </p>
                   )}
-                  <h3 className="text-[22px] font-bold leading-[22px] text-white transition-colors group-hover:text-[#5a72be]">
+                  <h3 className="text-[20px] font-bold leading-[20px] text-white transition-colors group-hover:text-[#5a72be]">
                     {article.title}
                   </h3>
-                  <p className="line-clamp-4 text-[17px] font-semibold leading-[17px] text-[#bbb]">
+                  <p className="line-clamp-4 text-[14px] font-semibold leading-none text-[#bbb]">
                     {article.excerpt}
                   </p>
                   <span className="text-[14px] font-semibold uppercase leading-[14px] tracking-[1.4px] text-white transition-colors group-hover:text-[#5a72be]">
@@ -82,7 +82,7 @@ export default async function NewsSection() {
             </svg>
             <Link
               href={content.ctaHref}
-              className="inline-flex h-[74px] w-[213px] items-center justify-center rounded-[52px] border border-white text-[12px] font-semibold uppercase text-white transition-all hover:bg-white hover:text-black"
+              className="inline-flex h-[74px] w-[213px] items-center justify-center rounded-[52px] border border-white text-[8px] font-semibold uppercase text-white transition-all hover:bg-white hover:text-black"
             >
               {content.ctaText}
             </Link>

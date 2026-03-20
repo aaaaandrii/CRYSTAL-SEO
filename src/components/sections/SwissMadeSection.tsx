@@ -47,18 +47,18 @@ export default async function SwissMadeSection() {
           {/* Right: Content */}
           <ScrollReveal direction="right" className="w-full flex-1">
             <div className="flex flex-col items-start gap-4 lg:gap-5">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="text-xs font-semibold uppercase text-[#888]">
                 {content.label}
               </p>
-              <h2 className="text-[32px] font-bold leading-[38px] tracking-[-1.2px] text-[#1a1a1a] sm:text-[40px] sm:leading-[46px] lg:text-[60px] lg:leading-[54px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 {content.heading}
               </h2>
-              <p className="max-w-[392px] pt-2 text-[15px] font-semibold leading-[20px] text-[#555] sm:text-[17px] sm:leading-[22px] lg:leading-[17px]">
+              <p className="max-w-[392px] pt-2 text-[14px] font-semibold leading-none text-[#555]">
                 {content.description}
               </p>
               <Link
                 href={content.ctaHref}
-                className="inline-flex h-[52px] w-[200px] items-center justify-center rounded-[60px] bg-black text-[14px] font-semibold uppercase text-white transition-all hover:bg-[#2a2a2a] lg:h-[73px] lg:w-[242px] lg:text-[16px]"
+                className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full bg-black text-[12px] font-semibold text-white transition-all hover:bg-[#2a2a2a]"
               >
                 {content.ctaText}
               </Link>

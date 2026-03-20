@@ -133,13 +133,13 @@ export default function AboutPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               About Us
             </p>
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Preserving What Matters
             </h1>
-            <p className="mx-auto mt-4 max-w-[560px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[560px] text-[14px] font-semibold leading-none text-[#555]">
               Over 30 years of pioneering research, one mission — make
               ultra-long-life data storage commercially available to the world.
             </p>
@@ -165,19 +165,19 @@ export default function AboutPage() {
 
             <ScrollReveal direction="right" className="w-full flex-1">
               <div>
-                <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+                <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                   Our Story
                 </p>
-                <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+                <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                   From Lab to Legacy
                 </h2>
-                <p className="mt-5 text-[17px] font-semibold leading-[22px] text-[#555]">
+                <p className="mt-5 text-[14px] font-semibold leading-none text-[#555]">
                   5D Memory Crystal technology was pioneered by Prof. Peter
                   Kazansky, a world-leading scientist whose decades of research
                   at the University of Southampton transformed our understanding
                   of light–matter interaction at the nanoscale.
                 </p>
-                <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+                <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
                   Today, led by technology entrepreneur Ilya Kazansky, our team
                   of scientists, engineers and product specialists combines
                   optical nano-technology with advances in machine learning and
@@ -195,10 +195,10 @@ export default function AboutPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 What Drives Us
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 Our Values
               </h2>
             </div>
@@ -209,10 +209,10 @@ export default function AboutPage() {
               <ScrollReveal key={value.title} delay={index * 0.1}>
                 <div className="flex h-full flex-col rounded-[22px] bg-white p-8 transition-all duration-300 hover:shadow-lg hover:shadow-black/5">
                   <div className="mb-4 text-[#5a72be]">{value.icon}</div>
-                  <h3 className="text-[22px] font-bold text-[#1a1a1a]">
+                  <h3 className="text-[20px] font-bold text-[#1a1a1a]">
                     {value.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-[15px] font-semibold leading-[20px] text-[#555]">
+                  <p className="mt-3 flex-1 text-[14px] font-semibold leading-none text-[#555]">
                     {value.description}
                   </p>
                 </div>
@@ -227,10 +227,10 @@ export default function AboutPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Our Journey
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 Key Milestones
               </h2>
             </div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
                     <h3 className="text-[20px] font-bold text-white">
                       {milestone.title}
                     </h3>
-                    <p className="mt-2 text-[15px] font-semibold leading-[20px] text-[#bbb]">
+                    <p className="mt-2 text-[14px] font-semibold leading-none text-[#bbb]">
                       {milestone.description}
                     </p>
                   </div>
@@ -293,13 +293,13 @@ export default function AboutPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Get Started
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 Preserve What Matters Most
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
                 Whether you&apos;re an institution, a researcher, or an
                 individual — we&apos;re here to help you store your most
                 valuable data for eternity.

@@ -79,10 +79,10 @@ export default function CaseStudiesGrid({
               <h2 className="text-[31px] font-semibold leading-[31px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
                 {study.client}
               </h2>
-              <p className="line-clamp-3 text-[17px] font-semibold leading-[17px] text-[#555]">
+              <p className="line-clamp-3 text-[14px] font-semibold leading-none text-[#555]">
                 {study.excerpt}
               </p>
-              <span className="text-[12px] font-semibold uppercase leading-[16px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
+              <span className="text-[8px] font-semibold uppercase leading-[16px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
                 Case Study →
               </span>
             </Link>
@@ -90,7 +90,7 @@ export default function CaseStudiesGrid({
         </div>
       ) : (
         <div className="py-16 text-center">
-          <p className="text-[17px] font-semibold text-[#555]">
+          <p className="text-[14px] font-semibold text-[#555]">
             No case studies found for this sector.
           </p>
         </div>

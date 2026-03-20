@@ -41,10 +41,10 @@ export default function SaveDataSection({ content }: { content?: Partial<SaveDat
 
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-40 sm:px-[50px] md:py-56">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(20px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
           className="max-w-[702px] text-center text-[52px] font-bold leading-[0.9] tracking-[-1.9px] text-[#1a1a1a] sm:text-[72px] lg:text-[96px]"
         >
           {c.heading}
@@ -55,7 +55,7 @@ export default function SaveDataSection({ content }: { content?: Partial<SaveDat
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mt-6 max-w-[373px] text-center text-[17px] font-semibold leading-none text-[#555]"
+          className="mt-6 max-w-[373px] text-center text-[14px] font-semibold leading-none text-[#555]"
         >
           {c.description}
         </motion.p>

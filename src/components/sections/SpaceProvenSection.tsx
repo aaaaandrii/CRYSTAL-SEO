@@ -47,18 +47,18 @@ export default async function SpaceProvenSection() {
           {/* Left: Content */}
           <ScrollReveal direction="left" className="order-2 w-full flex-1 lg:order-1">
             <div className="flex flex-col items-start gap-4 lg:gap-5">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="text-xs font-semibold uppercase text-[#888]">
                 {content.label}
               </p>
-              <h2 className="text-[32px] font-bold leading-[38px] tracking-[-1.2px] text-white sm:text-[40px] sm:leading-[46px] lg:text-[60px] lg:leading-[54px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 {content.heading}
               </h2>
-              <p className="pt-1 text-[15px] font-semibold leading-[20px] text-white/70 sm:text-[17px] sm:leading-[22px] lg:leading-[17px]">
+              <p className="pt-1 text-[14px] font-semibold leading-none text-white/70">
                 {content.description}
               </p>
               <Link
                 href={content.ctaHref}
-                className="inline-flex h-[52px] w-[200px] items-center justify-center rounded-[60px] bg-white text-[14px] font-semibold uppercase text-[#2a2a2a] transition-all hover:bg-[#e4e8ef] lg:h-[73px] lg:w-[242px] lg:text-[16px]"
+                className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full bg-white text-[12px] font-semibold text-[#2a2a2a] transition-all hover:bg-[#e4e8ef]"
               >
                 {content.ctaText}
               </Link>

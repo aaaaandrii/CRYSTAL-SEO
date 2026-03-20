@@ -65,10 +65,10 @@ export default function OrderPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Order Now
             </h1>
-            <p className="mx-auto mt-4 max-w-[500px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[500px] text-[14px] font-semibold leading-none text-[#555]">
               Choose the crystal that fits your needs. All crystals are manufactured in Switzerland and include a certificate of authenticity.
             </p>
           </div>
@@ -93,13 +93,13 @@ export default function OrderPage() {
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-[22px] font-bold text-[#1a1a1a]">
+                <h3 className="text-[20px] font-bold text-[#1a1a1a]">
                   {product.name}
                 </h3>
                 <p className="mt-1 text-[14px] font-semibold text-[#5a72be]">
                   {product.capacity}
                 </p>
-                <p className="mt-3 text-[15px] font-semibold leading-[18px] text-[#555]">
+                <p className="mt-3 text-[14px] font-semibold leading-none text-[#555]">
                   {product.description}
                 </p>
                 <p className="mt-4 text-[28px] font-bold text-[#1a1a1a]">
@@ -140,14 +140,14 @@ export default function OrderPage() {
       <section className="bg-black py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white">
+            <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
               Need a Custom Solution?
             </h2>
-            <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+            <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
               For bespoke crystal configurations, bulk orders, or
               specialised encoding requirements, our team is ready to help.
             </p>
-            <p className="mt-6 text-[17px] font-semibold text-[#bbb]">
+            <p className="mt-6 text-[14px] font-semibold text-[#bbb]">
               Email us at{' '}
               <a
                 href={`mailto:${COMPANY_EMAIL}`}

@@ -12,8 +12,8 @@ const defaultTableRows = [
 ];
 
 const defaultLifespanBars = [
-  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YRS', highlight: true },
-  { name: 'Silica Disc', years: '100,000,000', mobileYears: '100M', unit: 'YRS', highlight: false },
+  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YEARS', highlight: true },
+  { name: 'Silica Disc', years: '100,000,000', mobileYears: '100M', unit: 'YEARS', highlight: false },
   { name: 'Magnetic Tape (LTO)', years: '30', mobileYears: '30', unit: 'YEARS', highlight: false },
   { name: 'SSD', years: '5-10', mobileYears: '5-10', unit: 'YEARS', highlight: false },
   { name: 'HDD', years: '3-5', mobileYears: '3-5', unit: 'YEARS', highlight: false },
@@ -51,7 +51,7 @@ export default async function ComparisonSection() {
           {/* Left: Heading */}
           <ScrollReveal>
             <div className="w-full shrink-0 lg:w-[500px]">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 {content.label}
               </p>
               <h2 className="mb-6 text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">

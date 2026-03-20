@@ -26,19 +26,19 @@ export default function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+        <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
           {eyebrow}
         </p>
       )}
       <h2 className={cn(
-        'text-[40px] font-bold leading-none tracking-[-1.2px] lg:text-[42px]',
+        'text-[32px] font-bold leading-none tracking-tight sm:text-[38px] lg:text-[42px]',
         dark ? 'text-white' : 'text-[#1a1a1a]'
       )}>
         {title}
       </h2>
       {description && (
         <p className={cn(
-          'mt-4 text-[17px] font-semibold leading-[22px]',
+          'mt-4 text-[14px] font-semibold leading-none',
           dark ? 'text-[#bbb]' : 'text-[#555]'
         )}>
           {description}

@@ -49,7 +49,7 @@ export default async function TrustedByBar() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <div className="shrink-0 text-center sm:text-left sm:border-r sm:border-[#d0d0d0] sm:pr-6">
-            <p className="text-[12px] font-semibold uppercase text-black">
+            <p className="text-[8px] font-semibold uppercase text-black">
               {content.label}
             </p>
           </div>

@@ -106,7 +106,7 @@ export default function NewsGrid({ articles }: { articles: Article[] }) {
                   <h2 className="mt-2 text-[20px] font-bold leading-tight text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
                     {article.title}
                   </h2>
-                  <p className="mt-3 flex-1 text-[15px] font-semibold leading-[20px] text-[#555]">
+                  <p className="mt-3 flex-1 text-[14px] font-semibold leading-none text-[#555]">
                     {article.excerpt}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#5a72be] transition-colors group-hover:text-[#4d63a8]">
@@ -130,7 +130,7 @@ export default function NewsGrid({ articles }: { articles: Article[] }) {
           </div>
         ) : (
           <div className="py-16 text-center">
-            <p className="text-[17px] font-semibold text-[#555]">
+            <p className="text-[14px] font-semibold text-[#555]">
               No articles found for this category.
             </p>
           </div>

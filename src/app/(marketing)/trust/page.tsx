@@ -94,13 +94,13 @@ export default function TrustPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               Security &amp; Provenance
             </p>
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Trust &amp; Security
             </h1>
-            <p className="mx-auto mt-4 max-w-[500px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[500px] text-[14px] font-semibold leading-none text-[#555]">
               Swiss-made, space-proven. Your data is handled with the highest
               security standards from transfer to delivery.
             </p>
@@ -117,7 +117,7 @@ export default function TrustPage() {
           />
           <div className="mx-auto max-w-4xl">
             <div className="rounded-[22px] bg-[#e4e8ef] p-6 md:p-10">
-              <p className="text-[17px] font-semibold leading-[22px] text-[#555]">
+              <p className="text-[14px] font-semibold leading-none text-[#555]">
                 Every 5D Memory Crystal is manufactured in our dedicated
                 facility in Switzerland. The Swiss legal framework provides some
                 of the strongest data privacy protections in the world, and our
@@ -131,7 +131,7 @@ export default function TrustPage() {
                   <h3 className="text-[17px] font-bold text-[#1a1a1a]">
                     Single-Site Production
                   </h3>
-                  <p className="mt-2 text-[15px] font-semibold leading-[18px] text-[#555]">
+                  <p className="mt-2 text-[14px] font-semibold leading-none text-[#555]">
                     All processes from encoding to packaging under one roof.
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function TrustPage() {
                   <h3 className="text-[17px] font-bold text-[#1a1a1a]">
                     24/7 Surveillance
                   </h3>
-                  <p className="mt-2 text-[15px] font-semibold leading-[18px] text-[#555]">
+                  <p className="mt-2 text-[14px] font-semibold leading-none text-[#555]">
                     Round-the-clock monitoring with biometric access control.
                   </p>
                 </div>
@@ -166,7 +166,7 @@ export default function TrustPage() {
                   <h3 className="text-[17px] font-bold text-[#1a1a1a]">
                     {measure.title}
                   </h3>
-                  <p className="mt-3 text-[15px] font-semibold leading-[18px] text-[#555]">
+                  <p className="mt-3 text-[14px] font-semibold leading-none text-[#555]">
                     {measure.description}
                   </p>
                 </article>
@@ -193,7 +193,7 @@ export default function TrustPage() {
                   <h3 className="text-[20px] font-bold text-[#5a72be]">
                     {cert.name}
                   </h3>
-                  <p className="mt-2 text-[15px] font-semibold leading-[18px] text-[#555]">
+                  <p className="mt-2 text-[14px] font-semibold leading-none text-[#555]">
                     {cert.description}
                   </p>
                 </article>
@@ -220,7 +220,7 @@ export default function TrustPage() {
                 <h3 className="text-[20px] font-bold text-white">
                   {partner.name}
                 </h3>
-                <p className="mt-3 text-[17px] font-semibold leading-[20px] text-[#bbb]">
+                <p className="mt-3 text-[14px] font-semibold leading-none text-[#bbb]">
                   {partner.description}
                 </p>
               </article>

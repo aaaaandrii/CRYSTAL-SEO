@@ -48,7 +48,7 @@ export default function ScheduleDemoForm() {
         <h3 className="text-[24px] font-bold text-[#1a1a1a]">
           Thank You!
         </h3>
-        <p className="mt-4 text-[17px] font-semibold text-[#555]">
+        <p className="mt-4 text-[14px] font-semibold text-[#555]">
           We have received your demo request. Our team will get back to you
           within one business day to confirm the details.
         </p>

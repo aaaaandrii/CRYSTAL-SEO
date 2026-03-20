@@ -59,10 +59,10 @@ export default async function FAQPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Frequently Asked Questions
             </h1>
-            <p className="mx-auto mt-4 max-w-[500px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[500px] text-[14px] font-semibold leading-none text-[#555]">
               Everything you need to know about 5D Memory Crystal technology and our services.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default async function FAQPage() {
                       className="group rounded-[16px] border border-[#d0d0d0] bg-[#e4e8ef] transition-colors open:border-[#5a72be]/40"
                     >
                       <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-[#1a1a1a] transition-colors hover:text-[#5a72be] [&::-webkit-details-marker]:hidden">
-                        <span className="pr-4 text-[17px] font-semibold">
+                        <span className="pr-4 text-[14px] font-semibold">
                           {item.question}
                         </span>
                         <span className="shrink-0 text-[#888] transition-transform group-open:rotate-45">
@@ -93,7 +93,7 @@ export default async function FAQPage() {
                         </span>
                       </summary>
                       <div className="border-t border-[#d0d0d0] px-6 py-4">
-                        <p className="text-[15px] font-semibold leading-[20px] text-[#555]">
+                        <p className="text-[14px] font-semibold leading-none text-[#555]">
                           {item.answer}
                         </p>
                       </div>
@@ -105,7 +105,7 @@ export default async function FAQPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-[17px] font-semibold text-[#555]">
+            <p className="text-[14px] font-semibold text-[#555]">
               Still have questions? We are happy to help.
             </p>
             <div className="mt-4">

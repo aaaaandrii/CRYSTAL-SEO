@@ -107,13 +107,13 @@ export default function ProcessPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               Trust &amp; Process
             </p>
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Trust &amp; Process
             </h1>
-            <p className="mx-auto mt-4 max-w-[580px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[580px] text-[14px] font-semibold leading-none text-[#555]">
               From the moment you hand over your data to the moment you read it
               back — every step is designed for security, transparency, and
               confidence.
@@ -127,13 +127,13 @@ export default function ProcessPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 The Process
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 Four Pillars of Trust
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
                 Each crystal goes through a rigorous, auditable process — so you
                 never have to wonder.
               </p>
@@ -155,7 +155,7 @@ export default function ProcessPage() {
                   <h3 className="mt-4 text-[20px] font-bold text-[#1a1a1a]">
                     {pillar.title}
                   </h3>
-                  <p className="mt-2 flex-1 text-[15px] font-semibold leading-[20px] text-[#555]">
+                  <p className="mt-2 flex-1 text-[14px] font-semibold leading-none text-[#555]">
                     {pillar.summary}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#5a72be] transition-colors group-hover:text-[#4d63a8]">
@@ -219,13 +219,13 @@ export default function ProcessPage() {
                   className="w-full flex-1"
                 >
                   <div>
-                    <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#5a72be]">
+                    <p className="mb-3 text-xs font-semibold uppercase text-[#5a72be]">
                       Step {step.step}
                     </p>
-                    <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+                    <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                       {step.title}
                     </h2>
-                    <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+                    <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
                       {step.description}
                     </p>
 
@@ -253,16 +253,16 @@ export default function ProcessPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-3xl text-center">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Looking Ahead
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 Continuous Improvement
               </h2>
               <h3 className="mt-3 text-[20px] font-bold text-[#5a72be]">
                 More Trust Services Coming
               </h3>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
                 We are continuously developing new services to increase your
                 confidence in our process and product — from expanded
                 verification options to long-term custodial services. This page
@@ -278,13 +278,13 @@ export default function ProcessPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Get Started
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 Ready to Preserve Your Data?
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
                 Get in touch to discuss your requirements or schedule a demo of
                 our secure encoding process.
               </p>

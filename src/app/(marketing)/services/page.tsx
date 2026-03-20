@@ -213,13 +213,13 @@ export default function ServicesPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               Sectors
             </p>
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               Storage Solutions for Every Need
             </h1>
-            <p className="mx-auto mt-4 max-w-[580px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[580px] text-[14px] font-semibold leading-none text-[#555]">
               From personal keepsakes to enterprise-grade archival, luxury
               goods, and blockchain verification — every service built on the
               same indestructible foundation.
@@ -282,13 +282,13 @@ export default function ServicesPage() {
                   className="w-full flex-1"
                 >
                   <div>
-                    <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+                    <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                       {svc.eyebrow}
                     </p>
-                    <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+                    <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                       {svc.title}
                     </h2>
-                    <p className="mt-4 max-w-[480px] text-[17px] font-semibold leading-[22px] text-[#555]">
+                    <p className="mt-4 max-w-[480px] text-[14px] font-semibold leading-none text-[#555]">
                       {svc.description}
                     </p>
 
@@ -322,13 +322,13 @@ export default function ServicesPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Why Choose Us?
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 The Problems We Solve
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
                 Every reason organisations and individuals turn to permanent
                 storage.
               </p>
@@ -351,7 +351,7 @@ export default function ServicesPage() {
                   <h3 className="text-[20px] font-bold text-white">
                     {problem.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-[15px] font-semibold leading-[20px] text-[#bbb]">
+                  <p className="mt-3 flex-1 text-[14px] font-semibold leading-none text-[#bbb]">
                     {problem.description}
                   </p>
                 </article>
@@ -366,13 +366,13 @@ export default function ServicesPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Process
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 How It Works
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
                 Four simple steps from upload to eternity.
               </p>
             </div>
@@ -387,10 +387,10 @@ export default function ServicesPage() {
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="mt-5 text-[18px] font-bold text-[#1a1a1a]">
+                  <h3 className="mt-5 text-[17px] font-bold text-[#1a1a1a]">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-[15px] font-semibold leading-[20px] text-[#555]">
+                  <p className="mt-2 text-[14px] font-semibold leading-none text-[#555]">
                     {step.description}
                   </p>
                 </div>
@@ -405,13 +405,13 @@ export default function ServicesPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Get Started
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 Ready to Preserve Your Data?
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
                 Choose your crystal format today and create a permanent record
                 that will outlast every other storage medium on Earth.
               </p>

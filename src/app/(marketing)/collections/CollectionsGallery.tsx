@@ -71,7 +71,7 @@ export default function CollectionsGallery({
               </span>
             </div>
             <div className="p-5">
-              <h3 className="text-[18px] font-bold leading-tight text-[#1a1a1a]">
+              <h3 className="text-[17px] font-bold leading-tight text-[#1a1a1a]">
                 {item.title}
               </h3>
               <p className="mt-1 text-[14px] font-semibold text-[#888]">
@@ -83,7 +83,7 @@ export default function CollectionsGallery({
       </div>
 
       {filtered.length === 0 && (
-        <p className="py-12 text-center text-[17px] font-semibold text-[#888]">
+        <p className="py-12 text-center text-[14px] font-semibold text-[#888]">
           No items found for this category.
         </p>
       )}

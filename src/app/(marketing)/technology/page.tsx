@@ -71,13 +71,13 @@ export default function TechnologyPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               Technology
             </p>
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               How 5D Optical Storage Works
             </h1>
-            <p className="mx-auto mt-4 max-w-[600px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[600px] text-[14px] font-semibold leading-none text-[#555]">
               Data is encoded using femtosecond laser pulses into fused quartz
               glass, creating nanoscale structures that store information across
               five dimensions. Founded on 30+ years of pioneering research at
@@ -103,7 +103,7 @@ export default function TechnologyPage() {
                     </span>
                   )}
                 </p>
-                <p className="mt-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+                <p className="mt-2 text-xs font-semibold uppercase text-[#888]">
                   {stat.label}
                 </p>
               </div>
@@ -151,13 +151,13 @@ export default function TechnologyPage() {
                   className="w-full flex-1"
                 >
                   <div>
-                    <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+                    <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                       {section.eyebrow}
                     </p>
-                    <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+                    <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                       {section.title}
                     </h2>
-                    <p className="mt-4 max-w-[480px] text-[17px] font-semibold leading-[22px] text-[#555]">
+                    <p className="mt-4 max-w-[480px] text-[14px] font-semibold leading-none text-[#555]">
                       {section.description}
                     </p>
 
@@ -187,13 +187,13 @@ export default function TechnologyPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Get Started
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 Your First Crystal
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
                 Available now for early adopters. Choose a format, upload your
                 files, and receive a crystal that will outlast everything you
                 own.

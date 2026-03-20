@@ -26,10 +26,10 @@ export default async function CaseStudiesSection() {
         {/* Heading */}
         <ScrollReveal>
           <div className="mb-12 md:mb-16">
-            <h2 className="mb-4 text-[40px] font-bold leading-[54px] tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h2 className="mb-4 text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               {content.heading}
             </h2>
-            <p className="max-w-[455px] text-[18px] font-semibold leading-[18px] text-[#555]">
+            <p className="max-w-[455px] text-[14px] font-semibold leading-none text-[#555]">
               {content.description}
             </p>
           </div>
@@ -60,10 +60,10 @@ export default async function CaseStudiesSection() {
                 <h3 className="text-[31px] font-semibold leading-[31px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
                   {study.client}
                 </h3>
-                <p className="line-clamp-3 text-[17px] font-semibold leading-[17px] text-[#555]">
+                <p className="line-clamp-3 text-[14px] font-semibold leading-none text-[#555]">
                   {study.excerpt}
                 </p>
-                <span className="text-[12px] font-semibold uppercase leading-[16px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
+                <span className="text-[8px] font-semibold uppercase leading-[16px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
                   Case Study →
                 </span>
               </Link>
@@ -79,7 +79,7 @@ export default async function CaseStudiesSection() {
             </svg>
             <Link
               href={content.ctaHref}
-              className="inline-flex h-[74px] w-[213px] items-center justify-center rounded-[52px] border border-[#2a2a2a] text-[12px] font-semibold uppercase text-black transition-all hover:bg-black hover:text-white"
+              className="inline-flex h-[74px] w-[213px] items-center justify-center rounded-[52px] border border-[#2a2a2a] text-[8px] font-semibold uppercase text-black transition-all hover:bg-black hover:text-white"
             >
               {content.ctaText}
             </Link>

@@ -137,13 +137,13 @@ export default function CollectionsPage() {
       <section className="bg-[#e4e8ef] py-20 md:py-[88px]">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+            <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
               Collections
             </p>
-            <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
+            <h1 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               What We&apos;ve Preserved
             </h1>
-            <p className="mx-auto mt-4 max-w-[560px] text-[17px] font-semibold leading-[22px] text-[#555]">
+            <p className="mx-auto mt-4 max-w-[560px] text-[14px] font-semibold leading-none text-[#555]">
               From the Magna Carta to complete human genomes — explore the works
               and data sets encoded into 5D Memory Crystal.
             </p>
@@ -156,13 +156,13 @@ export default function CollectionsPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Featured Works
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 Gallery
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
                 A curated selection of crystals produced for institutions,
                 researchers, and private clients worldwide.
               </p>
@@ -178,10 +178,10 @@ export default function CollectionsPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Categories
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
                 Browse by Collection
               </h2>
             </div>
@@ -207,7 +207,7 @@ export default function CollectionsPage() {
                     <h3 className="text-[20px] font-bold text-[#1a1a1a]">
                       {category.name}
                     </h3>
-                    <p className="mt-2 flex-1 text-[15px] font-semibold leading-[20px] text-[#555]">
+                    <p className="mt-2 flex-1 text-[14px] font-semibold leading-none text-[#555]">
                       {category.description}
                     </p>
                   </div>
@@ -223,13 +223,13 @@ export default function CollectionsPage() {
         <Container>
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
                 Custom Orders
               </p>
-              <h2 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-white lg:text-[42px]">
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
                 Commission a Custom Crystal
               </h2>
-              <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#bbb]">
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#bbb]">
                 Have something unique to preserve? Work with our team to encode
                 your data into a bespoke 5D Memory Crystal.
               </p>

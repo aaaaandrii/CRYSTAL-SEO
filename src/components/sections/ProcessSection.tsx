@@ -30,13 +30,13 @@ export default async function ProcessSection() {
       <Container>
         <ScrollReveal>
           <div className="mx-auto mb-10 max-w-xl text-center md:mb-14">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-brand-accent">
+            <p className="mb-3 text-xs font-semibold uppercase text-brand-accent">
               {content.label}
             </p>
-            <h2 className="mb-4 text-3xl font-bold leading-none tracking-tight text-brand-dark sm:text-4xl lg:text-5xl">
+            <h2 className="mb-4 text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               {content.heading}
             </h2>
-            <p className="text-base leading-none text-brand-gray">
+            <p className="text-[14px] font-semibold leading-none text-[#555]">
               {content.description}
             </p>
           </div>
@@ -53,7 +53,7 @@ export default async function ProcessSection() {
                 <h3 className="mb-3 text-lg font-bold leading-none text-brand-dark">
                   {step.title}
                 </h3>
-                <p className="text-sm leading-none text-brand-gray">
+                <p className="text-[14px] font-semibold leading-none text-[#555]">
                   {step.description}
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default async function ProcessSection() {
         {/* Bottom text + CTA */}
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
-            <p className="mx-auto mb-8 max-w-lg text-sm leading-none text-brand-gray">
+            <p className="mx-auto mb-8 max-w-lg text-[14px] font-semibold leading-none text-[#555]">
               {content.bottomText}
             </p>
             <Button href={content.ctaHref} variant="primary" size="lg">

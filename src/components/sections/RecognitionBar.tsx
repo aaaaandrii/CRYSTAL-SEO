@@ -10,7 +10,7 @@ interface RecognitionContent {
 
 interface MediaQuote {
   quote: string;
-  source: string;
+  source: React.ReactNode;
 }
 
 const defaultContent: RecognitionContent = {
@@ -20,7 +20,7 @@ const defaultContent: RecognitionContent = {
 
 const defaultQuotes: MediaQuote[] = [
   { quote: 'Data storage that could outlast civilisation itself', source: 'WIRED' },
-  { quote: 'Most durable data storage material in the world', source: 'Guinness World Records' },
+  { quote: 'Most durable data storage material in the world', source: <>Guinness World<br />Records</> },
   { quote: 'Groundbreaking university research project', source: 'The Telegraph' },
 ];
 
@@ -65,10 +65,10 @@ export default function RecognitionBar({
                   alt=""
                   width={85}
                   height={154}
-                  className="h-[90px] w-auto shrink-0 sm:h-[130px]"
+                  className="h-[72px] w-auto shrink-0 sm:h-[105px]"
                   aria-hidden="true"
                 />
-                <blockquote className="w-[150px] shrink-0 px-1 text-center text-[17px] font-bold leading-none tracking-[-0.5px] text-[#e3e7ee] sm:w-[200px] sm:text-[22px] lg:w-[220px] lg:text-[26px]">
+                <blockquote className="w-[121px] shrink-0 px-1 text-center text-[14px] font-bold leading-none tracking-[-0.5px] text-[#e3e7ee] sm:w-[161px] sm:text-[17px] lg:w-[177px] lg:text-[21px]">
                   {item.quote}
                 </blockquote>
                 <Image
@@ -76,11 +76,11 @@ export default function RecognitionBar({
                   alt=""
                   width={86}
                   height={154}
-                  className="h-[90px] w-auto shrink-0 sm:h-[130px]"
+                  className="h-[72px] w-auto shrink-0 sm:h-[105px]"
                   aria-hidden="true"
                 />
               </div>
-              <p className="mt-4 text-[14px] font-semibold uppercase text-[#e3e7ee]">
+              <p className="mt-4 text-xs font-semibold uppercase text-[#e3e7ee]">
                 {item.source}
               </p>
             </motion.div>
@@ -93,7 +93,7 @@ export default function RecognitionBar({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mx-auto mt-16 max-w-[530px] text-center text-[20px] font-semibold leading-none text-[#e3e7ee]/70 md:mt-20"
+          className="mx-auto mt-16 max-w-[530px] text-center text-[14px] font-semibold leading-none text-[#e3e7ee]/70 md:mt-20"
         >
           {c.bottomText}
         </motion.p>

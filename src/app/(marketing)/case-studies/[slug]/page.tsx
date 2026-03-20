@@ -116,7 +116,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {study.title}
               </h1>
               <div className="mt-4 flex flex-wrap items-center gap-4 text-[14px] font-semibold text-[#888]">
-                <span className="rounded-full bg-[#5a72be]/10 px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-[#5a72be]">
+                <span className="rounded-full bg-[#5a72be]/10 px-3 py-1 text-[8px] font-semibold uppercase tracking-wider text-[#5a72be]">
                   {study.sector}
                 </span>
                 <span className="text-[#555]">{study.client}</span>
@@ -136,7 +136,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <h2 className="text-[20px] font-bold text-[#1a1a1a]">
                     Challenge
                   </h2>
-                  <p className="mt-3 text-[17px] font-semibold leading-[22px] text-[#555]">
+                  <p className="mt-3 text-[14px] font-semibold leading-none text-[#555]">
                     {study.challenge}
                   </p>
                 </div>
@@ -145,7 +145,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <h2 className="text-[20px] font-bold text-[#1a1a1a]">
                     Solution
                   </h2>
-                  <p className="mt-3 text-[17px] font-semibold leading-[22px] text-[#555]">
+                  <p className="mt-3 text-[14px] font-semibold leading-none text-[#555]">
                     {study.solution}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <h2 className="text-[20px] font-bold text-[#1a1a1a]">
                     Outcome
                   </h2>
-                  <p className="mt-3 text-[17px] font-semibold leading-[22px] text-[#555]">
+                  <p className="mt-3 text-[14px] font-semibold leading-none text-[#555]">
                     {study.outcome}
                   </p>
                 </div>

@@ -18,7 +18,7 @@ export default async function BenefitsSection() {
     <section id="benefits" className="bg-brand-white py-20 text-brand-dark md:py-28">
       <Container>
         <ScrollReveal>
-          <h2 className="mb-12 max-w-xl text-4xl font-bold leading-none tracking-tight text-brand-dark sm:text-5xl md:mb-16 lg:text-6xl">
+          <h2 className="mb-12 max-w-xl text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] md:mb-16 lg:text-[42px]">
             {content.heading}
           </h2>
         </ScrollReveal>
@@ -39,7 +39,7 @@ export default async function BenefitsSection() {
                 <h3 className="mb-3 text-2xl font-bold leading-none text-brand-dark">
                   {benefit.title}
                 </h3>
-                <p className="text-sm leading-none text-brand-gray">
+                <p className="text-[14px] font-semibold leading-none text-[#555]">
                   {benefit.description}
                 </p>
               </div>

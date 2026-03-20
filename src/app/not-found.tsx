@@ -7,10 +7,10 @@ export default function NotFound() {
       <Container>
         <div className="mx-auto max-w-lg text-center">
           <p className="text-[80px] font-bold leading-none text-[#5a72be]">404</p>
-          <h1 className="mt-4 text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a]">
+          <h1 className="mt-4 text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
             Page Not Found
           </h1>
-          <p className="mt-4 text-[17px] font-semibold leading-[22px] text-[#555]">
+          <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
             The page you are looking for does not exist or has been moved.
             Please check the URL or navigate back to the homepage.
           </p>
