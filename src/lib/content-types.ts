@@ -1,309 +1,333 @@
-// Defines the field schema for each ContentItem type and PageContent section
-// Used by admin editors to render appropriate form fields
+// CMS Architecture: Pages → Blocks → Inputs
+// Each page contains blocks. Each block has section fields + optional list items.
 
 export interface FieldDef {
   key: string;
   label: string;
-  type: 'text' | 'textarea' | 'image' | 'select' | 'number' | 'boolean' | 'json';
+  type: 'text' | 'textarea' | 'image' | 'select' | 'number' | 'boolean';
   options?: { value: string; label: string }[];
   placeholder?: string;
 }
 
-export interface ContentTypeDef {
-  type: string;
+export interface BlockDef {
+  id: string; // matches PageContent section name
   label: string;
-  labelPlural: string;
   description: string;
-  nameField: string; // which field to show as the item name in lists
-  fields: FieldDef[];
+  fields: FieldDef[]; // PageContent fields for this block
+  items?: {
+    type: string; // ContentItem type
+    label: string;
+    labelPlural: string;
+    nameField: string;
+    fields: FieldDef[];
+  }[];
 }
 
-export const contentTypes: Record<string, ContentTypeDef> = {
-  benefit: {
-    type: 'benefit',
-    label: 'Benefit',
-    labelPlural: 'Benefits',
-    description: 'Why 5D Crystal benefit cards on the homepage',
-    nameField: 'title',
-    fields: [
-      { key: 'icon', label: 'Icon Path', type: 'text', placeholder: '/icons/icon-name.svg' },
-      { key: 'title', label: 'Title', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-    ],
-  },
-  sector: {
-    type: 'sector',
-    label: 'Sector',
-    labelPlural: 'Sectors',
-    description: 'Service sector cards shown on homepage and sectors page',
-    nameField: 'title',
-    fields: [
-      { key: 'slug', label: 'Slug', type: 'text', placeholder: 'e.g. space-agencies' },
-      { key: 'title', label: 'Title', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'image', label: 'Image Path', type: 'text', placeholder: '/sectors/image.png' },
-      { key: 'icon', label: 'Icon Path', type: 'text', placeholder: '/icons/icon.svg' },
-    ],
-  },
-  faq: {
-    type: 'faq',
-    label: 'FAQ',
-    labelPlural: 'FAQ Items',
-    description: 'Frequently asked questions on the FAQ page',
-    nameField: 'question',
-    fields: [
-      { key: 'question', label: 'Question', type: 'text' },
-      { key: 'answer', label: 'Answer', type: 'textarea' },
+export interface PageDef {
+  id: string;
+  label: string;
+  description: string;
+  blocks: BlockDef[];
+}
+
+export const pages: PageDef[] = [
+  {
+    id: 'home',
+    label: 'Homepage',
+    description: 'Main landing page with hero, benefits, sectors, and more',
+    blocks: [
       {
-        key: 'category',
-        label: 'Category',
-        type: 'select',
-        options: [
-          { value: 'technology', label: 'Technology' },
-          { value: 'security', label: 'Security' },
-          { value: 'storage', label: 'Storage' },
-          { value: 'ordering', label: 'Ordering' },
+        id: 'hero',
+        label: 'Hero',
+        description: 'Main banner with headline, description, badges, and CTAs',
+        fields: [
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'headingSuperscript', label: 'Heading Superscript', type: 'text', placeholder: '*' },
+          { key: 'footnote', label: 'Footnote', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+          { key: 'cta1Text', label: 'Primary Button Text', type: 'text' },
+          { key: 'cta1Href', label: 'Primary Button Link', type: 'text' },
+          { key: 'cta2Text', label: 'Secondary Button Text', type: 'text' },
+          { key: 'cta2Href', label: 'Secondary Button Link', type: 'text' },
+          { key: 'lifespanLabel', label: 'Lifespan Label', type: 'text' },
+          { key: 'videoSrc', label: 'Hero Video', type: 'image' },
+        ],
+      },
+      {
+        id: 'trusted-by',
+        label: 'Trusted By',
+        description: 'Partner logos bar',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+        ],
+        items: [
+          {
+            type: 'partner-logo',
+            label: 'Partner Logo',
+            labelPlural: 'Partner Logos',
+            nameField: 'name',
+            fields: [
+              { key: 'name', label: 'Partner Name', type: 'text' },
+              { key: 'logo', label: 'Logo', type: 'image' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'recognition',
+        label: 'Recognition',
+        description: 'Media recognition and press quotes',
+        fields: [
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'text', label: 'Description', type: 'textarea' },
+        ],
+        items: [
+          {
+            type: 'media-quote',
+            label: 'Media Quote',
+            labelPlural: 'Media Quotes',
+            nameField: 'source',
+            fields: [
+              { key: 'quote', label: 'Quote', type: 'textarea' },
+              { key: 'source', label: 'Source', type: 'text', placeholder: 'e.g. BBC News' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'benefits',
+        label: 'Benefits',
+        description: 'Why 5D Crystal — benefit cards',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+        ],
+        items: [
+          {
+            type: 'benefit',
+            label: 'Benefit',
+            labelPlural: 'Benefits',
+            nameField: 'title',
+            fields: [
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'description', label: 'Description', type: 'textarea' },
+              { key: 'icon', label: 'Icon', type: 'image' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'comparison',
+        label: 'Comparison',
+        description: 'Storage comparison table and lifespan bars',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+        ],
+        items: [
+          {
+            type: 'comparison-row',
+            label: 'Comparison Row',
+            labelPlural: 'Comparison Rows',
+            nameField: 'feature',
+            fields: [
+              { key: 'feature', label: 'Feature', type: 'text' },
+              { key: 'crystal', label: '5D Crystal', type: 'text' },
+              { key: 'hdd', label: 'HDD/SSD', type: 'text' },
+              { key: 'tape', label: 'Tape/Cloud', type: 'text' },
+            ],
+          },
+          {
+            type: 'lifespan-bar',
+            label: 'Lifespan Bar',
+            labelPlural: 'Lifespan Bars',
+            nameField: 'name',
+            fields: [
+              { key: 'name', label: 'Storage Name', type: 'text' },
+              { key: 'years', label: 'Years', type: 'text' },
+              { key: 'mobileYears', label: 'Mobile Display', type: 'text' },
+              { key: 'unit', label: 'Unit Label', type: 'text', placeholder: 'YRS' },
+              { key: 'highlight', label: 'Highlighted', type: 'boolean' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'save-data',
+        label: 'Save Your Data CTA',
+        description: 'Mid-page call-to-action section',
+        fields: [
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+          { key: 'cta1Text', label: 'Primary Button Text', type: 'text' },
+          { key: 'cta1Href', label: 'Primary Button Link', type: 'text' },
+          { key: 'cta2Text', label: 'Secondary Button Text', type: 'text' },
+          { key: 'cta2Href', label: 'Secondary Button Link', type: 'text' },
+        ],
+      },
+      {
+        id: 'sectors',
+        label: 'Sectors',
+        description: 'Service sectors grid',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'subheading', label: 'Subheading', type: 'textarea' },
+        ],
+        items: [
+          {
+            type: 'sector',
+            label: 'Sector',
+            labelPlural: 'Sectors',
+            nameField: 'title',
+            fields: [
+              { key: 'slug', label: 'Slug', type: 'text', placeholder: 'space-tech' },
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'description', label: 'Description', type: 'textarea' },
+              { key: 'image', label: 'Image', type: 'image' },
+              { key: 'icon', label: 'Icon', type: 'image' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'process',
+        label: 'Process',
+        description: 'How it works — step-by-step',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+          { key: 'ctaText', label: 'Button Text', type: 'text' },
+          { key: 'ctaHref', label: 'Button Link', type: 'text' },
+        ],
+        items: [
+          {
+            type: 'process-step',
+            label: 'Step',
+            labelPlural: 'Steps',
+            nameField: 'title',
+            fields: [
+              { key: 'number', label: 'Step Number', type: 'text', placeholder: '01' },
+              { key: 'title', label: 'Title', type: 'text' },
+              { key: 'description', label: 'Description', type: 'textarea' },
+              { key: 'image', label: 'Image', type: 'image' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'swiss-made',
+        label: 'Swiss Made',
+        description: 'Swiss quality section',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+          { key: 'ctaText', label: 'Button Text', type: 'text' },
+          { key: 'ctaHref', label: 'Button Link', type: 'text' },
+          { key: 'image', label: 'Image', type: 'image' },
+        ],
+      },
+      {
+        id: 'space-proven',
+        label: 'Space Proven',
+        description: 'Space technology section',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+          { key: 'ctaText', label: 'Button Text', type: 'text' },
+          { key: 'ctaHref', label: 'Button Link', type: 'text' },
+          { key: 'image', label: 'Image', type: 'image' },
+        ],
+      },
+      {
+        id: 'case-studies',
+        label: 'Case Studies',
+        description: 'Case studies section heading',
+        fields: [
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'description', label: 'Description', type: 'textarea' },
+          { key: 'ctaText', label: 'Button Text', type: 'text' },
+          { key: 'ctaHref', label: 'Button Link', type: 'text' },
+        ],
+      },
+      {
+        id: 'news',
+        label: 'Latest News',
+        description: 'News section heading',
+        fields: [
+          { key: 'label', label: 'Section Label', type: 'text' },
+          { key: 'heading', label: 'Heading', type: 'text' },
+          { key: 'ctaText', label: 'Button Text', type: 'text' },
+          { key: 'ctaHref', label: 'Button Link', type: 'text' },
+        ],
+      },
+      {
+        id: 'cta',
+        label: 'Bottom CTA',
+        description: 'Two-column call-to-action at page bottom',
+        fields: [
+          { key: 'leftLabel', label: 'Left Column Label', type: 'text' },
+          { key: 'leftHeading', label: 'Left Column Heading', type: 'text' },
+          { key: 'leftDescription', label: 'Left Column Description', type: 'textarea' },
+          { key: 'leftCtaText', label: 'Left Button Text', type: 'text' },
+          { key: 'leftCtaHref', label: 'Left Button Link', type: 'text' },
+          { key: 'rightLabel', label: 'Right Column Label', type: 'text' },
+          { key: 'rightHeading', label: 'Right Column Heading', type: 'text' },
+          { key: 'rightDescription', label: 'Right Column Description', type: 'textarea' },
+          { key: 'rightCtaText', label: 'Right Button Text', type: 'text' },
+          { key: 'rightCtaHref', label: 'Right Button Link', type: 'text' },
         ],
       },
     ],
   },
-  'process-step': {
-    type: 'process-step',
-    label: 'Process Step',
-    labelPlural: 'Process Steps',
-    description: 'Steps in the Our Process section on the homepage',
-    nameField: 'title',
-    fields: [
-      { key: 'number', label: 'Step Number', type: 'text', placeholder: '01' },
-      { key: 'title', label: 'Title', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'image', label: 'Image Path', type: 'text', placeholder: '/images/step.png' },
-    ],
-  },
-  'media-quote': {
-    type: 'media-quote',
-    label: 'Media Quote',
-    labelPlural: 'Media Quotes',
-    description: 'Press quotes shown in the recognition bar',
-    nameField: 'source',
-    fields: [
-      { key: 'quote', label: 'Quote', type: 'textarea' },
-      { key: 'source', label: 'Source', type: 'text', placeholder: 'e.g. BBC News' },
-    ],
-  },
-  'partner-logo': {
-    type: 'partner-logo',
-    label: 'Partner Logo',
-    labelPlural: 'Partner Logos',
-    description: 'Trusted By logos on the homepage',
-    nameField: 'name',
-    fields: [
-      { key: 'name', label: 'Partner Name', type: 'text' },
-      { key: 'logo', label: 'Logo Path', type: 'text', placeholder: '/logos/PARTNER.png' },
-    ],
-  },
-  'comparison-row': {
-    type: 'comparison-row',
-    label: 'Comparison Row',
-    labelPlural: 'Comparison Rows',
-    description: 'Rows in the comparison table on the homepage',
-    nameField: 'feature',
-    fields: [
-      { key: 'feature', label: 'Feature', type: 'text' },
-      { key: 'crystal', label: '5D Crystal Value', type: 'text' },
-      { key: 'hdd', label: 'HDD/SSD Value', type: 'text' },
-      { key: 'tape', label: 'Tape Value', type: 'text' },
-    ],
-  },
-  'lifespan-bar': {
-    type: 'lifespan-bar',
-    label: 'Lifespan Bar',
-    labelPlural: 'Lifespan Bars',
-    description: 'Lifespan comparison bars in the comparison section',
-    nameField: 'name',
-    fields: [
-      { key: 'name', label: 'Storage Name', type: 'text' },
-      { key: 'years', label: 'Years', type: 'number' },
-      { key: 'mobileYears', label: 'Mobile Years (compact)', type: 'number' },
-      { key: 'unit', label: 'Unit Label', type: 'text', placeholder: 'e.g. years, billion years' },
-      { key: 'highlight', label: 'Highlighted', type: 'boolean' },
-    ],
-  },
-};
-
-// PageContent section definitions - describes what fields each section has
-export interface SectionDef {
-  page: string;
-  section: string;
-  label: string;
-  description: string;
-  fields: FieldDef[];
-}
-
-export const pageSections: SectionDef[] = [
   {
-    page: 'home',
-    section: 'hero',
-    label: 'Hero Section',
-    description: 'Main hero banner with headline, description, and CTAs',
-    fields: [
-      { key: 'badge1', label: 'Badge 1', type: 'text' },
-      { key: 'badge2', label: 'Badge 2', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'cta1Text', label: 'CTA 1 Text', type: 'text' },
-      { key: 'cta1Href', label: 'CTA 1 Link', type: 'text' },
-      { key: 'cta2Text', label: 'CTA 2 Text', type: 'text' },
-      { key: 'cta2Href', label: 'CTA 2 Link', type: 'text' },
-      { key: 'videoSrc', label: 'Video Source', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'trusted-by',
-    label: 'Trusted By Bar',
-    description: 'Partner logos bar label',
-    fields: [
-      { key: 'label', label: 'Label Text', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'recognition',
-    label: 'Recognition Bar',
-    description: 'As Featured In media recognition section',
-    fields: [
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'text', label: 'Description Text', type: 'textarea' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'benefits',
-    label: 'Benefits Section',
-    description: 'Why 5D Crystal section heading',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'comparison',
-    label: 'Comparison Section',
-    description: 'Storage comparison table section',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'sectors',
-    label: 'Sectors Section',
-    description: 'Service sectors grid section',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'subheading', label: 'Subheading', type: 'textarea' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'process',
-    label: 'Process Section',
-    description: 'Our Process steps section',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'ctaText', label: 'CTA Text', type: 'text' },
-      { key: 'ctaHref', label: 'CTA Link', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'swiss-made',
-    label: 'Swiss Made Section',
-    description: 'Swiss Made quality section',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'ctaText', label: 'CTA Text', type: 'text' },
-      { key: 'ctaHref', label: 'CTA Link', type: 'text' },
-      { key: 'image', label: 'Image Path', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'space-proven',
-    label: 'Space Proven Section',
-    description: 'Space Proven technology section',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'ctaText', label: 'CTA Text', type: 'text' },
-      { key: 'ctaHref', label: 'CTA Link', type: 'text' },
-      { key: 'image', label: 'Image Path', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'case-studies',
-    label: 'Case Studies Section',
-    description: 'Case studies section heading and CTA',
-    fields: [
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'ctaText', label: 'CTA Text', type: 'text' },
-      { key: 'ctaHref', label: 'CTA Link', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'news',
-    label: 'News Section',
-    description: 'News section heading and CTA',
-    fields: [
-      { key: 'label', label: 'Section Label', type: 'text' },
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'ctaText', label: 'CTA Text', type: 'text' },
-      { key: 'ctaHref', label: 'CTA Link', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'save-data',
-    label: 'Save Data Section',
-    description: 'Save Your Most Valuable Data CTA section',
-    fields: [
-      { key: 'heading', label: 'Heading', type: 'text' },
-      { key: 'description', label: 'Description', type: 'textarea' },
-      { key: 'cta1Text', label: 'CTA 1 Text', type: 'text' },
-      { key: 'cta1Href', label: 'CTA 1 Link', type: 'text' },
-      { key: 'cta2Text', label: 'CTA 2 Text', type: 'text' },
-      { key: 'cta2Href', label: 'CTA 2 Link', type: 'text' },
-    ],
-  },
-  {
-    page: 'home',
-    section: 'cta',
-    label: 'CTA Section',
-    description: 'Bottom CTA section with two columns',
-    fields: [
-      { key: 'leftLabel', label: 'Left Label', type: 'text' },
-      { key: 'leftHeading', label: 'Left Heading', type: 'text' },
-      { key: 'leftDescription', label: 'Left Description', type: 'textarea' },
-      { key: 'leftCtaText', label: 'Left CTA Text', type: 'text' },
-      { key: 'leftCtaHref', label: 'Left CTA Link', type: 'text' },
-      { key: 'rightLabel', label: 'Right Label', type: 'text' },
-      { key: 'rightHeading', label: 'Right Heading', type: 'text' },
-      { key: 'rightDescription', label: 'Right Description', type: 'textarea' },
-      { key: 'rightCtaText', label: 'Right CTA Text', type: 'text' },
-      { key: 'rightCtaHref', label: 'Right CTA Link', type: 'text' },
+    id: 'faq',
+    label: 'FAQ',
+    description: 'Frequently asked questions page',
+    blocks: [
+      {
+        id: 'faq-items',
+        label: 'FAQ Items',
+        description: 'Questions and answers grouped by category',
+        fields: [],
+        items: [
+          {
+            type: 'faq',
+            label: 'FAQ',
+            labelPlural: 'FAQ Items',
+            nameField: 'question',
+            fields: [
+              { key: 'question', label: 'Question', type: 'text' },
+              { key: 'answer', label: 'Answer', type: 'textarea' },
+              {
+                key: 'category',
+                label: 'Category',
+                type: 'select',
+                options: [
+                  { value: 'technology', label: 'Technology' },
+                  { value: 'security', label: 'Security' },
+                  { value: 'storage', label: 'Storage' },
+                  { value: 'ordering', label: 'Ordering' },
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 ];
+
+// Helper: find a page definition
+export function getPageDef(pageId: string): PageDef | undefined {
+  return pages.find((p) => p.id === pageId);
+}
+
+// Helper: find a block definition
+export function getBlockDef(pageId: string, blockId: string): BlockDef | undefined {
+  return getPageDef(pageId)?.blocks.find((b) => b.id === blockId);
+}
