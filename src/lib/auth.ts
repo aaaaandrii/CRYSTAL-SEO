@@ -1,6 +1,7 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { compare } from 'bcryptjs';
+import { prisma } from './prisma';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: {
@@ -22,24 +23,18 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         if (!email || !password) return null;
 
-        const adminEmail = process.env.ADMIN_EMAIL;
-        const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
+        // DB-based user lookup
+        const user = await prisma.user.findUnique({ where: { email } });
+        if (!user) return null;
 
-        if (!adminEmail || !adminPasswordHash) {
-          console.error('ADMIN_EMAIL or ADMIN_PASSWORD_HASH not set');
-          return null;
-        }
-
-        if (email !== adminEmail) return null;
-
-        const isValid = await compare(password, adminPasswordHash);
+        const isValid = await compare(password, user.passwordHash);
         if (!isValid) return null;
 
         return {
-          id: '1',
-          email: adminEmail,
-          name: 'Admin',
-          role: 'admin',
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          role: user.role,
         };
       },
     }),
@@ -47,13 +42,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        token.id = (user as { id: string }).id;
         token.role = (user as { role?: string }).role;
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as { role?: string }).role = token.role as string;
+        (session.user as { id?: string; role?: string }).id = token.id as string;
+        (session.user as { id?: string; role?: string }).role = token.role as string;
       }
       return session;
     },

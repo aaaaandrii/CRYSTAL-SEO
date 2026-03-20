@@ -10,7 +10,7 @@ const tableRows = [
   { feature: 'Cyber attack surface', crystal: 'Zero (air-gapped)', hdd: 'High', tape: 'High' },
 ];
 
-const lifespanBars = [
+const lifespanBars: Array<{ name: string; years: string; yearsMobile: string; filled: boolean; stripWidth?: number }> = [
   { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000 YEARS', yearsMobile: '100Q+ YRS', filled: true },
   { name: 'Silica Disc', years: '100,000,000 YEARS', yearsMobile: '100M YRS', filled: false, stripWidth: 10 },
   { name: 'Magnetic Tape (LTO)', years: '30 YEARS', yearsMobile: '30 YRS', filled: false, stripWidth: 1 },
@@ -87,14 +87,14 @@ export default function ComparisonSection() {
                 {!bar.filled && (
                   <div
                     className="absolute left-0 top-0 h-full bg-[#5a72be]"
-                    style={{ width: `${('stripWidth' in bar && bar.stripWidth) || 5}px` }}
+                    style={{ width: `${bar.stripWidth ?? 5}px` }}
                   />
                 )}
                 <span className="relative z-10 text-[16px] font-bold leading-none text-white sm:text-[28px] lg:text-[42px]">
                   {bar.name}
                 </span>
                 <span className="relative z-10 text-[10px] font-bold leading-none tracking-wider text-white sm:text-[14px] lg:text-[20px]">
-                  <span className="sm:hidden">{'yearsMobile' in bar ? bar.yearsMobile : bar.years}</span>
+                  <span className="sm:hidden">{bar.yearsMobile}</span>
                   <span className="hidden sm:inline">{bar.years}</span>
                 </span>
               </div>

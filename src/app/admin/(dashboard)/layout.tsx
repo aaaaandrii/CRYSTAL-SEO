@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { auth } from '@/lib/auth';
 import { AdminSidebar } from '@/components/admin/AdminSidebar';
+import { SessionProvider } from 'next-auth/react';
 
 export default async function DashboardLayout({
   children,
@@ -14,9 +15,11 @@ export default async function DashboardLayout({
   }
 
   return (
-    <div className="flex min-h-screen bg-brand-dark">
-      <AdminSidebar />
-      <main className="flex-1 ml-64 p-8">{children}</main>
-    </div>
+    <SessionProvider session={session}>
+      <div className="flex min-h-screen bg-brand-dark">
+        <AdminSidebar />
+        <main className="flex-1 ml-64 p-8">{children}</main>
+      </div>
+    </SessionProvider>
   );
 }

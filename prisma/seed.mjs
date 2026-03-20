@@ -1,16 +1,12 @@
 import Database from 'better-sqlite3';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { randomBytes } from 'crypto';
+import { randomBytes, createHash } from 'crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dbPath = join(__dirname, 'dev.db');
 
 // Use better-sqlite3 directly to avoid Prisma client ESM issues in seed
-// This is only for seeding - the app uses Prisma client normally
-import { createRequire } from 'module';
-
-// Simple direct SQLite seeding via the prisma db
 const db = (await import('better-sqlite3')).default(dbPath);
 
 function cuid() {
@@ -19,9 +15,19 @@ function cuid() {
 
 const now = new Date().toISOString();
 
-// Clear existing
+// Clear existing tables
 db.exec('DELETE FROM NewsArticle');
 db.exec('DELETE FROM CaseStudy');
+db.exec('DELETE FROM User');
+db.exec('DELETE FROM PageContent');
+db.exec('DELETE FROM ContentItem');
+
+// ── Seed admin user ──────────────────────────────────────────────────
+// Default admin: admin@5dmemorycrystal.com / admin123
+// Using bcryptjs hash for "admin123"
+const adminHash = '$2b$10$RViHgf/stpI4rOY7dmDCIedkjBq4rG2aNhalrerEe.R1tJ.QEJw/i';
+db.prepare(`INSERT INTO User (id, email, name, passwordHash, role, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?, ?)`)
+  .run(cuid(), 'admin@5dmemorycrystal.com', 'Admin', adminHash, 'admin', now, now);
 
 const insertCaseStudy = db.prepare(`
   INSERT INTO CaseStudy (id, title, slug, client, sector, excerpt, challenge, solution, outcome, content, imageUrl, imageAlt, published, featured, publishedAt, createdAt, updatedAt)
