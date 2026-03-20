@@ -11,7 +11,15 @@ RUN apk add --no-cache python3 make g++
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
+# Set DATABASE_URL for build (dev.db is gitignored, so create it here)
+ENV DATABASE_URL="file:./prisma/dev.db"
+
 RUN npx prisma generate
+# Create and seed the database for build-time static generation
+RUN npx prisma migrate deploy
+RUN node prisma/seed.mjs
+# Build Next.js (SSG pages will query the seeded DB)
 RUN npm run build
 
 # Stage 3: Production runner
@@ -27,7 +35,7 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 
-# Copy prisma files for migrations and seed DB
+# Copy prisma files and the seeded database
 COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
 COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
