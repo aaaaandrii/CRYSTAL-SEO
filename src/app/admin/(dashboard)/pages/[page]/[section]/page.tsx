@@ -4,8 +4,10 @@ import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getBlockDef } from '@/lib/content-types';
-import type { FieldDef } from '@/lib/content-types';
+import type { FieldDef, BlockDef } from '@/lib/content-types';
 import { ImageUpload } from '@/components/admin/ImageUpload';
+
+type ItemDef = NonNullable<BlockDef['items']>[number];
 
 interface ContentItem {
   id: string;
@@ -259,71 +261,84 @@ export default function BlockEditorPage({
                 const isThisEditing = editingItem?.id === item.id;
 
                 return (
-                  <div
-                    key={item.id}
-                    className={`group flex items-start gap-3 px-6 py-3 cursor-pointer transition-colors ${isThisEditing ? 'bg-brand-accent/5' : 'hover:bg-brand-dark/20'}`}
-                    onClick={() => {
-                      if (!isThisEditing) setEditingItem({ type: itemDef.type, id: item.id, data: { ...item.data } });
-                    }}
-                  >
-                    {/* Reorder */}
-                    <div className="flex shrink-0 flex-col items-center gap-0 pt-0.5" onClick={(e) => e.stopPropagation()}>
-                      <button
-                        onClick={() => handleMoveItem(itemDef.type, index, 'up')}
-                        disabled={index === 0}
-                        className="rounded p-0.5 text-brand-gray/40 hover:text-brand-white disabled:opacity-20 transition-colors"
-                      >
-                        <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-                        </svg>
-                      </button>
-                      <span className="text-[9px] text-brand-gray/30 tabular-nums">{index + 1}</span>
-                      <button
-                        onClick={() => handleMoveItem(itemDef.type, index, 'down')}
-                        disabled={index === items.length - 1}
-                        className="rounded p-0.5 text-brand-gray/40 hover:text-brand-white disabled:opacity-20 transition-colors"
-                      >
-                        <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                      </button>
-                    </div>
+                  <div key={item.id}>
+                    <div
+                      className={`group flex items-start gap-3 px-6 py-3 cursor-pointer transition-colors ${isThisEditing ? 'bg-brand-accent/5' : 'hover:bg-brand-dark/20'}`}
+                      onClick={() => {
+                        if (isThisEditing) setEditingItem(null);
+                        else setEditingItem({ type: itemDef.type, id: item.id, data: { ...item.data } });
+                      }}
+                    >
+                      {/* Reorder */}
+                      <div className="flex shrink-0 flex-col items-center gap-0 pt-0.5" onClick={(e) => e.stopPropagation()}>
+                        <button
+                          onClick={() => handleMoveItem(itemDef.type, index, 'up')}
+                          disabled={index === 0}
+                          className="rounded p-0.5 text-brand-gray/40 hover:text-brand-white disabled:opacity-20 transition-colors"
+                        >
+                          <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                          </svg>
+                        </button>
+                        <span className="text-[9px] text-brand-gray/30 tabular-nums">{index + 1}</span>
+                        <button
+                          onClick={() => handleMoveItem(itemDef.type, index, 'down')}
+                          disabled={index === items.length - 1}
+                          className="rounded p-0.5 text-brand-gray/40 hover:text-brand-white disabled:opacity-20 transition-colors"
+                        >
+                          <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                          </svg>
+                        </button>
+                      </div>
 
-                    {/* Thumbnail */}
-                    {imageUrl && (
-                      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded bg-[#222]">
-                        {isSvg ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img src={imageUrl} alt="" className="h-full w-full object-contain p-1" />
-                        ) : (
-                          <Image src={imageUrl} alt="" fill className="object-contain p-0.5" sizes="40px" />
+                      {/* Thumbnail */}
+                      {imageUrl && (
+                        <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded bg-[#222]">
+                          {isSvg ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={imageUrl} alt="" className="h-full w-full object-contain p-1" />
+                          ) : (
+                            <Image src={imageUrl} alt="" fill className="object-contain p-0.5" sizes="40px" />
+                          )}
+                        </div>
+                      )}
+
+                      {/* Content */}
+                      <div className="min-w-0 flex-1">
+                        <p className="text-sm font-medium text-brand-white">{name}</p>
+                        {desc && (
+                          <p className="mt-0.5 truncate text-xs text-brand-gray/50">{desc}</p>
                         )}
                       </div>
+
+                      {/* Actions */}
+                      <div className="flex shrink-0 items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity" onClick={(e) => e.stopPropagation()}>
+                        <button
+                          onClick={() => setEditingItem({ type: itemDef.type, id: item.id, data: { ...item.data } })}
+                          className="rounded px-2 py-1 text-[11px] text-brand-gray hover:text-brand-accent transition-colors"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteItem(item.id, name)}
+                          className="rounded px-2 py-1 text-[11px] text-brand-gray hover:text-red-400 transition-colors"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Inline editor — renders directly below this item */}
+                    {isThisEditing && (
+                      <InlineItemEditor
+                        itemDef={itemDef}
+                        editingItem={editingItem}
+                        setEditingItem={setEditingItem}
+                        onSave={handleSaveItem}
+                        saving={savingItem}
+                      />
                     )}
-
-                    {/* Content */}
-                    <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium text-brand-white">{name}</p>
-                      {desc && (
-                        <p className="mt-0.5 truncate text-xs text-brand-gray/50">{desc}</p>
-                      )}
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex shrink-0 items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity" onClick={(e) => e.stopPropagation()}>
-                      <button
-                        onClick={() => setEditingItem({ type: itemDef.type, id: item.id, data: { ...item.data } })}
-                        className="rounded px-2 py-1 text-[11px] text-brand-gray hover:text-brand-accent transition-colors"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => handleDeleteItem(item.id, name)}
-                        className="rounded px-2 py-1 text-[11px] text-brand-gray hover:text-red-400 transition-colors"
-                      >
-                        Delete
-                      </button>
-                    </div>
                   </div>
                 );
               })}
@@ -335,51 +350,15 @@ export default function BlockEditorPage({
               )}
             </div>
 
-            {/* Inline editor */}
-            {isEditing && (
-              <div className="border-t border-brand-accent/30 bg-brand-accent/5 p-6">
-                <h3 className="mb-4 text-xs font-semibold text-brand-accent">
-                  {editingItem.id ? 'Edit' : 'New'} {itemDef.label}
-                </h3>
-                <div className="space-y-4">
-                  {itemDef.fields.map((field) =>
-                    field.type === 'image' ? (
-                      <ImageUpload
-                        key={field.key}
-                        label={field.label}
-                        value={String(editingItem.data[field.key] ?? '')}
-                        onChange={(val) =>
-                          setEditingItem({ ...editingItem, data: { ...editingItem.data, [field.key]: val } })
-                        }
-                      />
-                    ) : (
-                      <FieldInput
-                        key={field.key}
-                        field={field}
-                        value={editingItem.data[field.key] ?? (field.type === 'boolean' ? false : '')}
-                        onChange={(val) =>
-                          setEditingItem({ ...editingItem, data: { ...editingItem.data, [field.key]: val } })
-                        }
-                      />
-                    )
-                  )}
-                </div>
-                <div className="mt-4 flex items-center gap-3">
-                  <button
-                    onClick={handleSaveItem}
-                    disabled={savingItem}
-                    className="bg-brand-accent hover:bg-brand-accent/80 text-white font-medium py-2 px-5 rounded-md transition-colors disabled:opacity-50 text-sm"
-                  >
-                    {savingItem ? 'Saving...' : editingItem.id ? 'Save' : 'Add'}
-                  </button>
-                  <button
-                    onClick={() => setEditingItem(null)}
-                    className="text-sm text-brand-gray hover:text-brand-white transition-colors"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
+            {/* New item editor — at bottom when adding */}
+            {isEditing && editingItem.id === null && (
+              <InlineItemEditor
+                itemDef={itemDef}
+                editingItem={editingItem}
+                setEditingItem={setEditingItem}
+                onSave={handleSaveItem}
+                saving={savingItem}
+              />
             )}
           </div>
         );
@@ -445,6 +424,66 @@ function FieldInput({
           className="admin-input"
         />
       )}
+    </div>
+  );
+}
+
+function InlineItemEditor({
+  itemDef,
+  editingItem,
+  setEditingItem,
+  onSave,
+  saving,
+}: {
+  itemDef: ItemDef;
+  editingItem: { type: string; id: string | null; data: Record<string, unknown> };
+  setEditingItem: (v: { type: string; id: string | null; data: Record<string, unknown> } | null) => void;
+  onSave: () => void;
+  saving: boolean;
+}) {
+  return (
+    <div className="border-t border-brand-accent/30 bg-brand-accent/5 px-6 py-5" onClick={(e) => e.stopPropagation()}>
+      <h3 className="mb-4 text-xs font-semibold text-brand-accent">
+        {editingItem.id ? 'Edit' : 'New'} {itemDef.label}
+      </h3>
+      <div className="space-y-4">
+        {itemDef.fields.map((field) =>
+          field.type === 'image' ? (
+            <ImageUpload
+              key={field.key}
+              label={field.label}
+              value={String(editingItem.data[field.key] ?? '')}
+              onChange={(val) =>
+                setEditingItem({ ...editingItem, data: { ...editingItem.data, [field.key]: val } })
+              }
+            />
+          ) : (
+            <FieldInput
+              key={field.key}
+              field={field}
+              value={editingItem.data[field.key] ?? (field.type === 'boolean' ? false : '')}
+              onChange={(val) =>
+                setEditingItem({ ...editingItem, data: { ...editingItem.data, [field.key]: val } })
+              }
+            />
+          )
+        )}
+      </div>
+      <div className="mt-4 flex items-center gap-3">
+        <button
+          onClick={onSave}
+          disabled={saving}
+          className="bg-brand-accent hover:bg-brand-accent/80 text-white font-medium py-2 px-5 rounded-md transition-colors disabled:opacity-50 text-sm"
+        >
+          {saving ? 'Saving...' : editingItem.id ? 'Save' : 'Add'}
+        </button>
+        <button
+          onClick={() => setEditingItem(null)}
+          className="text-sm text-brand-gray hover:text-brand-white transition-colors"
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 }
