@@ -3,22 +3,37 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const mediaQuotes = [
-  {
-    quote: 'Data storage that could outlast civilisation itself',
-    source: 'WIRED',
-  },
-  {
-    quote: 'Most durable data storage material in the world',
-    source: 'Guinness World Records',
-  },
-  {
-    quote: 'Groundbreaking university research project',
-    source: 'The Telegraph',
-  },
+interface RecognitionContent {
+  heading: string;
+  bottomText: string;
+}
+
+interface MediaQuote {
+  quote: string;
+  source: string;
+}
+
+const defaultContent: RecognitionContent = {
+  heading: 'Recognised by worlds leading media',
+  bottomText: 'Our crystal technology even appeared in Mission: Impossible — The Final Reckoning and has been exhibited at the V&A Museum in London.',
+};
+
+const defaultQuotes: MediaQuote[] = [
+  { quote: 'Data storage that could outlast civilisation itself', source: 'WIRED' },
+  { quote: 'Most durable data storage material in the world', source: 'Guinness World Records' },
+  { quote: 'Groundbreaking university research project', source: 'The Telegraph' },
 ];
 
-export default function RecognitionBar() {
+export default function RecognitionBar({
+  content,
+  quotes,
+}: {
+  content?: Partial<RecognitionContent>;
+  quotes?: MediaQuote[];
+}) {
+  const c = { ...defaultContent, ...content };
+  const mediaQuotes = quotes && quotes.length > 0 ? quotes : defaultQuotes;
+
   return (
     <section id="recognition" className="border-t border-black bg-black py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-[50px]">
@@ -30,7 +45,7 @@ export default function RecognitionBar() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-16 max-w-[430px] text-center text-[39px] font-bold leading-none tracking-[-0.47px] text-[#e3e7ee] md:mb-20"
         >
-          Recognised by worlds leading media
+          {c.heading}
         </motion.h2>
 
         {/* Quote cards with laurel wreaths */}
@@ -44,9 +59,7 @@ export default function RecognitionBar() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="flex flex-col items-center text-center"
             >
-              {/* Laurel wreath + quote */}
               <div className="relative flex items-center justify-center gap-0">
-                {/* Left laurel */}
                 <Image
                   src="/icons/laurel-left.svg"
                   alt=""
@@ -55,13 +68,9 @@ export default function RecognitionBar() {
                   className="h-[90px] w-auto shrink-0 sm:h-[130px]"
                   aria-hidden="true"
                 />
-
-                {/* Quote text */}
                 <blockquote className="w-[150px] shrink-0 px-1 text-center text-[17px] font-bold leading-none tracking-[-0.5px] text-[#e3e7ee] sm:w-[200px] sm:text-[22px] lg:w-[220px] lg:text-[26px]">
                   {item.quote}
                 </blockquote>
-
-                {/* Right laurel */}
                 <Image
                   src="/icons/laurel-right.svg"
                   alt=""
@@ -71,8 +80,6 @@ export default function RecognitionBar() {
                   aria-hidden="true"
                 />
               </div>
-
-              {/* Source label */}
               <p className="mt-4 text-[14px] font-semibold uppercase text-[#e3e7ee]">
                 {item.source}
               </p>
@@ -88,8 +95,7 @@ export default function RecognitionBar() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mx-auto mt-16 max-w-[530px] text-center text-[20px] font-semibold leading-none text-[#e3e7ee]/70 md:mt-20"
         >
-          Our crystal technology even appeared in Mission: Impossible — The Final
-          Reckoning and has been exhibited at the V&A Museum in London.
+          {c.bottomText}
         </motion.p>
       </div>
     </section>

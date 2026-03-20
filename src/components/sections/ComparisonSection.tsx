@@ -1,6 +1,7 @@
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
+import { getPageContent, getContentItems } from '@/lib/content';
 
-const tableRows = [
+const defaultTableRows = [
   { feature: 'Lifespan', crystal: '13.8 Billion yrs', hdd: '5–10 years', tape: '30–50 years' },
   { feature: 'Heat Resistance', crystal: 'Up to 1,000 °C', hdd: 'Low', tape: 'Moderate' },
   { feature: 'EMP / Radiation', crystal: 'Fully resistant', hdd: 'Vulnerable', tape: 'Vulnerable' },
@@ -10,15 +11,38 @@ const tableRows = [
   { feature: 'Cyber attack surface', crystal: 'Zero (air-gapped)', hdd: 'High', tape: 'High' },
 ];
 
-const lifespanBars: Array<{ name: string; years: string; yearsMobile: string; filled: boolean; stripWidth?: number }> = [
-  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000 YEARS', yearsMobile: '100Q+ YRS', filled: true },
-  { name: 'Silica Disc', years: '100,000,000 YEARS', yearsMobile: '100M YRS', filled: false, stripWidth: 10 },
-  { name: 'Magnetic Tape (LTO)', years: '30 YEARS', yearsMobile: '30 YRS', filled: false, stripWidth: 1 },
-  { name: 'SSD', years: '5-10 YEARS', yearsMobile: '5-10 YRS', filled: false, stripWidth: 1 },
-  { name: 'HDD', years: '3-5 YEARS', yearsMobile: '3-5 YRS', filled: false, stripWidth: 1 },
+const defaultLifespanBars = [
+  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YRS', highlight: true },
+  { name: 'Silica Disc', years: '100,000,000', mobileYears: '100M', unit: 'YRS', highlight: false },
+  { name: 'Magnetic Tape (LTO)', years: '30', mobileYears: '30', unit: 'YEARS', highlight: false },
+  { name: 'SSD', years: '5-10', mobileYears: '5-10', unit: 'YEARS', highlight: false },
+  { name: 'HDD', years: '3-5', mobileYears: '3-5', unit: 'YEARS', highlight: false },
 ];
 
-export default function ComparisonSection() {
+const stripWidths: Record<string, number> = {
+  'Silica Disc': 10,
+  'Magnetic Tape (LTO)': 1,
+  'SSD': 1,
+  'HDD': 1,
+};
+
+export default async function ComparisonSection() {
+  const content = await getPageContent('home', 'comparison', {
+    label: 'Comparison',
+    heading: '5D Memory Crystal vs Conventional Storage',
+    description: 'No degradation. No magnetic fields. No moving parts. Just light encoded into glass.',
+  });
+
+  const tableRows = await getContentItems<{ feature: string; crystal: string; hdd: string; tape: string }>(
+    'comparison-row',
+    defaultTableRows
+  );
+
+  const lifespanBars = await getContentItems<{ name: string; years: string; mobileYears: string; unit: string; highlight: boolean }>(
+    'lifespan-bar',
+    defaultLifespanBars
+  );
+
   return (
     <section id="comparison" className="overflow-x-hidden bg-black py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-[50px]">
@@ -28,13 +52,13 @@ export default function ComparisonSection() {
           <ScrollReveal>
             <div className="w-full shrink-0 lg:w-[500px]">
               <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
-                Comparison
+                {content.label}
               </p>
               <h2 className="mb-6 text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
-                5D Memory Crystal vs Conventional Storage
+                {content.heading}
               </h2>
               <p className="max-w-[348px] text-[20px] font-semibold leading-none text-[#bbb]">
-                No degradation. No magnetic fields. No moving parts. Just light encoded into glass.
+                {content.description}
               </p>
             </div>
           </ScrollReveal>
@@ -78,24 +102,23 @@ export default function ComparisonSection() {
               <div
                 key={bar.name}
                 className={`relative flex items-center justify-between overflow-hidden rounded-[12px] px-4 py-4 sm:rounded-[20px] sm:px-8 sm:py-7 ${
-                  bar.filled
+                  bar.highlight
                     ? 'bg-[#5a72be]'
                     : 'bg-[#141425]'
                 }`}
               >
-                {/* Thin left-edge accent strip for non-filled bars */}
-                {!bar.filled && (
+                {!bar.highlight && (
                   <div
                     className="absolute left-0 top-0 h-full bg-[#5a72be]"
-                    style={{ width: `${bar.stripWidth ?? 5}px` }}
+                    style={{ width: `${stripWidths[bar.name] ?? 5}px` }}
                   />
                 )}
                 <span className="relative z-10 text-[16px] font-bold leading-none text-white sm:text-[28px] lg:text-[42px]">
                   {bar.name}
                 </span>
                 <span className="relative z-10 text-[10px] font-bold leading-none tracking-wider text-white sm:text-[14px] lg:text-[20px]">
-                  <span className="sm:hidden">{bar.yearsMobile}</span>
-                  <span className="hidden sm:inline">{bar.years}</span>
+                  <span className="sm:hidden">{bar.mobileYears} {bar.unit}</span>
+                  <span className="hidden sm:inline">{bar.years} {bar.unit}</span>
                 </span>
               </div>
             ))}

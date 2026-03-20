@@ -1,9 +1,21 @@
 import Image from 'next/image';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { sectors } from '@/data/sectors';
+import { getPageContent, getContentItems } from '@/lib/content';
+import { sectors as defaultSectors } from '@/data/sectors';
 import Link from 'next/link';
 
-export default function SectorsSection() {
+export default async function SectorsSection() {
+  const content = await getPageContent('home', 'sectors', {
+    label: 'What we offer',
+    heading: 'Storage Solutions for Every Sector',
+    subheading: 'From personal keepsakes to enterprise-grade archival, luxury goods, and blockchain verification.',
+  });
+
+  const sectors = await getContentItems<{ slug: string; title: string; description: string; image: string; icon: string }>(
+    'sector',
+    defaultSectors
+  );
+
   return (
     <section id="sectors" className="border-t border-[#d0d0d0] bg-[#e4e8ef] py-20 md:py-[88px]">
       <div className="mx-auto max-w-7xl px-6 sm:px-[50px]">
@@ -11,13 +23,13 @@ export default function SectorsSection() {
         <ScrollReveal>
           <div className="mb-12">
             <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
-              What we offer
+              {content.label}
             </p>
             <h2 className="mb-3 text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
-              Storage Solutions for Every Sector
+              {content.heading}
             </h2>
             <p className="text-[20px] font-semibold leading-none text-[#555]">
-              From personal keepsakes to enterprise-grade archival, luxury goods, and blockchain verification.
+              {content.subheading}
             </p>
           </div>
         </ScrollReveal>

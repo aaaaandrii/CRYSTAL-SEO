@@ -3,7 +3,8 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
-import { faqItems } from '@/data/faq';
+import { faqItems as defaultFaqItems } from '@/data/faq';
+import { getContentItems } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'FAQ',
@@ -23,7 +24,12 @@ const categoryLabels: Record<string, string> = {
 
 const categoryOrder = ['technology', 'security', 'storage', 'ordering'];
 
-export default function FAQPage() {
+export default async function FAQPage() {
+  const faqItems = await getContentItems<{ question: string; answer: string; category: string }>(
+    'faq',
+    defaultFaqItems
+  );
+
   const groupedFaqs = categoryOrder
     .map((cat) => ({
       category: cat,

@@ -12,16 +12,25 @@ import SpaceProvenSection from '@/components/sections/SpaceProvenSection';
 import NewsSection from '@/components/sections/NewsSection';
 import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import CTASection from '@/components/sections/CTASection';
+import { getPageContent, getContentItems } from '@/lib/content';
 
-export default function HomePage() {
+export default async function HomePage() {
+  // Fetch content for client components (server components fetch their own)
+  const [heroContent, recognitionContent, mediaQuotes, saveDataContent] = await Promise.all([
+    getPageContent('home', 'hero', {}),
+    getPageContent('home', 'recognition', {}),
+    getContentItems<{ quote: string; source: string }>('media-quote', []),
+    getPageContent('home', 'save-data', {}),
+  ]);
+
   return (
     <>
-      <HeroSection />
+      <HeroSection content={heroContent} />
       <TrustedByBar />
-      <RecognitionBar />
+      <RecognitionBar content={recognitionContent} quotes={mediaQuotes} />
       <BenefitsSection />
       <ComparisonSection />
-      <SaveDataSection />
+      <SaveDataSection content={saveDataContent} />
       <SectorsSection />
       <ProcessSection />
       <SwissMadeSection />

@@ -3,10 +3,29 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function SaveDataSection() {
+interface SaveDataContent {
+  heading: string;
+  description: string;
+  cta1Text: string;
+  cta1Href: string;
+  cta2Text: string;
+  cta2Href: string;
+}
+
+const defaultContent: SaveDataContent = {
+  heading: 'Save Your Most Valuable Data',
+  description: '5D Memory Crystal is ideal for storing data, that you cannot afford to lose.',
+  cta1Text: 'Order Crystal',
+  cta1Href: '/contact',
+  cta2Text: 'Schedule a Call',
+  cta2Href: '/schedule-demo',
+};
+
+export default function SaveDataSection({ content }: { content?: Partial<SaveDataContent> }) {
+  const c = { ...defaultContent, ...content };
+
   return (
     <section id="save-data" className="relative overflow-hidden bg-[#e3e7ee]">
-      {/* Background video — large centered crystal, cropped by overflow-hidden */}
       <div className="absolute left-1/2 top-0 h-[1100px] w-[1200px] -translate-x-1/2 lg:h-[1568px] lg:w-[1687px]">
         <video
           autoPlay
@@ -20,7 +39,6 @@ export default function SaveDataSection() {
         </video>
       </div>
 
-      {/* Content overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-40 sm:px-[50px] md:py-56">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -29,7 +47,7 @@ export default function SaveDataSection() {
           transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-[702px] text-center text-[52px] font-bold leading-[0.9] tracking-[-1.9px] text-[#1a1a1a] sm:text-[72px] lg:text-[96px]"
         >
-          Save Your Most Valuable Data
+          {c.heading}
         </motion.h2>
 
         <motion.p
@@ -39,7 +57,7 @@ export default function SaveDataSection() {
           transition={{ duration: 0.7, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mt-6 max-w-[373px] text-center text-[17px] font-semibold leading-none text-[#555]"
         >
-          5D Memory Crystal is ideal for storing data, that you cannot afford to lose.
+          {c.description}
         </motion.p>
 
         <motion.div
@@ -50,16 +68,16 @@ export default function SaveDataSection() {
           className="mt-8 flex gap-2"
         >
           <Link
-            href="/contact"
+            href={c.cta1Href}
             className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#5a72be] bg-[#5a72be] text-[12px] font-semibold text-white transition-all hover:bg-[#4d63a8]"
           >
-            Order Crystal
+            {c.cta1Text}
           </Link>
           <Link
-            href="/schedule-demo"
+            href={c.cta2Href}
             className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#5a72be] bg-[rgba(81,52,227,0.03)] text-[12px] font-semibold text-[#5a72be] transition-all hover:bg-[#5a72be]/10"
           >
-            Schedule a Call
+            {c.cta2Text}
           </Link>
         </motion.div>
       </div>

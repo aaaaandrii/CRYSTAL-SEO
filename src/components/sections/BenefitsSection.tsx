@@ -1,15 +1,25 @@
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { benefits } from '@/data/benefits';
+import { getPageContent, getContentItems } from '@/lib/content';
+import { benefits as defaultBenefits } from '@/data/benefits';
 
-export default function BenefitsSection() {
+export default async function BenefitsSection() {
+  const content = await getPageContent('home', 'benefits', {
+    heading: 'Every reason to choose permanent storage.',
+  });
+
+  const benefits = await getContentItems<{ icon: string; title: string; description: string }>(
+    'benefit',
+    defaultBenefits
+  );
+
   return (
     <section id="benefits" className="bg-brand-white py-20 text-brand-dark md:py-28">
       <Container>
         <ScrollReveal>
           <h2 className="mb-12 max-w-xl text-4xl font-bold leading-none tracking-tight text-brand-dark sm:text-5xl md:mb-16 lg:text-6xl">
-            Every reason to choose permanent storage.
+            {content.heading}
           </h2>
         </ScrollReveal>
 
