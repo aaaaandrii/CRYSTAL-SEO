@@ -37,7 +37,8 @@ COPY --from=builder /app/public ./public
 
 # Copy prisma files and the seeded database
 COPY --from=builder /app/prisma ./prisma
-COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+# Prisma v7 generates client to src/generated/prisma (not node_modules/.prisma)
+COPY --from=builder /app/src/generated/prisma ./src/generated/prisma
 COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 COPY --from=builder /app/node_modules/better-sqlite3 ./node_modules/better-sqlite3
 
