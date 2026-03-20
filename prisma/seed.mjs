@@ -23,11 +23,9 @@ db.exec('DELETE FROM PageContent');
 db.exec('DELETE FROM ContentItem');
 
 // ── Seed admin user ──────────────────────────────────────────────────
-// Default admin: admin@5dmemorycrystal.com / admin123
-// Using bcryptjs hash for "admin123"
-const adminHash = '$2b$10$RViHgf/stpI4rOY7dmDCIedkjBq4rG2aNhalrerEe.R1tJ.QEJw/i';
+const adminHash = '$2b$10$/7pC97h..po2B3AdgWbyPe5Sp582TU0unJMoiBuFnExinp4lwLMR6';
 db.prepare(`INSERT INTO User (id, email, name, passwordHash, role, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?, ?)`)
-  .run(cuid(), 'admin@5dmemorycrystal.com', 'Admin', adminHash, 'admin', now, now);
+  .run(cuid(), 'pavlovdrey@gmail.com', 'Andrii Pavlov', adminHash, 'admin', now, now);
 
 const insertCaseStudy = db.prepare(`
   INSERT INTO CaseStudy (id, title, slug, client, sector, excerpt, challenge, solution, outcome, content, imageUrl, imageAlt, published, featured, publishedAt, createdAt, updatedAt)
