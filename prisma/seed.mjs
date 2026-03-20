@@ -184,9 +184,9 @@ seedPageContent('home', 'trusted-by', {
 const benefits = [
   { icon: '/icons/no-data-loss.svg', title: 'No Data Loss', description: 'Hard drives fail. Cloud providers shut down. 5D crystal removes the risk of losing irreplaceable digital assets forever.' },
   { icon: '/icons/no-access-loss.svg', title: 'No Access Loss', description: 'Format obsolescence, account lockouts, service discontinuation — crystal data is readable with basic optics, no subscription needed.' },
-  { icon: '/icons/Legal & Compliance Ready.svg', title: 'Legal & Compliance Ready', description: 'Regulatory mandates require immutable, long-term records. Crystal provides tamper-proof storage that satisfies the strictest retention policies.' },
+  { icon: '/icons/legal-compliance-ready.svg', title: 'Legal & Compliance Ready', description: 'Regulatory mandates require immutable, long-term records. Crystal provides tamper-proof storage that satisfies the strictest retention policies.' },
   { icon: '/icons/cyber-security.svg', title: 'Cyber Security Proofed', description: 'Fully air-gapped, offline, and immune to ransomware. No network connection means zero attack surface for your most sensitive data.' },
-  { icon: '/icons/Environmental Performance.svg', title: 'Environmental Performance', description: 'Data centres consume 1-2% of global electricity. Crystal requires zero energy to maintain — write once, store forever with no carbon footprint.' },
+  { icon: '/icons/environmental-performance.svg', title: 'Environmental Performance', description: 'Data centres consume 1-2% of global electricity. Crystal requires zero energy to maintain — write once, store forever with no carbon footprint.' },
   { icon: '/icons/Ultimate Backup.svg', title: 'Ultimate Backup', description: 'The ultimate last line of defence. A crystal backup survives fires, floods, EMP, and electromagnetic interference that would destroy any conventional copy.' },
 ];
 benefits.forEach((b, i) => seedContentItem('benefit', b, i));
@@ -238,13 +238,13 @@ mediaQuotes.forEach((q, i) => seedContentItem('media-quote', q, i));
 
 // ── Partner Logos (Trusted By) ─────────────────────────────────────────
 const partnerLogos = [
-  { name: 'MoMA', logo: '/logos/moma.svg' },
+  { name: 'MoMA', logo: '/logos/MOMA.png' },
   { name: 'Astrolab', logo: '/logos/ASTROLAB.svg' },
-  { name: 'Uplift', logo: '/logos/uplift.svg' },
-  { name: 'GOG', logo: '/logos/gog.svg' },
-  { name: 'Soundsfun', logo: '/logos/soundsfun.svg' },
-  { name: 'Lifeship', logo: '/logos/lifeship.svg' },
-  { name: 'Boucheron', logo: '/logos/boucheron.svg' },
+  { name: 'Uplift', logo: '/logos/UPLIFT.png' },
+  { name: 'GOG', logo: '/logos/GOG.png' },
+  { name: 'Soundsfun', logo: '/logos/SOUNDSFUN.svg' },
+  { name: 'Lifeship', logo: '/logos/LIFESHIP.png' },
+  { name: 'Boucheron', logo: '/logos/BOUCHERON.png' },
 ];
 partnerLogos.forEach((p, i) => seedContentItem('partner-logo', p, i));
 

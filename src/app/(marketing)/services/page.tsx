@@ -157,7 +157,7 @@ const problems = [
     title: 'Legal & Compliance',
     description:
       'Regulatory mandates require immutable, long-term records. Crystal provides tamper-proof storage that satisfies the strictest policies.',
-    icon: '/icons/Legal & Compliance Ready.svg',
+    icon: '/icons/legal-compliance-ready.svg',
   },
   {
     title: 'Cyber Security',
@@ -169,7 +169,7 @@ const problems = [
     title: 'Environmental Performance',
     description:
       'Data centres consume 1–2% of global electricity. Crystal requires zero energy to maintain — write once, store forever.',
-    icon: '/icons/Environmental Performance.svg',
+    icon: '/icons/environmental-performance.svg',
   },
   {
     title: 'Backup & Redundancy',
