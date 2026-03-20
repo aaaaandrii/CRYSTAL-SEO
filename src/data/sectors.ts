@@ -2,11 +2,11 @@ import { Sector } from '@/types';
 
 export const sectors: Sector[] = [
   {
-    slug: 'personal',
-    title: 'Personal & Family',
-    description: 'Encode family photos, videos, and memories into a crystal keepsake — a permanent gift for generations to come.',
-    image: '/sectors/personal.png',
-    icon: '👨‍👩‍👧‍👦',
+    slug: 'space-tech',
+    title: 'Space Tech',
+    description: 'The 5D Memory Crystal engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation.',
+    image: '/sectors/Space.png',
+    icon: '🚀',
   },
   {
     slug: 'corporate',
@@ -16,11 +16,11 @@ export const sectors: Sector[] = [
     icon: '🏢',
   },
   {
-    slug: 'cultural',
-    title: 'Cultural Heritage',
-    description: "Partner with museums, libraries, and archives to preserve humanity's most irreplaceable documents and artworks.",
-    image: '/sectors/cultural.png',
-    icon: '🏛️',
+    slug: 'ip',
+    title: 'IP Protection',
+    description: 'Timestamped, tamper-proof records of intellectual property — patents, trade secrets, and creative works sealed in glass.',
+    image: '/sectors/ip.png',
+    icon: '🔒',
   },
   {
     slug: 'dna',
@@ -30,11 +30,11 @@ export const sectors: Sector[] = [
     icon: '🧬',
   },
   {
-    slug: 'government',
-    title: 'Government & Defence',
-    description: 'Classified and mission-critical data stored offline, EMP-hardened, and fully air-gapped — no network required, ever.',
-    image: '/sectors/Space.png',
-    icon: '🛡️',
+    slug: 'cultural',
+    title: 'Cultural Heritage',
+    description: "Partner with museums, libraries, and archives to preserve humanity's most irreplaceable documents and artworks.",
+    image: '/sectors/cultural.png',
+    icon: '🏛️',
   },
   {
     slug: 'luxury',
@@ -51,10 +51,10 @@ export const sectors: Sector[] = [
     icon: '₿',
   },
   {
-    slug: 'ip',
-    title: 'IP Protection',
-    description: 'Timestamped, tamper-proof records of intellectual property — patents, trade secrets, and creative works sealed in glass.',
-    image: '/sectors/ip.png',
-    icon: '🔒',
+    slug: 'personal',
+    title: 'Personal & Family',
+    description: 'Encode family photos, videos, and memories into a crystal keepsake — a permanent gift for generations to come.',
+    image: '/sectors/personal.png',
+    icon: '👨‍👩‍👧‍👦',
   },
 ];

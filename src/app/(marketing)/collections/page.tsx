@@ -210,21 +210,6 @@ export default function CollectionsPage() {
                     <p className="mt-2 flex-1 text-[15px] font-semibold leading-[20px] text-[#555]">
                       {category.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#5a72be] transition-colors group-hover:text-[#4d63a8]">
-                      View Collection
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </span>
                   </div>
                 </Link>
               </ScrollReveal>
@@ -252,7 +237,7 @@ export default function CollectionsPage() {
                 <Button href="/contact" size="lg">
                   Contact Us
                 </Button>
-                <Button href="/order" variant="outline" size="lg">
+                <Button href="/contact" variant="outline" size="lg">
                   See Pricing
                 </Button>
               </div>

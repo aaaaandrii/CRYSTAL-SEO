@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: '13.8B', unit: 'Years', label: 'Data Lifespan' },
+  { value: '10', unit: 'Years', label: 'Data Lifespan', sup: '20' },
   { value: '360', unit: 'TB', label: 'Per Disc Capacity' },
   { value: '1,000°C', unit: '', label: 'Heat Resistance' },
   { value: '30+', unit: '', label: 'Years of R&D' },
@@ -28,7 +28,7 @@ const contentSections = [
     title: 'The Five Dimensions',
     description:
       'Unlike conventional storage that records data in two dimensions, 5D optical storage encodes information across five separate dimensions within fused quartz glass. Three spatial dimensions (x, y, z layering) define the physical position of each data point within the crystal. Two additional optical dimensions are derived from birefringence — the slow axis orientation and retardance strength of self-assembled nanogratings — enabling vastly greater data density and permanence.',
-    image: '/images/swiss-facility.png',
+    image: '/technology/5d-storage.png',
     imageAlt: '5D encoding diagram showing five dimensions of data storage',
     bullets: null,
   },
@@ -38,7 +38,7 @@ const contentSections = [
     title: 'How Data is Written',
     description:
       'A femtosecond laser creates self-assembled nanogratings within fused silica glass. Each pit is less than 200nm in size and stores 8 bits (one byte) of data. The ultrashort laser pulses modify the glass at the nanoscale without cracking or damaging the surrounding material, enabling precise, high-density inscription.',
-    image: '/sectors/ip.png',
+    image: '/technology/how-data-is-written.JPG',
     imageAlt: 'Femtosecond laser writing process creating nanogratings in quartz glass',
     bullets: [
       'Femtosecond laser inscription',
@@ -48,48 +48,18 @@ const contentSections = [
     ],
   },
   {
-    id: 'dna',
-    eyebrow: 'Genomics',
-    title: 'DNA & Genomic Storage',
-    description:
-      'Entire human genomes can be encoded into a single crystal, preserving the biological blueprint of life for billions of years. In partnership with LifeShip, biological data sets are inscribed into fused quartz glass — making permanent what was once perishable. From medical research archives to personal genome records, crystal storage ensures that critical biological data endures far beyond the limits of conventional media.',
-    image: '/sectors/dna.png',
-    imageAlt: 'DNA data encoded into a 5D Memory Crystal',
-    bullets: [
-      'Complete human genome storage',
-      'Biological dataset archival',
-      'Billion-year preservation guarantee',
-      'Partnership with LifeShip',
-    ],
-  },
-  {
     id: 'environment',
     eyebrow: 'Sustainability',
     title: 'Environmental Sustainability',
     description:
       'Global data centres consume 1–2% of the world\'s electricity and generate significant carbon emissions. 5D crystal storage requires zero ongoing energy once data has been written. Write once, store forever — with no cooling infrastructure, no hardware refresh cycles, and no recurring energy cost. A fundamentally more sustainable approach to long-term data preservation.',
-    image: '/sectors/corporate.png',
+    image: '/technology/enviromental.png',
     imageAlt: 'Sustainable data storage with zero energy maintenance',
     bullets: [
       'Zero energy maintenance',
       'No cooling infrastructure required',
       'No hardware refresh cycles',
       'Reduced carbon footprint vs cloud',
-    ],
-  },
-  {
-    id: 'luxury-crypto',
-    eyebrow: 'Premium Applications',
-    title: 'Luxury, Jewellery & Crypto',
-    description:
-      'Beyond archival, 5D crystal functions as a luxury object in its own right. Bespoke data jewellery encodes personal meaning into wearable, permanent form. For the crypto community, crystal offers the ultimate cold storage — seed phrases and wallet keys inscribed into glass that is offline, unhackable, and indestructible. Commemorative and collectible pieces combine artistry with embedded authentication data.',
-    image: '/sectors/luxury.png',
-    imageAlt: 'Luxury crystal jewellery and crypto cold storage solutions',
-    bullets: [
-      'Bespoke crystal jewellery',
-      'Crypto cold storage (seed phrases, keys)',
-      'Commemorative luxury pieces',
-      'Embedded authentication data',
     ],
   },
 ];
@@ -124,8 +94,11 @@ export default function TechnologyPage() {
               >
                 <p className="text-[36px] font-bold leading-none tracking-[-1px] text-[#1a1a1a] md:text-[42px]">
                   {stat.value}
+                  {'sup' in stat && stat.sup && (
+                    <sup className="relative -top-[20px] text-[0.5em]">{stat.sup}</sup>
+                  )}
                   {stat.unit && (
-                    <span className="ml-1 text-[18px] font-semibold text-[#5a72be] md:text-[20px]">
+                    <span className="ml-1 text-[36px] font-bold text-[#1a1a1a] md:text-[42px]">
                       {stat.unit}
                     </span>
                   )}
@@ -161,13 +134,13 @@ export default function TechnologyPage() {
                   direction={isEven ? 'left' : 'right'}
                   className="w-full flex-1"
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[22px]">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-[22px]">
                     <Image
                       src={section.image}
                       alt={section.imageAlt}
                       fill
+                      unoptimized
                       className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </ScrollReveal>
@@ -226,7 +199,7 @@ export default function TechnologyPage() {
                 own.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button href="/order" size="lg">
+                <Button href="/contact" size="lg">
                   Order Your Crystal
                 </Button>
                 <Button href="/collections" variant="outline" size="lg">

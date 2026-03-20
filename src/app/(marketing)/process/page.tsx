@@ -50,7 +50,7 @@ const steps = [
       'Air-gapped receiving environment — no internet exposure',
       'Data securely erased from all transfer media after encoding',
     ],
-    image: '/sectors/corporate.png',
+    image: '/process/data-transfer.JPG.webp',
     imageAlt: 'Encrypted upload and secure data transfer process',
   },
   {
@@ -65,7 +65,7 @@ const steps = [
       'Cryptographic hash of the source data for independent verification',
       'Physical and digital certificate formats available',
     ],
-    image: '/sectors/ip.png',
+    image: '/process/certificate.JPG',
     imageAlt: 'Certificate of Authority document for 5D Memory Crystal',
   },
   {
@@ -80,7 +80,7 @@ const steps = [
       'Verification report included with your Certificate of Authority',
       'Failed verifications trigger automatic re-encoding',
     ],
-    image: '/images/swiss-facility.png',
+    image: '/process/data-verification.jpg.webp',
     imageAlt: 'Data verification and quality check process',
   },
   {
@@ -95,7 +95,7 @@ const steps = [
       'Secure return shipping and handling',
       'Future-proofed — visual decoding instructions encoded on the crystal itself',
     ],
-    image: '/sectors/dna.png',
+    image: '/process/reading-device.JPG.webp',
     imageAlt: 'Crystal reader and optical data retrieval equipment',
   },
 ];
@@ -202,13 +202,13 @@ export default function ProcessPage() {
                   direction={isEven ? 'left' : 'right'}
                   className="w-full flex-1"
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[22px]">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-[22px]">
                     <Image
                       src={step.image}
                       alt={step.imageAlt}
                       fill
+                      unoptimized
                       className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </ScrollReveal>

@@ -24,7 +24,7 @@ export function Header() {
                 muted
                 loop
                 playsInline
-                className="h-8 w-8 shrink-0 object-contain mix-blend-multiply"
+                className="h-7 w-7 shrink-0 object-contain mix-blend-multiply"
               >
                 <source src="/videos/logo-symbol.mp4" type="video/mp4" />
               </video>
@@ -32,7 +32,7 @@ export function Header() {
               <img
                 src="/crystal-logo.svg"
                 alt="5D Memory Crystal"
-                className="h-[18px] w-auto sm:h-[22px]"
+                className="h-[22px] w-auto translate-y-[1.5px] sm:h-[26px]"
               />
             </Link>
 

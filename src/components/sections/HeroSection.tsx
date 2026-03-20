@@ -14,29 +14,27 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="w-full shrink-0 text-center lg:w-[500px] lg:text-left"
+            className="w-full shrink-0 text-center lg:w-[550px] lg:text-left"
           >
             {/* Badges */}
-            <div className="mb-2.5 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-              <span className="inline-flex items-center gap-[7px] text-[11px] font-medium leading-none tracking-[-0.03em] text-black/40">
-                <Image src="/icons/badge-swiss.svg" alt="" width={21} height={18} className="shrink-0" aria-hidden />
+            <div className="mb-2.5 flex flex-nowrap items-center justify-center gap-2 sm:gap-4 lg:justify-start">
+              <span className="inline-flex items-center gap-[5px] text-[9px] font-medium leading-none tracking-[-0.03em] text-black/40 sm:gap-[7px] sm:text-[11px]">
+                <Image src="/icons/badge-swiss.svg" alt="" width={21} height={18} className="h-[14px] w-auto shrink-0 sm:h-[18px]" aria-hidden />
                 Made in Switzerland
               </span>
-              <span className="inline-flex items-center gap-[7px] text-[11px] font-medium leading-none tracking-[-0.03em] text-black/40">
-                <Image src="/icons/badge-guinness.svg" alt="" width={14} height={13} className="shrink-0" aria-hidden />
+              <span className="inline-flex items-center gap-[5px] text-[9px] font-medium leading-none tracking-[-0.03em] text-black/40 sm:gap-[7px] sm:text-[11px]">
+                <Image src="/icons/badge-guinness.svg" alt="" width={14} height={13} className="h-[11px] w-auto shrink-0 sm:h-[13px]" aria-hidden />
                 Guinness World Record
               </span>
-              <span className="inline-flex items-center gap-[7px] text-[11px] font-medium leading-none tracking-[-0.03em] text-black/40">
-                <Image src="/icons/badge-secure.svg" alt="" width={17} height={18} className="shrink-0" aria-hidden />
+              <span className="inline-flex items-center gap-[5px] text-[9px] font-medium leading-none tracking-[-0.03em] text-black/40 sm:gap-[7px] sm:text-[11px]">
+                <Image src="/icons/badge-secure.svg" alt="" width={17} height={18} className="h-[14px] w-auto shrink-0 sm:h-[18px]" aria-hidden />
                 Private and Secure
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-[36px] font-bold leading-none tracking-[-0.02em] text-[#1a1a1a] sm:text-[44px] lg:text-[49px]">
-              The Most Durable
-              <br />
-              Storage in the World
+            <h1 className="text-[32px] font-bold leading-none tracking-[-0.02em] text-[#1a1a1a] sm:text-[44px] lg:text-[53px]">
+              The Most Durable Storage in the World<sup className="text-[0.5em]">*</sup>
             </h1>
 
             {/* Asterisk + Footnote */}
@@ -62,7 +60,7 @@ export default function HeroSection() {
               className="mt-5 flex justify-center gap-2 lg:justify-start"
             >
               <Link
-                href="/order"
+                href="/contact"
                 className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#5a72be] bg-[#5a72be] text-[12px] font-semibold text-white transition-all hover:bg-[#4d63a8]"
               >
                 Order Crystal
@@ -93,7 +91,7 @@ export default function HeroSection() {
                 preload="auto"
                 className="h-auto w-full mix-blend-multiply"
               >
-                <source src="/videos/hero-main-video.mp4" type="video/mp4" />
+                <source src="/videos/hero-main-video-upd.mp4" type="video/mp4" />
               </video>
             </div>
 

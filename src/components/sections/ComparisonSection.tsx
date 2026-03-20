@@ -11,19 +11,19 @@ const tableRows = [
 ];
 
 const lifespanBars = [
-  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000 YEARS', filled: true },
-  { name: 'Silica Disc', years: '100,000,000 YEARS', filled: false, stripWidth: 10 },
-  { name: 'Magnetic Tape (LTO)', years: '30 YEARS', filled: false, stripWidth: 1 },
-  { name: 'SSD', years: '5-10 YEARS', filled: false, stripWidth: 1 },
-  { name: 'HDD', years: '3-5 YEARS', filled: false, stripWidth: 1 },
+  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000 YEARS', yearsMobile: '100Q+ YRS', filled: true },
+  { name: 'Silica Disc', years: '100,000,000 YEARS', yearsMobile: '100M YRS', filled: false, stripWidth: 10 },
+  { name: 'Magnetic Tape (LTO)', years: '30 YEARS', yearsMobile: '30 YRS', filled: false, stripWidth: 1 },
+  { name: 'SSD', years: '5-10 YEARS', yearsMobile: '5-10 YRS', filled: false, stripWidth: 1 },
+  { name: 'HDD', years: '3-5 YEARS', yearsMobile: '3-5 YRS', filled: false, stripWidth: 1 },
 ];
 
 export default function ComparisonSection() {
   return (
-    <section id="comparison" className="bg-black py-20 md:py-28">
+    <section id="comparison" className="overflow-x-hidden bg-black py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-[50px]">
         {/* Split layout: Text left, Table right */}
-        <div className="flex flex-col items-start gap-12 lg:flex-row lg:gap-8">
+        <div className="flex min-w-0 flex-col items-start gap-12 lg:flex-row lg:gap-8">
           {/* Left: Heading */}
           <ScrollReveal>
             <div className="w-full shrink-0 lg:w-[500px]">
@@ -40,31 +40,33 @@ export default function ComparisonSection() {
           </ScrollReveal>
 
           {/* Right: Table */}
-          <ScrollReveal delay={0.15}>
-            <div className="w-full overflow-x-auto rounded-[14px] border border-[#444]">
-              <table className="w-full min-w-[500px] border-collapse text-left">
-                <thead>
-                  <tr className="bg-[#5a72be]">
-                    <th className="px-5 py-4 text-[17px] font-bold leading-none text-white">Feature</th>
-                    <th className="px-5 py-4 text-[17px] font-bold leading-none text-white">5D Crystal</th>
-                    <th className="px-5 py-4 text-[17px] font-bold leading-none text-white">HDD / SSD</th>
-                    <th className="px-5 py-4 text-[17px] font-bold leading-none text-white">Tape / Cloud</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {tableRows.map((row, index) => (
-                    <tr
-                      key={row.feature}
-                      className={index < tableRows.length - 1 ? 'border-b border-[#444]' : ''}
-                    >
-                      <td className="px-5 py-4 text-[17px] font-semibold leading-none text-white">{row.feature}</td>
-                      <td className="px-5 py-4 text-[17px] font-bold leading-none text-white">{row.crystal}</td>
-                      <td className="px-5 py-4 text-[17px] font-semibold leading-none text-[#888]">{row.hdd}</td>
-                      <td className="px-5 py-4 text-[17px] font-semibold leading-none text-[#888]">{row.tape}</td>
+          <ScrollReveal delay={0.15} className="min-w-0 w-full">
+            <div className="overflow-hidden rounded-[14px] border border-[#444]">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[360px] border-collapse text-left">
+                  <thead>
+                    <tr className="bg-[#5a72be]">
+                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">Feature</th>
+                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">5D Crystal</th>
+                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">HDD / SSD</th>
+                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">Tape / Cloud</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {tableRows.map((row, index) => (
+                      <tr
+                        key={row.feature}
+                        className={index < tableRows.length - 1 ? 'border-b border-[#444]' : ''}
+                      >
+                        <td className="px-3 py-3 text-[13px] font-semibold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.feature}</td>
+                        <td className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.crystal}</td>
+                        <td className="px-3 py-3 text-[13px] font-semibold leading-tight text-[#888] sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.hdd}</td>
+                        <td className="px-3 py-3 text-[13px] font-semibold leading-tight text-[#888] sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.tape}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -75,7 +77,7 @@ export default function ComparisonSection() {
             {lifespanBars.map((bar) => (
               <div
                 key={bar.name}
-                className={`relative flex items-center justify-between overflow-hidden rounded-[20px] px-8 py-7 ${
+                className={`relative flex items-center justify-between overflow-hidden rounded-[12px] px-4 py-4 sm:rounded-[20px] sm:px-8 sm:py-7 ${
                   bar.filled
                     ? 'bg-[#5a72be]'
                     : 'bg-[#141425]'
@@ -88,11 +90,12 @@ export default function ComparisonSection() {
                     style={{ width: `${('stripWidth' in bar && bar.stripWidth) || 5}px` }}
                   />
                 )}
-                <span className="relative z-10 text-[28px] font-bold leading-none text-white sm:text-[34px] lg:text-[42px]">
+                <span className="relative z-10 text-[16px] font-bold leading-none text-white sm:text-[28px] lg:text-[42px]">
                   {bar.name}
                 </span>
-                <span className="relative z-10 text-[14px] font-bold leading-none tracking-wider text-white sm:text-[17px] lg:text-[20px]">
-                  {bar.years}
+                <span className="relative z-10 text-[10px] font-bold leading-none tracking-wider text-white sm:text-[14px] lg:text-[20px]">
+                  <span className="sm:hidden">{'yearsMobile' in bar ? bar.yearsMobile : bar.years}</span>
+                  <span className="hidden sm:inline">{bar.years}</span>
                 </span>
               </div>
             ))}

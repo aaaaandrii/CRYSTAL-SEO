@@ -7,7 +7,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SITE_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'Sectors',
   description:
     'From personal keepsakes to enterprise-grade archival, luxury goods, and blockchain verification — every service built on the same indestructible foundation.',
   alternates: {
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    slug: 'personal',
-    eyebrow: 'Personal & Family',
-    title: 'Memories That Last Forever',
+    slug: 'space-tech',
+    eyebrow: 'Space Tech',
+    title: 'Built for the Final Frontier',
     description:
-      'Family photos, wedding videos, letters, and personal milestones encoded into a crystal keepsake — a permanent gift that outlasts every hard drive, cloud account, and social media platform. Whether it\'s a first birthday or a lifetime archive, your memories are preserved beyond the reach of data loss, format obsolescence, or digital decay.',
-    image: '/sectors/personal.png',
-    imageAlt: 'Personal family memories preserved in 5D crystal',
+      'The 5D Memory Crystal is engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation. Whether aboard satellites, deep-space probes, or lunar installations, crystal storage ensures mission-critical data survives where no conventional medium can.',
+    image: '/sectors/Space.png',
+    imageAlt: 'Space technology grade crystal data storage',
     bullets: [
-      'Photos, videos, documents, and audio files',
-      'Presentation case included as standard',
-      'Perfect as a gift or heirloom',
-      'No subscription or maintenance required',
+      'Radiation-resistant and vacuum-stable',
+      'Survives extreme temperature swings',
+      'Ideal for satellites and deep-space missions',
+      'No power required for data retention',
     ],
   },
   {
@@ -49,18 +49,18 @@ const services = [
     ],
   },
   {
-    slug: 'cultural',
-    eyebrow: 'Cultural Heritage',
-    title: 'Preserving Civilisation',
+    slug: 'ip',
+    eyebrow: 'IP Protection',
+    title: 'Proof That Can\'t Be Altered',
     description:
-      'Partner with museums, libraries, national archives, and UNESCO sites to preserve humanity\'s most irreplaceable documents and artworks. From the Magna Carta to the Universal Declaration of Human Rights, we\'ve encoded some of the world\'s most significant cultural artefacts into 5D crystal — ensuring they survive for billions of years.',
-    image: '/sectors/cultural.png',
-    imageAlt: 'Cultural heritage preservation with 5D crystal technology',
+      'Timestamped, tamper-proof records of intellectual property — patents, trade secrets, source code, and creative works sealed in glass. Crystal provides irrefutable proof of existence at a specific point in time, creating a permanent record that stands up in any jurisdiction and cannot be backdated, altered, or destroyed.',
+    image: '/sectors/ip.png',
+    imageAlt: 'Intellectual property protection and timestamping',
     bullets: [
-      'UNESCO and national archive partnerships',
-      'Magna Carta and UDHR already encoded',
-      'Museum-grade presentation cases',
-      'Full provenance and Certificate of Authority',
+      'Tamper-proof timestamp of creation',
+      'Patents, trade secrets, and source code',
+      'Admissible as evidence in legal proceedings',
+      'Cannot be backdated or altered',
     ],
   },
   {
@@ -79,18 +79,18 @@ const services = [
     ],
   },
   {
-    slug: 'government',
-    eyebrow: 'Government & Defence',
-    title: 'Mission-Critical, Offline, Permanent',
+    slug: 'cultural',
+    eyebrow: 'Cultural Heritage',
+    title: 'Preserving Civilisation',
     description:
-      'Classified and mission-critical data stored fully offline, EMP-hardened, and air-gapped. No network connection means zero attack surface — ever. Crystal storage meets the needs of government agencies and defence organisations requiring the highest levels of data security and permanence, with full chain-of-custody from our secure Swiss facility.',
-    image: '/sectors/Space.png',
-    imageAlt: 'Government and defence grade secure data storage',
+      'Partner with museums, libraries, national archives, and UNESCO sites to preserve humanity\'s most irreplaceable documents and artworks. From the Magna Carta to the Universal Declaration of Human Rights, we\'ve encoded some of the world\'s most significant cultural artefacts into 5D crystal — ensuring they survive for billions of years.',
+    image: '/sectors/cultural.png',
+    imageAlt: 'Cultural heritage preservation with 5D crystal technology',
     bullets: [
-      'EMP-hardened and radiation-resistant',
-      'Fully air-gapped — no network required',
-      'Swiss-manufactured with full chain of custody',
-      'Meets classified data handling requirements',
+      'UNESCO and national archive partnerships',
+      'Magna Carta and UDHR already encoded',
+      'Museum-grade presentation cases',
+      'Full provenance and Certificate of Authority',
     ],
   },
   {
@@ -124,18 +124,18 @@ const services = [
     ],
   },
   {
-    slug: 'ip',
-    eyebrow: 'IP Protection',
-    title: 'Proof That Can\'t Be Altered',
+    slug: 'personal',
+    eyebrow: 'Personal & Family',
+    title: 'Memories That Last Forever',
     description:
-      'Timestamped, tamper-proof records of intellectual property — patents, trade secrets, source code, and creative works sealed in glass. Crystal provides irrefutable proof of existence at a specific point in time, creating a permanent record that stands up in any jurisdiction and cannot be backdated, altered, or destroyed.',
-    image: '/sectors/ip.png',
-    imageAlt: 'Intellectual property protection and timestamping',
+      'Family photos, wedding videos, letters, and personal milestones encoded into a crystal keepsake — a permanent gift that outlasts every hard drive, cloud account, and social media platform. Whether it\'s a first birthday or a lifetime archive, your memories are preserved beyond the reach of data loss, format obsolescence, or digital decay.',
+    image: '/sectors/personal.png',
+    imageAlt: 'Personal family memories preserved in 5D crystal',
     bullets: [
-      'Tamper-proof timestamp of creation',
-      'Patents, trade secrets, and source code',
-      'Admissible as evidence in legal proceedings',
-      'Cannot be backdated or altered',
+      'Photos, videos, documents, and audio files',
+      'Presentation case included as standard',
+      'Perfect as a gift or heirloom',
+      'No subscription or maintenance required',
     ],
   },
 ];
@@ -214,7 +214,7 @@ export default function ServicesPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#888]">
-              Services
+              Sectors
             </p>
             <h1 className="text-[40px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] lg:text-[60px]">
               Storage Solutions for Every Need
@@ -265,13 +265,13 @@ export default function ServicesPage() {
                   direction={isEven ? 'left' : 'right'}
                   className="w-full flex-1"
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[22px]">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-[22px]">
                     <Image
                       src={svc.image}
                       alt={svc.imageAlt}
                       fill
+                      unoptimized
                       className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </ScrollReveal>
@@ -305,7 +305,7 @@ export default function ServicesPage() {
                     </ul>
 
                     <div className="mt-8">
-                      <Button href="/order" size="lg">
+                      <Button href="/contact" size="lg">
                         Get Started
                       </Button>
                     </div>
@@ -416,7 +416,7 @@ export default function ServicesPage() {
                 that will outlast every other storage medium on Earth.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button href="/order" size="lg">
+                <Button href="/contact" size="lg">
                   Order Your Crystal
                 </Button>
                 <Button href="/schedule-demo" variant="outline" size="lg">

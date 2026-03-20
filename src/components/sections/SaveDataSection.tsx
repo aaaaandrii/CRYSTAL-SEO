@@ -50,14 +50,14 @@ export default function SaveDataSection() {
           className="mt-8 flex gap-2"
         >
           <Link
-            href="/order"
-            className="inline-flex h-[80px] w-[187px] items-center justify-center rounded-full border border-[#5a72be] bg-[#5a72be] text-[15px] font-semibold leading-none text-white transition-all hover:bg-[#4d63a8]"
+            href="/contact"
+            className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#5a72be] bg-[#5a72be] text-[12px] font-semibold text-white transition-all hover:bg-[#4d63a8]"
           >
             Order Crystal
           </Link>
           <Link
             href="/schedule-demo"
-            className="inline-flex h-[80px] w-[187px] items-center justify-center rounded-full border border-[#5a72be] bg-[rgba(81,52,227,0.03)] text-[15px] font-semibold leading-none text-[#5a72be] transition-all hover:bg-[#5a72be]/10"
+            className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#5a72be] bg-[rgba(81,52,227,0.03)] text-[12px] font-semibold text-[#5a72be] transition-all hover:bg-[#5a72be]/10"
           >
             Schedule a Call
           </Link>

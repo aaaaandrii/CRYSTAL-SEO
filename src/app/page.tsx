@@ -11,6 +11,7 @@ import SwissMadeSection from '@/components/sections/SwissMadeSection';
 import SpaceProvenSection from '@/components/sections/SpaceProvenSection';
 import NewsSection from '@/components/sections/NewsSection';
 import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
+import CTASection from '@/components/sections/CTASection';
 
 export default function HomePage() {
   return (
@@ -31,6 +32,7 @@ export default function HomePage() {
       <Suspense fallback={<NewsSkeleton />}>
         <NewsSection />
       </Suspense>
+      <CTASection />
     </>
   );
 }

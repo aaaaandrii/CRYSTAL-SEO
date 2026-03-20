@@ -5,16 +5,16 @@ import { motion } from 'framer-motion';
 
 const mediaQuotes = [
   {
-    quote: 'Data storage that could outlast civilisation itself.',
-    source: 'BBC',
-  },
-  {
-    quote: 'Data storage that could outlast civilisation itself.',
+    quote: 'Data storage that could outlast civilisation itself',
     source: 'WIRED',
   },
   {
-    quote: 'Data storage that could outlast civilisation itself.',
-    source: 'CNN',
+    quote: 'Most durable data storage material in the world',
+    source: 'Guinness World Records',
+  },
+  {
+    quote: 'Groundbreaking university research project',
+    source: 'The Telegraph',
   },
 ];
 
@@ -58,7 +58,7 @@ export default function RecognitionBar() {
 
                 {/* Quote text */}
                 <blockquote className="w-[150px] shrink-0 px-1 text-center text-[17px] font-bold leading-none tracking-[-0.5px] text-[#e3e7ee] sm:w-[200px] sm:text-[22px] lg:w-[220px] lg:text-[26px]">
-                  &ldquo;{item.quote}&rdquo;
+                  {item.quote}
                 </blockquote>
 
                 {/* Right laurel */}

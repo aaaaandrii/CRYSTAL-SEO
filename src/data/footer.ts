@@ -11,13 +11,13 @@ export const footerColumns: FooterColumn[] = [
     ],
   },
   {
-    title: 'Services',
+    title: 'Sectors',
     links: [
       { label: 'Personal & Family', href: '/services#personal' },
       { label: 'Corporate & Legal', href: '/services#corporate' },
       { label: 'Cultural Heritage', href: '/services#cultural' },
       { label: 'DNA & Genomics', href: '/services#dna' },
-      { label: 'Government & Defence', href: '/services#government' },
+      { label: 'Space Tech', href: '/services#space-tech' },
       { label: 'Luxury & Jewellery', href: '/services#luxury' },
       { label: 'Crypto & Blockchain', href: '/services#crypto' },
       { label: 'IP Protection', href: '/services#ip' },
