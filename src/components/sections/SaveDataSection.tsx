@@ -25,7 +25,7 @@ export default function SaveDataSection({ content }: { content?: Partial<SaveDat
   const c = { ...defaultContent, ...content };
 
   return (
-    <section id="save-data" className="relative overflow-hidden bg-[#e3e7ee]">
+    <section id="save-data" className="relative overflow-hidden bg-white">
       <div className="absolute left-1/2 top-0 h-[1100px] w-[1200px] -translate-x-1/2 lg:h-[1568px] lg:w-[1687px]">
         <video
           autoPlay
