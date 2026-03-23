@@ -44,7 +44,17 @@ export default async function SectorsSection() {
               >
                 <div className="relative transition-transform duration-800 [transition-timing-function:cubic-bezier(0.95,0,0.05,1)] [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front */}
-                  <div className="flex min-h-[320px] flex-col justify-between rounded-[22px] bg-white px-6 py-8 [backface-visibility:hidden]">
+                  <div className="flex min-h-[320px] flex-col gap-4 rounded-[22px] bg-white p-6 lg:justify-between lg:gap-0 [backface-visibility:hidden]">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-[16px] lg:hidden">
+                      <Image
+                        src={sector.image}
+                        alt={sector.title}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                      />
+                    </div>
                     <div>
                       <h3 className="text-[21px] font-bold leading-none tracking-[-0.47px] text-[#1a1a1a] lg:text-[27px]">
                         {sector.title}

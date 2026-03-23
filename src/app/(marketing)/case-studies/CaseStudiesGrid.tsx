@@ -73,7 +73,7 @@ export default function CaseStudiesGrid({
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <p className="text-[15px] font-bold leading-[21px] text-[#1a1a1a] opacity-50">
+              <p className="text-xs font-semibold uppercase text-[#1a1a1a]/50">
                 {capitalize(study.sector)}
               </p>
               <h2 className="text-[31px] font-semibold leading-[31px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">

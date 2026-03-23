@@ -74,18 +74,12 @@ export default async function CaseStudiesSection() {
         {/* View All Cases button with arrows */}
         <ScrollReveal delay={0.4}>
           <div className="mt-12 flex items-center justify-center gap-6">
-            <svg width="35" height="8" viewBox="0 0 35 8" fill="none" className="text-[#2a2a2a]">
-              <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM35 3.5L1 3.5V4.5L35 4.5V3.5Z" fill="currentColor"/>
-            </svg>
             <Link
               href={content.ctaHref}
               className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#2a2a2a] text-[12px] font-semibold text-black transition-all hover:bg-black hover:text-white"
             >
               {content.ctaText}
             </Link>
-            <svg width="35" height="8" viewBox="0 0 35 8" fill="none" className="text-[#2a2a2a]">
-              <path d="M34.3536 4.35355C34.5488 4.15829 34.5488 3.84171 34.3536 3.64645L31.1716 0.464466C30.9763 0.269204 30.6597 0.269204 30.4645 0.464466C30.2692 0.659728 30.2692 0.976311 30.4645 1.17157L33.2929 4L30.4645 6.82843C30.2692 7.02369 30.2692 7.34027 30.4645 7.53553C30.6597 7.7308 30.9763 7.7308 31.1716 7.53553L34.3536 4.35355ZM0 4.5H34V3.5H0V4.5Z" fill="currentColor"/>
-            </svg>
           </div>
         </ScrollReveal>
       </div>

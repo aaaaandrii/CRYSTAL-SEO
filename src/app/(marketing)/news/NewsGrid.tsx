@@ -92,14 +92,14 @@ export default function NewsGrid({ articles }: { articles: Article[] }) {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <span
-                    className={`absolute left-4 top-4 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] ${getTagColor(article.tags)}`}
+                    className={`absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-semibold uppercase ${getTagColor(article.tags)}`}
                   >
                     {getTagLabel(article.tags)}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   {article.publishedAt && (
-                    <p className="text-[13px] font-semibold text-[#888]">
+                    <p className="text-xs font-semibold uppercase text-[#888]">
                       {formatDate(article.publishedAt)}
                     </p>
                   )}
@@ -109,20 +109,8 @@ export default function NewsGrid({ articles }: { articles: Article[] }) {
                   <p className="mt-3 flex-1 text-[14px] font-semibold leading-none text-[#555]">
                     {article.excerpt}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#5a72be] transition-colors group-hover:text-[#4d63a8]">
-                    Read More
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
+                  <span className="mt-4 text-[8px] font-semibold uppercase leading-[16px] text-[#1a1a1a] transition-colors group-hover:text-[#5a72be]">
+                    Read more →
                   </span>
                 </div>
               </Link>
