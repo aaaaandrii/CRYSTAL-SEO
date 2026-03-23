@@ -5,7 +5,7 @@ import { getPageContent } from '@/lib/content';
 export default async function CTASection() {
   const content = await getPageContent('home', 'cta', {
     leftLabel: 'Interested in Buying?',
-    leftHeading: 'Order directly from here or contact us',
+    leftHeading: 'Feel free to contact us to discuss your order.',
     leftDescription: 'Choose your crystal, upload your data, and receive a permanent record engineered to last billions of years. No subscription, no maintenance — just secure, Swiss-made storage delivered to your door.',
     leftCta1Text: 'Order',
     leftCta1Href: '/contact',
@@ -29,7 +29,7 @@ export default async function CTASection() {
             <p className="mb-6 text-xs font-semibold uppercase text-[#1a1a1a]/70">
               {content.leftLabel}
             </p>
-            <h2 className="mb-8 min-h-[130px] text-[36px] font-bold leading-[0.9] tracking-tight text-[#1a1a1a] sm:text-[44px] lg:text-[52px]">
+            <h2 className="mb-10 text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
               {content.leftHeading}
             </h2>
             <p className="mb-10 max-w-[460px] text-[14px] font-semibold leading-none text-[#1a1a1a]/70">
@@ -58,7 +58,7 @@ export default async function CTASection() {
             <p className="mb-6 text-xs font-semibold uppercase text-white/70">
               {content.rightLabel}
             </p>
-            <h2 className="mb-8 min-h-[130px] text-[36px] font-bold leading-[0.9] tracking-tight text-white sm:text-[44px] lg:text-[52px]">
+            <h2 className="mb-10 text-[32px] font-bold leading-none tracking-tight text-white sm:text-[38px] lg:text-[42px]">
               {content.rightHeading}
             </h2>
             <p className="mb-10 max-w-[460px] text-[14px] font-semibold leading-none text-white/70">
