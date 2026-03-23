@@ -52,7 +52,7 @@ export default async function CaseStudiesSection() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <p className="text-[15px] font-bold leading-[21px] text-[#1a1a1a] opacity-50">
+                <p className="text-xs font-semibold uppercase text-[#1a1a1a]/50">
                   {study.sector
                     ? study.sector.charAt(0).toUpperCase() + study.sector.slice(1)
                     : 'General'}
@@ -79,7 +79,7 @@ export default async function CaseStudiesSection() {
             </svg>
             <Link
               href={content.ctaHref}
-              className="inline-flex h-[74px] w-[213px] items-center justify-center rounded-[52px] border border-[#2a2a2a] text-[8px] font-semibold uppercase text-black transition-all hover:bg-black hover:text-white"
+              className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-[#2a2a2a] text-[12px] font-semibold text-black transition-all hover:bg-black hover:text-white"
             >
               {content.ctaText}
             </Link>

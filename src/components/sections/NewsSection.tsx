@@ -82,7 +82,7 @@ export default async function NewsSection() {
             </svg>
             <Link
               href={content.ctaHref}
-              className="inline-flex h-[74px] w-[213px] items-center justify-center rounded-[52px] border border-white text-[8px] font-semibold uppercase text-white transition-all hover:bg-white hover:text-black"
+              className="inline-flex h-[65px] w-[152px] items-center justify-center rounded-full border border-white text-[12px] font-semibold text-white transition-all hover:bg-white hover:text-black"
             >
               {content.ctaText}
             </Link>

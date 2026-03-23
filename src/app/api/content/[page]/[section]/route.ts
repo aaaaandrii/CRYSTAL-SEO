@@ -34,19 +34,28 @@ export async function PUT(
   const { page, section } = await params;
   const body = await request.json();
 
-  const row = await prisma.pageContent.upsert({
-    where: { page_section: { page, section } },
-    update: { content: JSON.stringify(body.content) },
-    create: {
-      page,
-      section,
-      content: JSON.stringify(body.content),
-    },
-  });
+  try {
+    const row = await prisma.pageContent.upsert({
+      where: { page_section: { page, section } },
+      update: { content: JSON.stringify(body.content) },
+      create: {
+        page,
+        section,
+        content: JSON.stringify(body.content),
+      },
+    });
 
-  // Revalidate the affected page
-  const pagePath = page === 'home' ? '/' : `/${page}`;
-  revalidatePath(pagePath);
+    // Revalidate the affected page
+    try {
+      const pagePath = page === 'home' ? '/' : `/${page}`;
+      revalidatePath(pagePath);
+    } catch {
+      // revalidatePath may fail in certain contexts — non-fatal
+    }
 
-  return NextResponse.json({ page, section, content: JSON.parse(row.content) });
+    return NextResponse.json({ page, section, content: JSON.parse(row.content) });
+  } catch (err) {
+    console.error('Content save error:', err);
+    return NextResponse.json({ error: 'Failed to save' }, { status: 500 });
+  }
 }
