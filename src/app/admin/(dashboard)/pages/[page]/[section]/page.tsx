@@ -88,10 +88,15 @@ export default function BlockEditorPage({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ content }),
       });
-      setMessage(res.ok ? 'saved' : 'Failed to save');
-      if (res.ok) setTimeout(() => setMessage(''), 3000);
-    } catch {
-      setMessage('Failed to save');
+      if (res.ok) {
+        setMessage('saved');
+        setTimeout(() => setMessage(''), 3000);
+      } else {
+        const errData = await res.json().catch(() => ({}));
+        setMessage(`Failed: ${res.status} — ${errData.error || 'Unknown'}${errData.details ? ': ' + errData.details : ''}`);
+      }
+    } catch (err) {
+      setMessage(`Failed: ${String(err)}`);
     } finally {
       setSaving(false);
     }

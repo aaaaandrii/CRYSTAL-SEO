@@ -26,13 +26,26 @@ export async function PUT(
   request: Request,
   { params }: { params: Promise<{ page: string; section: string }> }
 ) {
-  const session = await auth();
+  let session;
+  try {
+    session = await auth();
+  } catch (err) {
+    console.error('Auth error in content PUT:', err);
+    return NextResponse.json({ error: 'Auth error', details: String(err) }, { status: 500 });
+  }
+
   if (!session?.user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   const { page, section } = await params;
-  const body = await request.json();
+
+  let body;
+  try {
+    body = await request.json();
+  } catch (err) {
+    return NextResponse.json({ error: 'Invalid JSON', details: String(err) }, { status: 400 });
+  }
 
   try {
     const row = await prisma.pageContent.upsert({
@@ -56,6 +69,6 @@ export async function PUT(
     return NextResponse.json({ page, section, content: JSON.parse(row.content) });
   } catch (err) {
     console.error('Content save error:', err);
-    return NextResponse.json({ error: 'Failed to save' }, { status: 500 });
+    return NextResponse.json({ error: 'DB error', details: String(err) }, { status: 500 });
   }
 }
