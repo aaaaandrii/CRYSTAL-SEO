@@ -86,6 +86,7 @@ export default function BlockEditorPage({
       const res = await fetch(`/api/content/${resolvedParams.page}/${resolvedParams.section}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({ content }),
       });
       if (res.ok) {
