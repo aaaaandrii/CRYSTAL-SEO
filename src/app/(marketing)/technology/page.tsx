@@ -8,7 +8,7 @@ import { SITE_URL } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Technology',
   description:
-    'Data is encoded using femtosecond laser pulses into fused quartz glass, creating nanoscale structures that store information across five dimensions.',
+    'Data is stored using femtosecond laser pulses into fused quartz glass, creating nanoscale structures that store information across five dimensions.',
   alternates: {
     canonical: `${SITE_URL}/technology`,
   },
@@ -78,7 +78,7 @@ export default function TechnologyPage() {
               How 5D Optical Storage Works
             </h1>
             <p className="mx-auto mt-4 max-w-[600px] text-[14px] font-semibold leading-none text-[#555]">
-              Data is encoded using femtosecond laser pulses into fused quartz
+              Data is stored using femtosecond laser pulses into fused quartz
               glass, creating nanoscale structures that store information across
               five dimensions. Founded on 30+ years of pioneering research at
               the University of Southampton.
