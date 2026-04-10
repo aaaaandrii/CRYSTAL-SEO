@@ -11,7 +11,7 @@ export const sectors: Sector[] = [
   {
     slug: 'corporate',
     title: 'Corporate & Legal',
-    description: 'Intellectual property, research data, regulatory archives, and compliance records that must remain immutable and retrievable indefinitely.',
+    description: 'Regulatory archives, intellectual property, research data, and compliance records that must remain immutable and retrievable indefinitely.',
     image: '/sectors/corporate.png',
     icon: '🏢',
   },
