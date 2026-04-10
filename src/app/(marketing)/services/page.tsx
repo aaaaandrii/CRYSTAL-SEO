@@ -76,7 +76,6 @@ const services = [
       'Immutable preservation of unique DNA',
       'Research dataset archival',
       'Safe capture and storage of rare species DNA',
-      'Partnership with LifeShip',
       'Billion-year data integrity guarantee',
     ],
   },
