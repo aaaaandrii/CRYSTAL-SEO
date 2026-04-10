@@ -19,6 +19,11 @@ if [ ! -f "$DB_PATH" ]; then
   fi
 fi
 
+# Apply content upgrade (idempotent — updates PageContent / ContentItem /
+# CaseStudy text fields from prisma/content-snapshot.json). Non-fatal.
+echo "Running content upgrade..."
+node /app/scripts/content-upgrade.mjs || echo "content-upgrade failed (non-fatal)"
+
 # Start the Next.js server
 echo "Starting Next.js server..."
 exec node server.js

@@ -42,9 +42,9 @@ COPY --from=builder /app/src/generated/prisma ./src/generated/prisma
 COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 COPY --from=builder /app/node_modules/better-sqlite3 ./node_modules/better-sqlite3
 
-# Copy startup script
-COPY scripts/start.sh ./start.sh
-RUN chmod +x ./start.sh
+# Copy startup + content upgrade scripts
+COPY --from=builder /app/scripts ./scripts
+RUN cp ./scripts/start.sh ./start.sh && chmod +x ./start.sh
 
 EXPOSE 3000
 

@@ -1,0 +1,1899 @@
+{
+  "pageContent": [
+    {
+      "page": "home",
+      "section": "hero",
+      "content": {
+        "badges": [
+          "Made in Switzerland",
+          "Guinness World Record",
+          "Private and Secure"
+        ],
+        "heading": "The Most Durable Storage in the World",
+        "headingSuperscript": "*",
+        "footnote": "*According to Guinness World Record Book",
+        "description": "5D Memory Crystal™ stores and preserves your most valuable digital assets using FemtoEtch™ technology into fused quartz glass — virtually indestructible, readable for billions of years, with $0 running storage costs.",
+        "cta1Text": "Order Crystal",
+        "cta1Href": "/contact",
+        "cta2Text": "Learn More",
+        "cta2Href": "/technology",
+        "lifespanLabel": "LIFESPAN: 100,000,000,000,000,000,000 YEARS",
+        "videoSrc": "/videos/hero-main-video-upd.mp4"
+      }
+    },
+    {
+      "page": "home",
+      "section": "recognition",
+      "content": {
+        "heading": "Recognised by worlds leading media",
+        "bottomText": "Our crystal technology even appeared in Mission: Impossible — The Final Reckoning and has been exhibited at the V&A Museum in London."
+      }
+    },
+    {
+      "page": "home",
+      "section": "benefits",
+      "content": {
+        "heading": "Every reason to choose permanent storage."
+      }
+    },
+    {
+      "page": "home",
+      "section": "comparison",
+      "content": {
+        "label": "Comparison",
+        "heading": "5D Memory Crystal™ vs Conventional Storage",
+        "description": "No degradation. No magnetic fields. No moving parts. Just light encoded into glass."
+      }
+    },
+    {
+      "page": "home",
+      "section": "sectors",
+      "content": {
+        "label": "What we offer",
+        "heading": "Storage Solutions for Every Sector",
+        "subheading": "From personal legacy preservation and cultural archiving to IP protection, blockchain verification and creativity in luxury goods."
+      }
+    },
+    {
+      "page": "home",
+      "section": "process",
+      "content": {
+        "label": "Secure Steps",
+        "heading": "Our Process",
+        "description": "From secure handover to verified storage — built to give you complete confidence in your crystal.",
+        "bottomText": "We are continuously expanding our trust services to give you even greater confidence in the security, integrity, and accessibility of your data.",
+        "ctaText": "Learn More",
+        "ctaHref": "/process"
+      }
+    },
+    {
+      "page": "home",
+      "section": "swiss-made",
+      "content": {
+        "label": "Security & Provenance",
+        "heading": "Swiss Made",
+        "description": "Every 5D Memory Crystal is produced in a secure Swiss facility — combining the highest standards of precision engineering with world-renowned data privacy protections. From raw fused quartz to finished crystal, the entire process takes place under controlled, auditable conditions.",
+        "ctaText": "Learn More",
+        "ctaHref": "/process",
+        "image": "/images/swiss-facility.png",
+        "features": [
+          "Swiss-based production with full chain of custody",
+          "Air-gapped encoding — your data never touches the internet",
+          "No third-party access at any stage of manufacturing",
+          "Tamper-evident packaging and secure delivery"
+        ]
+      }
+    },
+    {
+      "page": "home",
+      "section": "space-proven",
+      "content": {
+        "label": "Out of Earth Durability",
+        "heading": "Space Proven",
+        "description": "5D Memory Crystal™ is a proven data storage medium that has been deployed in space. From the SpaceX Falcon Heavy payload orbiting the Sun to the Arch Mission lunar library, our crystals carry humanity's knowledge beyond Earth — surviving the vacuum, radiation, and temperature extremes of space without degradation.",
+        "ctaText": "Learn More",
+        "ctaHref": "/technology",
+        "image": "/images/space-proven-2.png",
+        "features": [
+          "Launched aboard SpaceX Falcon Heavy into solar orbit",
+          "Deployed by AstroLab for off-world data preservation",
+          "Partnered with LifeShip for genetic preservation",
+          "Featured in the MoonMars Museum lunar collection"
+        ]
+      }
+    },
+    {
+      "page": "home",
+      "section": "case-studies",
+      "content": {
+        "heading": "Case Studies",
+        "description": "From space missions to cultural institutions — see who is preserving their most critical data with us.",
+        "ctaText": "View All Cases",
+        "ctaHref": "/case-studies"
+      }
+    },
+    {
+      "page": "home",
+      "section": "news",
+      "content": {
+        "label": "Latest News",
+        "heading": "News & Updates",
+        "ctaText": "View All News",
+        "ctaHref": "/news"
+      }
+    },
+    {
+      "page": "home",
+      "section": "save-data",
+      "content": {
+        "heading": "Save Your Most Valuable Data",
+        "description": "5D Memory Crystal is ideal for storing data, that you cannot afford to lose.",
+        "cta1Text": "Order Crystal",
+        "cta1Href": "/contact",
+        "cta2Text": "Schedule a Call",
+        "cta2Href": "/schedule-demo"
+      }
+    },
+    {
+      "page": "home",
+      "section": "cta",
+      "content": {
+        "leftLabel": "Interested in Buying?",
+        "leftHeading": "Feel free to contact us to discuss your order.",
+        "leftDescription": "Choose your crystal, upload your data, and receive a permanent record engineered to last billions of years. No subscription, no maintenance — just secure, Swiss-made storage delivered to your door.",
+        "leftCta1Text": "Order",
+        "leftCta1Href": "/contact",
+        "leftCta2Text": "Contact Us",
+        "leftCta2Href": "/contact",
+        "rightLabel": "Interested in Partnering?",
+        "rightHeading": "Become off-channel partner",
+        "rightDescription": "Whether you represent a museum, government body, enterprise, or luxury brand — we offer tailored partnership programmes for resellers, integrators, and institutional clients worldwide.",
+        "rightCta1Text": "Become Partner",
+        "rightCta1Href": "/contact",
+        "rightCta2Text": "Contact Us",
+        "rightCta2Href": "/contact"
+      }
+    },
+    {
+      "page": "home",
+      "section": "trusted-by",
+      "content": {
+        "label": "Trusted by:"
+      }
+    },
+    {
+      "page": "technology",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Technology",
+        "heading": "How 5D Optical Storage Works",
+        "description": "Data is stored using femtosecond laser pulses into fused quartz glass, creating nanoscale structures that store information across five dimensions. Founded on 30+ years of pioneering research at the University of Southampton."
+      }
+    },
+    {
+      "page": "technology",
+      "section": "cta",
+      "content": {
+        "eyebrow": "Get Started",
+        "heading": "Your First Crystal",
+        "description": "Available now for early adopters. Choose a format, upload your files, and receive a crystal that will outlast everything you own.",
+        "cta1Text": "Order Your Crystal",
+        "cta1Href": "/contact",
+        "cta2Text": "See Collections",
+        "cta2Href": "/collections"
+      }
+    },
+    {
+      "page": "services",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Sectors",
+        "heading": "Storage Solutions for Every Need",
+        "description": "From personal keepsakes to enterprise-grade archival, luxury goods, and blockchain verification — every service built on the same indestructible foundation."
+      }
+    },
+    {
+      "page": "services",
+      "section": "problems",
+      "content": {
+        "eyebrow": "Why Choose Us?",
+        "heading": "The Problems We Solve",
+        "description": "Every reason organisations and individuals turn to permanent storage."
+      }
+    },
+    {
+      "page": "services",
+      "section": "how-it-works",
+      "content": {
+        "eyebrow": "Process",
+        "heading": "How It Works",
+        "description": "Four simple steps from upload to eternity."
+      }
+    },
+    {
+      "page": "services",
+      "section": "cta",
+      "content": {
+        "eyebrow": "Get Started",
+        "heading": "Ready to Preserve Your Data?",
+        "description": "Choose your crystal format today and create a permanent record that will outlast every other storage medium on Earth.",
+        "cta1Text": "Order Your Crystal",
+        "cta1Href": "/contact",
+        "cta2Text": "Schedule Demo",
+        "cta2Href": "/schedule-demo"
+      }
+    },
+    {
+      "page": "process",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Trust & Process",
+        "heading": "Trust & Process",
+        "description": "From the moment you hand over your data to the moment you read it back — every step is designed for security, transparency, and confidence."
+      }
+    },
+    {
+      "page": "process",
+      "section": "pillars",
+      "content": {
+        "eyebrow": "The Process",
+        "heading": "Four Pillars of Trust",
+        "description": "Each crystal goes through a rigorous, auditable process — so you never have to wonder."
+      }
+    },
+    {
+      "page": "process",
+      "section": "continuous-improvement",
+      "content": {
+        "eyebrow": "Looking Ahead",
+        "heading": "Continuous Improvement",
+        "subheading": "More Trust Services Coming",
+        "description": "We are continuously developing new services to increase your confidence in our process and product — from expanded verification options to long-term custodial services. This page will grow as we do."
+      }
+    },
+    {
+      "page": "process",
+      "section": "cta",
+      "content": {
+        "eyebrow": "Get Started",
+        "heading": "Ready to Preserve Your Data?",
+        "description": "Get in touch to discuss your requirements or schedule a demo of our secure encoding process.",
+        "cta1Text": "Schedule Demo",
+        "cta1Href": "/schedule-demo",
+        "cta2Text": "Contact Us",
+        "cta2Href": "/contact"
+      }
+    },
+    {
+      "page": "about",
+      "section": "hero",
+      "content": {
+        "eyebrow": "About Us",
+        "heading": "Preserving What Matters",
+        "description": "Over 30 years of pioneering research, one mission — make ultra-long-life data storage commercially available to the world."
+      }
+    },
+    {
+      "page": "about",
+      "section": "story",
+      "content": {
+        "eyebrow": "Our Story",
+        "heading": "From Lab to Legacy",
+        "paragraph1": "5D Memory Crystal technology was pioneered by Prof. Peter Kazansky, a world-leading scientist whose decades of research at the University of Southampton transformed our understanding of light–matter interaction at the nanoscale.",
+        "paragraph2": "Today, led by technology entrepreneur Ilya Kazansky, our team of scientists, engineers and product specialists combines optical nano-technology with advances in machine learning and AI to deliver the most durable storage medium ever created — manufactured in Switzerland to the highest standards.",
+        "image": "/images/swiss-facility.png",
+        "imageAlt": "5D Memory Crystal Swiss manufacturing facility"
+      }
+    },
+    {
+      "page": "about",
+      "section": "values",
+      "content": {
+        "eyebrow": "What Drives Us",
+        "heading": "Our Values"
+      }
+    },
+    {
+      "page": "about",
+      "section": "milestones",
+      "content": {
+        "eyebrow": "Our Journey",
+        "heading": "Key Milestones"
+      }
+    },
+    {
+      "page": "about",
+      "section": "cta",
+      "content": {
+        "eyebrow": "Get Started",
+        "heading": "Preserve What Matters Most",
+        "description": "Whether you're an institution, a researcher, or an individual — we're here to help you store your most valuable data for eternity.",
+        "cta1Text": "Schedule a Demo",
+        "cta1Href": "/schedule-demo",
+        "cta2Text": "Contact Us",
+        "cta2Href": "/contact"
+      }
+    },
+    {
+      "page": "collections",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Collections",
+        "heading": "What We've Preserved",
+        "description": "From the Magna Carta to complete human genomes — explore the works and data sets encoded into 5D Memory Crystal."
+      }
+    },
+    {
+      "page": "collections",
+      "section": "gallery",
+      "content": {
+        "eyebrow": "Featured Works",
+        "heading": "Gallery",
+        "description": "A curated selection of crystals produced for institutions, researchers, and private clients worldwide."
+      }
+    },
+    {
+      "page": "collections",
+      "section": "categories",
+      "content": {
+        "eyebrow": "Categories",
+        "heading": "Browse by Collection"
+      }
+    },
+    {
+      "page": "collections",
+      "section": "cta",
+      "content": {
+        "eyebrow": "Custom Orders",
+        "heading": "Commission a Custom Crystal",
+        "description": "Have something unique to preserve? Work with our team to encode your data into a bespoke 5D Memory Crystal.",
+        "cta1Text": "Contact Us",
+        "cta1Href": "/contact",
+        "cta2Text": "See Pricing",
+        "cta2Href": "/contact"
+      }
+    },
+    {
+      "page": "trust",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Security & Provenance",
+        "heading": "Trust & Security",
+        "description": "Swiss-made, space-proven. Your data is handled with the highest security standards from transfer to delivery."
+      }
+    },
+    {
+      "page": "trust",
+      "section": "swiss-manufacturing",
+      "content": {
+        "heading": "Swiss Manufacturing",
+        "description": "Precision engineering under the world's strictest quality and data protection laws.",
+        "bodyText": "Every 5D Memory Crystal is manufactured in our dedicated facility in Switzerland. The Swiss legal framework provides some of the strongest data privacy protections in the world, and our facility operates under strict physical and digital security protocols. From raw fused quartz to finished crystal, the entire manufacturing chain takes place in one location, eliminating third-party handling risks.",
+        "feature1Title": "Single-Site Production",
+        "feature1Desc": "All processes from encoding to packaging under one roof.",
+        "feature2Title": "24/7 Surveillance",
+        "feature2Desc": "Round-the-clock monitoring with biometric access control."
+      }
+    },
+    {
+      "page": "trust",
+      "section": "security",
+      "content": {
+        "heading": "Security Measures",
+        "description": "Multi-layered protection for your most valuable data."
+      }
+    },
+    {
+      "page": "trust",
+      "section": "certifications",
+      "content": {
+        "heading": "Certifications",
+        "description": "Independently verified standards of quality and security."
+      }
+    },
+    {
+      "page": "trust",
+      "section": "partnerships",
+      "content": {
+        "heading": "Partnerships",
+        "description": "Trusted by leading research institutions and space agencies."
+      }
+    },
+    {
+      "page": "contact",
+      "section": "hero",
+      "content": {
+        "heading": "Contact Us",
+        "description": "Have a question, need a quote, or want to learn more? We would love to hear from you."
+      }
+    },
+    {
+      "page": "contact",
+      "section": "info",
+      "content": {
+        "infoHeading": "Get in Touch",
+        "email": "info@5dmemorycrystal.com",
+        "companyName": "5D Memory Crystal AG",
+        "location": "Zurich, Switzerland",
+        "businessHours": "Monday – Friday: 9:00 – 18:00 CET",
+        "responseTime": "We typically respond within one business day."
+      }
+    },
+    {
+      "page": "order",
+      "section": "hero",
+      "content": {
+        "heading": "Order Now",
+        "description": "Choose the crystal that fits your needs. All crystals are manufactured in Switzerland and include a certificate of authenticity."
+      }
+    },
+    {
+      "page": "order",
+      "section": "custom",
+      "content": {
+        "heading": "Need a Custom Solution?",
+        "description": "For bespoke crystal configurations, bulk orders, or specialised encoding requirements, our team is ready to help.",
+        "emailNote": "Email us at info@5dmemorycrystal.com or schedule a consultation.",
+        "cta1Text": "Schedule a Consultation",
+        "cta1Href": "/schedule-demo",
+        "cta2Text": "Contact Us",
+        "cta2Href": "/contact"
+      }
+    },
+    {
+      "page": "schedule-demo",
+      "section": "hero",
+      "content": {
+        "heading": "Schedule a Demo",
+        "description": "See 5D Memory Crystal technology in action. Book a personalised demonstration with our team."
+      }
+    },
+    {
+      "page": "news-page",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Press & Media",
+        "heading": "News & Updates",
+        "description": "The latest from 5D Memory Crystal — product updates, partnerships, and media coverage."
+      }
+    },
+    {
+      "page": "news-page",
+      "section": "newsletter-cta",
+      "content": {
+        "heading": "Stay in the Loop",
+        "description": "Be the first to hear about new products, partnerships, and breakthroughs in eternal data storage.",
+        "cta1Text": "Subscribe",
+        "cta1Href": "/contact",
+        "cta2Text": "Contact Us",
+        "cta2Href": "/contact"
+      }
+    },
+    {
+      "page": "case-studies-page",
+      "section": "hero",
+      "content": {
+        "eyebrow": "Real-World Applications",
+        "heading": "Case Studies",
+        "description": "From space missions to cultural institutions — see who is preserving their most critical data with us."
+      }
+    }
+  ],
+  "contentItems": [
+    {
+      "type": "about-stat",
+      "data": {
+        "stat": "30+",
+        "label": "Years of Research"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "about-stat",
+      "data": {
+        "stat": "360 TB",
+        "label": "Max Capacity per Crystal"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "about-stat",
+      "data": {
+        "stat": "13.8B",
+        "label": "Years Lifespan"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "about-stat",
+      "data": {
+        "stat": "1,000°C",
+        "label": "Heat Resistance"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "benefit",
+      "data": {
+        "icon": "/icons/no-data-loss.svg",
+        "title": "No Data Loss",
+        "description": "Hard drives fail. Servers corrupt. Cloud providers shut down. Environmental disasters wipe out systems. 5D Memory Crystal™ removes the risk of losing irreplaceable digital assets forever."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "benefit",
+      "data": {
+        "icon": "/icons/no-access-loss.svg",
+        "title": "No Access Loss",
+        "description": "Format obsolescence, account lockouts, service discontinuation, blocked wallets — 5D Memory Crystal™ data is immutable with random accessibility."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "benefit",
+      "data": {
+        "icon": "/icons/legal-compliance-ready.svg",
+        "title": "Legal & Compliance Ready",
+        "description": "Regulatory mandates require immutable, long-term records. 5D Memory Crystal™ provides tamper-proof storage that satisfies the strictest retention policies."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "benefit",
+      "data": {
+        "icon": "/icons/cyber-security.svg",
+        "title": "Cyber Security Proofed",
+        "description": "Fully air-gapped, offline, and immune to ransomware. No network connection means zero attack surface for your most sensitive data."
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "benefit",
+      "data": {
+        "icon": "/icons/environmental-performance.svg",
+        "title": "Environmental Performance",
+        "description": "The most sustainable cold data storage medium with zero energy storage costs or requirements. 5D Memory Crystal™ is composed of renewable materials."
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "benefit",
+      "data": {
+        "icon": "/icons/Ultimate Backup.svg",
+        "title": "Ultimate Backup",
+        "description": "5D optical data storage is impervious to extreme heat, subzero temperatures, EMP, space environments, hacking and electromagnetic interference."
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "certification",
+      "data": {
+        "name": "ISO 27001",
+        "description": "Information security management system certification ensuring rigorous data protection controls."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "certification",
+      "data": {
+        "name": "ISO 9001",
+        "description": "Quality management system certification guaranteeing consistent manufacturing excellence."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "certification",
+      "data": {
+        "name": "Swiss Made",
+        "description": "All crystals are manufactured in Switzerland under the strictest quality and privacy laws in the world."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "certification",
+      "data": {
+        "name": "GDPR Compliant",
+        "description": "Full compliance with the European General Data Protection Regulation for handling client data."
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "collection-category",
+      "data": {
+        "name": "Personal Archives",
+        "slug": "personal-archives",
+        "description": "Family photos, videos, letters, and memories encoded as permanent keepsakes.",
+        "image": "/collections/personal-archives.png"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "collection-category",
+      "data": {
+        "name": "Eternal Art",
+        "slug": "eternal-art",
+        "description": "Artworks, rare media, and creative works preserved beyond the life of any medium.",
+        "image": "/collections/eternal-art.png"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "collection-category",
+      "data": {
+        "name": "Time Capsules",
+        "slug": "time-capsules",
+        "description": "Messages and artefacts sealed for future generations to discover.",
+        "image": "/collections/time-capsules.png"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "collection-category",
+      "data": {
+        "name": "Documents & Archives",
+        "slug": "documents-archives",
+        "description": "Legal records, research data, and institutional archives made permanent.",
+        "image": "/collections/documents.png"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "collection-category",
+      "data": {
+        "name": "DNA & Genomics",
+        "slug": "dna-genomics",
+        "description": "Complete genomes and biological datasets preserved for billions of years.",
+        "image": "/collections/archives.png"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "collection-category",
+      "data": {
+        "name": "Luxury & Commemorative",
+        "slug": "luxury-commemorative",
+        "description": "Bespoke crystal jewellery and high-end collectibles with embedded data.",
+        "image": "/collections/printed-doc.png"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "Lifespan",
+        "crystal": "13.8 Billion yrs",
+        "hdd": "5–10 years",
+        "tape": "30–50 years"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "Heat Resistance",
+        "crystal": "Up to 1,000 °C",
+        "hdd": "Low",
+        "tape": "Moderate"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "EMP / Radiation",
+        "crystal": "Fully resistant",
+        "hdd": "Vulnerable",
+        "tape": "Vulnerable"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "Physical medium",
+        "crystal": "Fused quartz glass",
+        "hdd": "Magnetic / Silicon",
+        "tape": "Polymer tape / Server"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "Read without power",
+        "crystal": "Yes (optical)",
+        "hdd": "No",
+        "tape": "No"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "Ongoing energy cost",
+        "crystal": "None",
+        "hdd": "Continuous",
+        "tape": "Continuous"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "comparison-row",
+      "data": {
+        "feature": "Cyber attack surface",
+        "crystal": "Zero (air-gapped)",
+        "hdd": "High",
+        "tape": "High"
+      },
+      "sortOrder": 6,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How does this 5D optical storage work?",
+        "answer": "The storage medium works by using an extremely fast and precise femtosecond laser to create tiny pits within the fused silica glass containing self-assembled nanostructures (nanogratings). The nanogratings, with features as small as 20 nm, are the smallest embedded structures ever produced by light. They change how light travels through them much in the same way that polarized sunglasses do, allowing scientists to read information about each depending on how the light is transformed. The changes to the light convey five 'dimensions' of information (thus the name), based on each nanostructure's orientation, the strength of the light that it refracts, and its location in space on the x, y, and z axes.",
+        "category": "technology"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How do nanogratings work?",
+        "answer": "The nanograting produces birefringence in glass, which is characterized by two parameters: slow axis orientation (4th dimension, coinciding also with the orientation of nanograting), and strength of retardance (5th dimension coinciding also with the size of nanograting). During recording the slow axis orientation and strength of retardance are controlled respectively by the polarization and intensity of light. If you add the two optical dimensions to three spatial co-ordinates the result is \"5D data storage\".",
+        "category": "technology"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How does this compare to conventional optical storage media?",
+        "answer": "By comparison, CDs only have two \"dimensions\" of information — reflecting or not reflecting laser light to convey the 1s and 0s of binary data in a single layer of plastic. In DVDs, the data is stored by burning tiny pits on multiple layers on the plastic disc, which means you are using three spatial dimensions to store information. With our technology, we exploit two additional, optical dimensions with fused silica glass.",
+        "category": "technology"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How is it different from storing information on hard drives?",
+        "answer": "Semiconductor data storage such as flash drives and solid-state drives provide a lifespan around ten years. For magnetization-based memory, such as HDD, needs to transfer data every couple of years in order to prevent data loss, while the data stored in conventional optical discs such as CD, DVD, HD DVD and Blu-ray only last tens of years. Other devices such as holographic memory can only reach the lifetime of a few decades.",
+        "category": "storage"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "Why do we need this type of storage?",
+        "answer": "Despite all technological progress it is still difficult to securely store large amounts of information over even relatively short timescales of 100 years. Our 5D data storage technology eliminates this problem by storing high capacity digital information that could survive the human race.",
+        "category": "storage"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How big is the 5D disc itself?",
+        "answer": "The technology exploits high purity glass substrates, which can reach various sizes up several meters. We are currently using 25 mm diameter discs, which are easy to handle and investigate. However, in future as we move towards commercialization, we might look into standard sizes of optical discs i.e. 12 cm diameter, which should ultimately fit about 360 TB.",
+        "category": "technology"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How much can each disc store?",
+        "answer": "The current achievable density is several TB per disc (CD size of 12 cm, 1.2 mm thickness), which is of the same order as magnetic disk data storage. In a couple of years, we hope to achieve about 20 TB per disc. We estimate the ultimate capacity of 360 TB per disc using this technology.",
+        "category": "storage"
+      },
+      "sortOrder": 6,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How robust is it?",
+        "answer": "The 5D storage has extremely high data stability because the information is recorded in structural modifications within fused quartz glass, one of the most chemically and thermally durable materials on Earth. The discs can withstand fire and temperatures of up to 1000°C. The glass can withstand direct impact of up to ½ ton.",
+        "category": "storage"
+      },
+      "sortOrder": 7,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How long will the data last?",
+        "answer": "The decay time of nanogratings is about 10²⁰ years at room temperature, indicating unprecedented stability. Even at elevated temperatures of 190°C the extrapolated decay time is comparable with the age of the Universe — 13.8 billion years.",
+        "category": "storage"
+      },
+      "sortOrder": 8,
+      "published": 1
+    },
+    {
+      "type": "faq",
+      "data": {
+        "question": "How would instructions for accessing the information be communicated to whoever discovers these devices in the future?",
+        "answer": "The technology of 5D writing allows high-resolution drawings and graphics to be printed in the same disc at the data. Visual instructions for reading the disc can be imprinted, and holograms can be recorded using the same technology in the disc.",
+        "category": "technology"
+      },
+      "sortOrder": 9,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Magna Carta",
+        "subtitle": "Salisbury Cathedral, 2016",
+        "tag": "Cultural Heritage",
+        "image": "/collections/magna-carta.jpg"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Universal Declaration of Human Rights",
+        "subtitle": "UNESCO, 2016",
+        "tag": "Cultural Heritage",
+        "image": "/collections/udhr.jpg"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Holy Bible",
+        "subtitle": "Biblioteca Apostolica Vaticana",
+        "tag": "Cultural Heritage",
+        "image": "/collections/udhr-colour.jpg"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Stephen Hawking's Brief History of Time",
+        "subtitle": "V&A Museum, London",
+        "tag": "Scientific",
+        "image": "/collections/asimov-1.jpg"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Isaac Newton's Opticks",
+        "subtitle": "Classical physics preserved",
+        "tag": "Scientific",
+        "image": "/collections/newton-opticks.jpg"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Isaac Asimov Collection",
+        "subtitle": "Complete works encoded",
+        "tag": "Art",
+        "image": "/collections/asimov-2.jpg"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "Human Genome",
+        "subtitle": "Complete DNA sequence, 2024",
+        "tag": "DNA",
+        "image": "/collections/asimov-3.jpg"
+      },
+      "sortOrder": 6,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "SpaceX Falcon Heavy Payload",
+        "subtitle": "Tesla Roadster in space, 2018",
+        "tag": "Scientific",
+        "image": "/collections/asimov-closeup.jpg"
+      },
+      "sortOrder": 7,
+      "published": 1
+    },
+    {
+      "type": "gallery-item",
+      "data": {
+        "title": "European Physical Society Milestones",
+        "subtitle": "50th anniversary, 2018",
+        "tag": "Scientific",
+        "image": "/collections/asimov-detail.jpg"
+      },
+      "sortOrder": 8,
+      "published": 1
+    },
+    {
+      "type": "lifespan-bar",
+      "data": {
+        "name": "5D Memory Crystal™",
+        "years": "100,000,000,000,000,000,000",
+        "mobileYears": "100Q+",
+        "unit": "YEARS",
+        "highlight": true
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "lifespan-bar",
+      "data": {
+        "name": "Silica Disc",
+        "years": "100,000,000",
+        "mobileYears": "100M",
+        "unit": "YEARS",
+        "highlight": false
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "lifespan-bar",
+      "data": {
+        "name": "Magnetic Tape (LTO)",
+        "years": "30",
+        "mobileYears": "30",
+        "unit": "YEARS",
+        "highlight": false
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "lifespan-bar",
+      "data": {
+        "name": "SSD",
+        "years": "5-10",
+        "mobileYears": "5-10",
+        "unit": "YEARS",
+        "highlight": false
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "lifespan-bar",
+      "data": {
+        "name": "HDD",
+        "years": "3-5",
+        "mobileYears": "3-5",
+        "unit": "YEARS",
+        "highlight": false
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "media-quote",
+      "data": {
+        "quote": "Data storage that could outlast civilisation itself",
+        "source": "WIRED"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "media-quote",
+      "data": {
+        "quote": "The everlasting 'memory crystals' that could slash data emissions",
+        "source": "BBC"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "media-quote",
+      "data": {
+        "quote": "The future of long-term data storage is clear and will last 14 billion years",
+        "source": "The Register"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "milestone",
+      "data": {
+        "year": "1999",
+        "title": "Research Begins",
+        "description": "Prof. Peter Kazansky begins pioneering research into femtosecond laser nanostructuring of fused quartz at the University of Southampton."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "milestone",
+      "data": {
+        "year": "2013",
+        "title": "Guinness World Record",
+        "description": "The 5D optical storage method achieves the Guinness World Record for the most durable digital storage medium."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "milestone",
+      "data": {
+        "year": "2016",
+        "title": "Cultural Firsts",
+        "description": "The Magna Carta and Universal Declaration of Human Rights are encoded into 5D Memory Crystal for permanent preservation."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "milestone",
+      "data": {
+        "year": "2018",
+        "title": "Into Space",
+        "description": "A 5D Memory Crystal is launched aboard the SpaceX Falcon Heavy, becoming the first permanent data storage in orbit."
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "milestone",
+      "data": {
+        "year": "2024",
+        "title": "Human Genome Preserved",
+        "description": "The complete human genome is encoded into a single 5D Memory Crystal, a landmark in biological data preservation."
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "milestone",
+      "data": {
+        "year": "2025",
+        "title": "Commercially Available",
+        "description": "5D Memory Crystal becomes commercially available for early adopters — organisations and individuals seeking eternal data preservation."
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "MoMA",
+        "logo": "/logos/MOMA.png"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "Astrolab",
+        "logo": "/logos/ASTROLAB.svg"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "Uplift",
+        "logo": "/logos/UPLIFT.png"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "GOG",
+        "logo": "/logos/GOG.png"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "Soundsfun",
+        "logo": "/logos/SOUNDSFUN.svg"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "Lifeship",
+        "logo": "/logos/LIFESHIP.png"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "partner-logo",
+      "data": {
+        "name": "Boucheron",
+        "logo": "/logos/BOUCHERON.png"
+      },
+      "sortOrder": 6,
+      "published": 1
+    },
+    {
+      "type": "partnership",
+      "data": {
+        "name": "University of Southampton",
+        "description": "Foundational research partnership with the Optoelectronics Research Centre, where 5D optical storage was invented."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "partnership",
+      "data": {
+        "name": "Arch Mission Foundation",
+        "description": "Collaboration to deploy 5D Memory Crystals on SpaceX missions as part of preserving human knowledge beyond Earth."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "partnership",
+      "data": {
+        "name": "European Space Agency",
+        "description": "Working with ESA on data permanence solutions for long-duration space missions and deep-space probes."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "problem",
+      "data": {
+        "title": "Data Loss",
+        "description": "Hard drives fail. Cloud providers shut down. 5D crystal removes the risk of losing irreplaceable digital assets forever.",
+        "icon": "/icons/no-data-loss.svg"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "problem",
+      "data": {
+        "title": "Loss of Access",
+        "description": "Format obsolescence, account lockouts, service discontinuation — crystal data is readable with basic optics, no subscription needed.",
+        "icon": "/icons/no-access-loss.svg"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "problem",
+      "data": {
+        "title": "Legal & Compliance",
+        "description": "Regulatory mandates require immutable, long-term records. Crystal provides tamper-proof storage that satisfies the strictest policies.",
+        "icon": "/icons/legal-compliance-ready.svg"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "problem",
+      "data": {
+        "title": "Cyber Security",
+        "description": "Fully air-gapped, offline, and immune to ransomware. No network connection means zero attack surface.",
+        "icon": "/icons/cyber-security.svg"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "problem",
+      "data": {
+        "title": "Environmental Performance",
+        "description": "Data centres consume 1–2% of global electricity. Crystal requires zero energy to maintain — write once, store forever.",
+        "icon": "/icons/environmental-performance.svg"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "problem",
+      "data": {
+        "title": "Backup & Redundancy",
+        "description": "The ultimate last line of defence. Crystal backup survives fires, floods, and EMP that would destroy any conventional copy.",
+        "icon": "/icons/Ultimate Backup.svg"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "process-step",
+      "data": {
+        "number": 1,
+        "title": "Secure Data Transfer",
+        "description": "Your data is transferred via encrypted channels or air-gapped physical media — it never passes through unsecured networks, and we do not retain any data supplied by clients.",
+        "image": "/process/data-transfer.JPG.webp"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "process-step",
+      "data": {
+        "number": 2,
+        "title": "Certificate of Authority",
+        "description": "Every crystal ships with a formal certificate documenting exactly what data has been encoded — your proof of provenance.",
+        "image": "/process/certificate.JPG"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "process-step",
+      "data": {
+        "number": 3,
+        "title": "Data Verification",
+        "description": "After encoding, the crystal is read back and verified against the original data to confirm integrity — bit for bit.",
+        "image": "/process/data-verification.jpg.webp"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "process-step",
+      "data": {
+        "number": 4,
+        "title": "Read Service",
+        "description": "Our read service retrieves information from your crystal using precision optical equipment on-site. Individual read machines will be available in late 2027. We also offer a secure Swiss vault service if you want us to store your crystals.",
+        "image": "/process/reading-device.JPG.webp"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "product",
+      "data": {
+        "name": "Nano Crystal",
+        "capacity": "Up to 5 GB",
+        "price": "From CHF 149",
+        "description": "Ideal for personal messages, photos, and small keepsakes. A meaningful gift that lasts forever.",
+        "features": "Personal data encoding\nGift-ready presentation box\nCertificate of authenticity\nStandard delivery",
+        "popular": false,
+        "ctaText": "Order Now",
+        "ctaHref": "/schedule-demo"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "product",
+      "data": {
+        "name": "Standard Crystal",
+        "capacity": "Up to 100 GB",
+        "price": "From CHF 499",
+        "description": "Our most popular option for families and professionals. Stores documents, photo libraries, and important records.",
+        "features": "Priority data encoding\nPremium presentation case\nCertificate of authenticity\nVerification QR code\nExpress delivery available",
+        "popular": true,
+        "ctaText": "Order Now",
+        "ctaHref": "/schedule-demo"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "product",
+      "data": {
+        "name": "Archive Crystal",
+        "capacity": "Up to 360 TB",
+        "price": "Custom Pricing",
+        "description": "Enterprise-grade storage for institutions, governments, and large organisations requiring maximum capacity.",
+        "features": "Dedicated encoding pipeline\nAir-gapped facility processing\nFull chain-of-custody documentation\nCustom packaging and branding\nSecure courier delivery\nDedicated account manager",
+        "popular": false,
+        "ctaText": "Contact Sales",
+        "ctaHref": "/schedule-demo"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "space-tech",
+        "title": "Space Tech",
+        "description": "The 5D Memory Crystal engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space, travel, orbit and lunar landings, without degradation.",
+        "image": "/sectors/Space.png",
+        "icon": "🚀"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "corporate",
+        "title": "Corporate & Legal",
+        "description": "Regulatory archives, intellectual property, research data, and compliance records that must remain immutable and retrievable indefinitely.",
+        "image": "/sectors/corporate.png",
+        "icon": "🏢"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "ip",
+        "title": "IP Protection",
+        "description": "Timestamped, tamper-proof records of intellectual property — patents, trade secrets, and creative works sealed in glass.",
+        "image": "/sectors/ip.png",
+        "icon": "🔒"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "dna",
+        "title": "DNA & Genomics",
+        "description": "Encode entire human genomes and biological data sets into crystal — preserving the blueprint of life for billions of years.",
+        "image": "/sectors/dna.png",
+        "icon": "🧬"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "cultural",
+        "title": "Cultural Heritage",
+        "description": "Partnering with the world's museums, libraries, and archives to preserve humanity's most irreplaceable documents and artworks.",
+        "image": "/sectors/cultural.png",
+        "icon": "🏛️"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "luxury",
+        "title": "Luxury & Jewellery",
+        "description": "Crystal as a luxury object — bespoke data jewellery, commemorative pieces, and high-end collectibles with embedded meaning.",
+        "image": "/sectors/luxury.png",
+        "icon": "💎"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "crypto",
+        "title": "Crypto & Blockchain",
+        "description": "Cold storage for seed phrases, wallet keys, and smart contract records — offline, unhackable, and permanent.",
+        "image": "/sectors/crypto.png",
+        "icon": "₿"
+      },
+      "sortOrder": 6,
+      "published": 1
+    },
+    {
+      "type": "sector",
+      "data": {
+        "slug": "personal",
+        "title": "Personal & Family",
+        "description": "Preserve personal and family legacies, photos, videos, letters, and milestones into a crystal keepsake — a permanent gift for generations to come.",
+        "image": "/sectors/personal.png",
+        "icon": "👨‍👩‍👧‍👦"
+      },
+      "sortOrder": 7,
+      "published": 1
+    },
+    {
+      "type": "security-measure",
+      "data": {
+        "title": "Air-Gapped Encoding",
+        "description": "Our encoding systems are completely isolated from external networks. No internet connection touches the machines that write your data, eliminating the risk of remote intrusion."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "security-measure",
+      "data": {
+        "title": "Encrypted Data Transfer",
+        "description": "All data submitted for encoding is transferred via end-to-end encryption. We use AES-256 encryption for data at rest and TLS 1.3 for data in transit."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "security-measure",
+      "data": {
+        "title": "Secure Destruction",
+        "description": "After successful encoding and verification, all source files and temporary copies are securely destroyed from our systems using certified data wiping protocols."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "security-measure",
+      "data": {
+        "title": "Cleanroom Manufacturing",
+        "description": "Crystals are encoded in a Class-100 cleanroom environment with strict access controls, environmental monitoring, and contamination prevention."
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "security-measure",
+      "data": {
+        "title": "Tamper-Evident Packaging",
+        "description": "Every crystal ships in tamper-evident, security-sealed packaging with a unique serial number for authenticity verification."
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "security-measure",
+      "data": {
+        "title": "Chain of Custody",
+        "description": "We maintain a complete chain-of-custody log from the moment your data arrives until your crystal is delivered, with full audit trail."
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "space-tech",
+        "eyebrow": "Space Tech",
+        "title": "Built for the Final Frontier",
+        "description": "The 5D Memory Crystal is engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation. Whether aboard satellites, deep-space probes, or lunar installations, crystal storage ensures mission-critical data survives where no conventional medium can.",
+        "image": "/sectors/Space.png",
+        "imageAlt": "Space technology grade crystal data storage",
+        "bullets": "Radiation-resistant and vacuum-stable\nSurvives extreme temperature swings\nIdeal for satellites and deep-space missions\nNo power required for data retention"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "corporate",
+        "eyebrow": "Corporate & Legal",
+        "title": "Immutable Business Records",
+        "description": "Regulatory archives, board resolutions, IP filings, and compliance records that must remain unalterable and retrievable indefinitely. Crystal storage meets the most demanding data retention policies — providing tamper-proof, offline records that satisfy auditors and regulators without ongoing infrastructure cost.",
+        "image": "/sectors/corporate.png",
+        "imageAlt": "Corporate data archival and legal compliance records",
+        "bullets": "Regulatory and compliance archival\nTamper-proof audit trail\nZero ongoing infrastructure cost\nAir-gapped — immune to cyber attacks"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "ip",
+        "eyebrow": "IP Protection",
+        "title": "Proof That Can't Be Altered",
+        "description": "Timestamped, tamper-proof records of intellectual property — patents, trade secrets, source code, and creative works sealed in glass. Crystal provides irrefutable proof of existence at a specific point in time, creating a permanent record that stands up in any jurisdiction and cannot be backdated, altered, or destroyed.",
+        "image": "/sectors/ip.png",
+        "imageAlt": "Intellectual property protection and timestamping",
+        "bullets": "Tamper-proof timestamp of creation\nPatents, trade secrets, and source code\nAdmissible as evidence in legal proceedings\nCannot be backdated or altered"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "dna",
+        "eyebrow": "DNA & Genomics",
+        "title": "The Blueprint of Life, Preserved",
+        "description": "Encode entire human genomes and biological data sets into crystal — preserving the blueprint of life for billions of years. In partnership with LifeShip, we offer a permanent record of your genetic identity. From personal genome preservation to large-scale research archives, crystal ensures biological data outlasts every conventional storage medium.",
+        "image": "/sectors/dna.png",
+        "imageAlt": "DNA and genomic data encoded into 5D memory crystal",
+        "bullets": "Complete human genome storage\nResearch dataset archival\nPartnership with LifeShip\nBillion-year data integrity guarantee"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "cultural",
+        "eyebrow": "Cultural Heritage",
+        "title": "Preserving Civilisation",
+        "description": "Partner with museums, libraries, national archives, and UNESCO sites to preserve humanity's most irreplaceable documents and artworks. From the Magna Carta to the Universal Declaration of Human Rights, we've encoded some of the world's most significant cultural artefacts into 5D crystal — ensuring they survive for billions of years.",
+        "image": "/sectors/cultural.png",
+        "imageAlt": "Cultural heritage preservation with 5D crystal technology",
+        "bullets": "UNESCO and national archive partnerships\nMagna Carta and UDHR already encoded\nMuseum-grade presentation cases\nFull provenance and Certificate of Authority"
+      },
+      "sortOrder": 4,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "luxury",
+        "eyebrow": "Luxury & Jewellery",
+        "title": "Data as a Luxury Object",
+        "description": "Crystal as a luxury object in its own right — bespoke data jewellery that encodes personal meaning into wearable, permanent form. Commemorative and collectible pieces combine artistry with embedded data, creating unique objects that tell a story visible only under specialised readers. Ideal for high-net-worth individuals, luxury brands, and special occasions.",
+        "image": "/sectors/luxury.png",
+        "imageAlt": "Luxury crystal jewellery with encoded data",
+        "bullets": "Bespoke crystal jewellery and pendants\nLuxury brand collaboration pieces\nCommemorative and limited editions\nEmbedded authentication data"
+      },
+      "sortOrder": 5,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "crypto",
+        "eyebrow": "Crypto & Blockchain",
+        "title": "The Ultimate Cold Storage",
+        "description": "Seed phrases, wallet keys, and smart contract records inscribed into glass that is offline, unhackable, and indestructible. No battery, no firmware, no single point of failure. For the crypto community, crystal offers cold storage that genuinely cannot be compromised — immune to fire, flood, EMP, and the passage of time.",
+        "image": "/sectors/crypto.png",
+        "imageAlt": "Cryptocurrency cold storage in 5D crystal",
+        "bullets": "Seed phrase and private key inscription\nImmune to fire, flood, and EMP\nNo battery or firmware dependency\nTamper-evident delivery and packaging"
+      },
+      "sortOrder": 6,
+      "published": 1
+    },
+    {
+      "type": "service-detail",
+      "data": {
+        "slug": "personal",
+        "eyebrow": "Personal & Family",
+        "title": "Memories That Last Forever",
+        "description": "Family photos, wedding videos, letters, and personal milestones encoded into a crystal keepsake — a permanent gift that outlasts every hard drive, cloud account, and social media platform. Whether it's a first birthday or a lifetime archive, your memories are preserved beyond the reach of data loss, format obsolescence, or digital decay.",
+        "image": "/sectors/personal.png",
+        "imageAlt": "Personal family memories preserved in 5D crystal",
+        "bullets": "Photos, videos, documents, and audio files\nPresentation case included as standard\nPerfect as a gift or heirloom\nNo subscription or maintenance required"
+      },
+      "sortOrder": 7,
+      "published": 1
+    },
+    {
+      "type": "services-process-step",
+      "data": {
+        "number": 1,
+        "title": "Choose Your Format",
+        "description": "Select crystal size and storage capacity based on your needs."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "services-process-step",
+      "data": {
+        "number": 2,
+        "title": "Upload Your Data",
+        "description": "Securely transfer files through our encrypted upload portal."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "services-process-step",
+      "data": {
+        "number": 3,
+        "title": "We Encode",
+        "description": "Femtosecond laser writes your data into fused quartz glass."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "services-process-step",
+      "data": {
+        "number": 4,
+        "title": "Receive Your Crystal",
+        "description": "Your permanent archive, delivered in a presentation case."
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "tech-section",
+      "data": {
+        "eyebrow": "Core Technology",
+        "title": "The Five Dimensions",
+        "description": "5D optical data storage uses a FemtoEtch™ process to store information across five dimensions within the structure of fused quartz glass. Three spatial dimensions (x, y, z layering) define the physical position of each data point within the crystal. Two additional optical dimensions are derived from birefringence — the slow axis orientation and retardance strength of self-assembled nanogratings — enabling vastly greater data density and permanence.",
+        "image": "/technology/5d-storage.png",
+        "imageAlt": "5D encoding diagram showing five dimensions of data storage",
+        "bullets": ""
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "tech-section",
+      "data": {
+        "eyebrow": "Writing Process",
+        "title": "How Data is Written",
+        "description": "A femtosecond laser creates self-assembled nanogratings within fused silica glass. Each pit is less than 200nm in size and stores 8 bits (one byte) of data. The ultrashort laser pulses modify the glass at the nanoscale without cracking or damaging the surrounding material, enabling precise, high-density inscription.",
+        "image": "/technology/how-data-is-written.JPG",
+        "imageAlt": "Femtosecond laser writing process creating nanogratings in quartz glass",
+        "bullets": "Femtosecond laser inscription\nSub-200nm nanogratings\nSelf-assembled nanostructures\nData erasable and rewritable"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "tech-section",
+      "data": {
+        "eyebrow": "Sustainability",
+        "title": "Environmental Sustainability",
+        "description": "Global data centres consume 1.5–3% of the world's electricity and generate significant carbon emissions. 5D Memory Crystal™ storage requires zero ongoing energy once data has been written. Write once, store forever — with no cooling infrastructure, no hardware refresh cycles, and no recurring energy cost. A fundamentally more sustainable approach to long-term data preservation.",
+        "image": "/technology/enviromental.png",
+        "imageAlt": "Sustainable data storage with zero energy maintenance",
+        "bullets": "Zero energy maintenance\nNo cooling infrastructure required\nNo hardware refresh cycles\nReduced carbon footprint vs cloud"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "tech-stat",
+      "data": {
+        "value": "10",
+        "unit": "Years",
+        "sup": "20",
+        "label": "Data Lifespan"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "tech-stat",
+      "data": {
+        "value": "360",
+        "unit": "TB",
+        "sup": "",
+        "label": "Potential Per Disc Capacity"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "tech-stat",
+      "data": {
+        "value": "1,000°C",
+        "unit": "",
+        "sup": "",
+        "label": "Heat Resistance"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "tech-stat",
+      "data": {
+        "value": "$0",
+        "unit": "",
+        "sup": "",
+        "label": "Running Storage Costs"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "trust-pillar",
+      "data": {
+        "number": 1,
+        "title": "Secure Transfer",
+        "summary": "Encrypted upload or air-gapped physical handover."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "trust-pillar",
+      "data": {
+        "number": 2,
+        "title": "Certificate",
+        "summary": "Formal proof of exactly what data is in your crystal."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "trust-pillar",
+      "data": {
+        "number": 3,
+        "title": "Verification",
+        "summary": "Bit-for-bit integrity check after encoding."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "trust-pillar",
+      "data": {
+        "number": 4,
+        "title": "Read Service",
+        "summary": "On-demand data retrieval from your crystal."
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "trust-step",
+      "data": {
+        "step": 1,
+        "id": "secure-transfer",
+        "title": "Secure Data Transfer",
+        "description": "Your data is the most valuable thing you'll entrust to us — so we treat the transfer with the same level of security as the crystal itself. Whether you upload through our encrypted portal or ship physical media directly, your files are handled in an air-gapped environment from the moment they arrive.",
+        "image": "/process/data-transfer.JPG.webp",
+        "imageAlt": "Encrypted upload and secure data transfer process",
+        "bullets": "End-to-end encrypted file upload portal\nPhysical media shipping option for sensitive data\nAir-gapped receiving environment — no internet exposure\nData securely erased from all transfer media after encoding"
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "trust-step",
+      "data": {
+        "step": 2,
+        "id": "certificate",
+        "title": "Certificate of Authority",
+        "description": "Every crystal comes with a formal Certificate of Authority — a documented record of exactly what data has been encoded, when it was written, and by whom. This is your proof of provenance: an auditable, tamper-evident record that travels with the crystal for its entire lifespan.",
+        "image": "/process/certificate.JPG",
+        "imageAlt": "Certificate of Authority document for 5D Memory Crystal",
+        "bullets": "Itemised manifest of all encoded files and data sets\nTimestamped encoding record with unique crystal identifier\nCryptographic hash of the source data for independent verification\nPhysical and digital certificate formats available"
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "trust-step",
+      "data": {
+        "step": 3,
+        "id": "verification",
+        "title": "Data Verification",
+        "description": "After encoding, the crystal is immediately read back and the retrieved data is compared against the original — bit for bit. This verification step confirms that the data stored in the crystal is complete, accurate, and exactly as it should be. Nothing is shipped until verification passes.",
+        "image": "/process/data-verification.jpg.webp",
+        "imageAlt": "Data verification and quality check process",
+        "bullets": "Full read-back after every encoding session\nBit-for-bit comparison against source data\nVerification report included with your Certificate of Authority\nFailed verifications trigger automatic re-encoding"
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "trust-step",
+      "data": {
+        "step": 4,
+        "id": "read-service",
+        "title": "Read Service",
+        "description": "Your data is encoded for eternity — but you may need to access it today. Our read service uses precision optical equipment to retrieve the data stored in your crystal and deliver it back to you in any standard digital format. Available on demand, as many times as you need.",
+        "image": "/process/reading-device.JPG.webp",
+        "imageAlt": "Crystal reader and optical data retrieval equipment",
+        "bullets": "On-demand data retrieval from any 5D Memory Crystal\nOutput delivered in standard digital formats\nSecure return shipping and handling\nFuture-proofed — visual decoding instructions encoded on the crystal itself"
+      },
+      "sortOrder": 3,
+      "published": 1
+    },
+    {
+      "type": "value",
+      "data": {
+        "title": "Permanence",
+        "description": "We build for timescales measured in billions of years. Every decision — from material selection to encoding method — is optimised for absolute longevity."
+      },
+      "sortOrder": 0,
+      "published": 1
+    },
+    {
+      "type": "value",
+      "data": {
+        "title": "Security",
+        "description": "Your data is handled in air-gapped Swiss facilities with full chain of custody. No third-party access, no internet exposure, tamper-evident delivery."
+      },
+      "sortOrder": 1,
+      "published": 1
+    },
+    {
+      "type": "value",
+      "data": {
+        "title": "Precision",
+        "description": "Femtosecond laser pulses write data at the nanoscale with bit-for-bit verification. Swiss-made engineering ensures consistent quality across every crystal."
+      },
+      "sortOrder": 2,
+      "published": 1
+    },
+    {
+      "type": "value",
+      "data": {
+        "title": "Sustainability",
+        "description": "Once written, a 5D Crystal requires zero energy to maintain. No cooling, no migration, no cloud infrastructure — the greenest archival medium in existence."
+      },
+      "sortOrder": 3,
+      "published": 1
+    }
+  ],
+  "caseStudies": [
+    {
+      "slug": "boucheron-heritage-preservation",
+      "title": "Boucheron Quatre 5D Memory Ring",
+      "excerpt": "Boucheron Creation Fusion — Quatre 5D Memory ring, unveiled 20th November 2024.",
+      "challenge": "Boucheron wanted to push the boundaries of creativity, art and high tech for its 2024 unveiling of its iconic Quatre Collection.",
+      "solution": "Using SPhotonix 5D Memory Crystal™ technology, we collaborated with the French jewellery maison to create a unique diamond crystal that contained the childhood memory of the seaside with a custom created score by IRAM representing the sound of water. 100 MB of data was preserved in the tiny crystal.",
+      "outcome": "The signature 'Quatre 5D Memory ring' was revealed as part of Boucheron opening of their first ever US store in New York. Debuting in Manhattan, the crystal is the first time high end luxury and art has combined with 5D optical data technology, a fusion of beauty and tech.",
+      "content": ""
+    },
+    {
+      "slug": "gog-digital-archive",
+      "title": "GOG — Heroes of Might and Magic III Preservation",
+      "excerpt": "Preserving an iconic video game forever in 5D Memory Crystal™.",
+      "challenge": "GOG has developed a preservation program that means classic video games are playable now and in the future. GOG wanted to see how to preserve an iconic game, Heroes of Might and Magic III, could be stored and accessible forever.",
+      "solution": "Working with GOG and understanding their passion for digital preservation of video games, now a key element of humanity's culture and society, we looked at how digital files of the game could be transferred and femtoetched™ into a 5D Memory Crystal™. The crystal is a 50mm diameter, 6mm thick round sample, with 1GB of stored data.",
+      "outcome": "The GOG 5D Memory Crystal™ now contains the full digital data files for Heroes of Might and Magic III meaning that future generations are able to enjoy the game no matter what happens. The crystal has beautiful artwork, as well as random access to all data stored.",
+      "content": ""
+    },
+    {
+      "slug": "astrolab-space-mission",
+      "title": "Astrolab Space Mission",
+      "excerpt": "Sending humanity knowledge to space on 5D Memory Crystals.",
+      "challenge": "Astrolab required ultra-durable storage for space travel conditions.",
+      "solution": "Custom 5D Memory Crystals designed for space radiation and extreme temperatures.",
+      "outcome": "Human knowledge preserved on the Moon as a backup of civilization.",
+      "content": "<p>Astrolab selected 5D Memory Crystal for lunar knowledge preservation.</p>"
+    },
+    {
+      "slug": "human-genome-preservation",
+      "title": "Human Genome Preservation",
+      "excerpt": "Preserving the human genome for eternity, etched into 5D Memory Crystal™.",
+      "challenge": "Professor Peter Kazansky wanted to see if it was possible to store the human genome for eternity using his femtoetch™ onto a crystal, inspired by the passing of a close family member.",
+      "solution": "Working with his team and scientists at HelixWorks, human DNA was digitised to binary code before ultra fast lasers etched it into the structure of the 5D Memory Crystal™.",
+      "outcome": "The crystal includes a visual key to show details about what data is stored inside and how it could be used by a future intelligence — species or machine — to create a human. The key shows the universal elements (hydrogen, oxygen, carbon and nitrogen); the four bases of the DNA molecule (adenine, cytosine, guanine and thymine) with their molecular structure; their placement in the double helix structure of DNA; and how genes position into a chromosome, which can then be inserted into a cell.",
+      "content": ""
+    }
+  ]
+}
