@@ -14,7 +14,7 @@ export default async function SpaceProvenSection() {
   const content = await getPageContent('home', 'space-proven', {
     label: 'Out of Earth Durability',
     heading: 'Space Proven',
-    description: "5D Memory Crystal™ is a proven data storage medium that has been deployed in space. Used by AstroLab and LifeShip for off-world data preservation, our crystals carry humanity's knowledge beyond Earth — surviving the vacuum, radiation, and temperature extremes of space without degradation.",
+    description: "5D Memory Crystal™ is a proven data storage medium that has been deployed in space. From the SpaceX Falcon Heavy payload orbiting the Sun to the Arch Mission lunar library, our crystals carry humanity's knowledge beyond Earth — surviving the vacuum, radiation, and temperature extremes of space without degradation.",
     ctaText: 'Learn More',
     ctaHref: '/technology',
     image: '/images/space-proven-2.png',
