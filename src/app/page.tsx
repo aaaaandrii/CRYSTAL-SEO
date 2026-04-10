@@ -14,6 +14,11 @@ import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import CTASection from '@/components/sections/CTASection';
 import { getPageContent, getContentItems } from '@/lib/content';
 
+// Home page pulls content from the DB (PageContent/ContentItem). Force
+// dynamic rendering so admin edits and migrations are reflected immediately
+// instead of being frozen into the prerendered static HTML at build time.
+export const dynamic = 'force-dynamic';
+
 export default async function HomePage() {
   // Fetch content for client components (server components fetch their own)
   const [heroContent, recognitionContent, mediaQuotes, saveDataContent] = await Promise.all([
