@@ -161,10 +161,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
               </div>
 
               {/* Full Content */}
-              <div
-                className="prose mt-12 max-w-none border-t border-[#d0d0d0] pt-10 prose-headings:font-bold prose-headings:text-[#1a1a1a] prose-p:text-[#555] prose-p:font-semibold prose-a:text-[#5a72be] prose-strong:text-[#1a1a1a]"
-                dangerouslySetInnerHTML={{ __html: study.content }}
-              />
+              {study.content && study.content.trim() && (
+                <div
+                  className="prose mt-12 max-w-none border-t border-[#d0d0d0] pt-10 prose-headings:font-bold prose-headings:text-[#1a1a1a] prose-p:text-[#555] prose-p:font-semibold prose-a:text-[#5a72be] prose-strong:text-[#1a1a1a]"
+                  dangerouslySetInnerHTML={{ __html: study.content }}
+                />
+              )}
 
               {/* CTA */}
               <div className="mt-12 flex flex-wrap gap-4 border-t border-[#d0d0d0] pt-8">
