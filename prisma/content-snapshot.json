@@ -1866,7 +1866,9 @@
       "challenge": "Boucheron wanted to push the boundaries of creativity, art and high tech for its 2024 unveiling of its iconic Quatre Collection.",
       "solution": "Using SPhotonix 5D Memory Crystal™ technology, we collaborated with the French jewellery maison to create a unique diamond crystal that contained the childhood memory of the seaside with a custom created score by IRAM representing the sound of water. 100 MB of data was preserved in the tiny crystal.",
       "outcome": "The signature 'Quatre 5D Memory ring' was revealed as part of Boucheron opening of their first ever US store in New York. Debuting in Manhattan, the crystal is the first time high end luxury and art has combined with 5D optical data technology, a fusion of beauty and tech.",
-      "content": ""
+      "content": "",
+      "imageUrl": "/case-studies/boucheron.png",
+      "imageAlt": "Boucheron Heritage Preservation"
     },
     {
       "slug": "gog-digital-archive",
@@ -1875,7 +1877,9 @@
       "challenge": "GOG has developed a preservation program that means classic video games are playable now and in the future. GOG wanted to see how to preserve an iconic game, Heroes of Might and Magic III, could be stored and accessible forever.",
       "solution": "Working with GOG and understanding their passion for digital preservation of video games, now a key element of humanity's culture and society, we looked at how digital files of the game could be transferred and femtoetched™ into a 5D Memory Crystal™. The crystal is a 50mm diameter, 6mm thick round sample, with 1GB of stored data.",
       "outcome": "The GOG 5D Memory Crystal™ now contains the full digital data files for Heroes of Might and Magic III meaning that future generations are able to enjoy the game no matter what happens. The crystal has beautiful artwork, as well as random access to all data stored.",
-      "content": ""
+      "content": "",
+      "imageUrl": "/case-studies/gog.png",
+      "imageAlt": "GOG Digital Archive"
     },
     {
       "slug": "astrolab-space-mission",
@@ -1884,7 +1888,9 @@
       "challenge": "Astrolab required ultra-durable storage for space travel conditions.",
       "solution": "Custom 5D Memory Crystals designed for space radiation and extreme temperatures.",
       "outcome": "Human knowledge preserved on the Moon as a backup of civilization.",
-      "content": "<p>Astrolab selected 5D Memory Crystal for lunar knowledge preservation.</p>"
+      "content": "<p>Astrolab selected 5D Memory Crystal for lunar knowledge preservation.</p>",
+      "imageUrl": "/case-studies/astrolab.png",
+      "imageAlt": "Astrolab Space Mission"
     },
     {
       "slug": "human-genome-preservation",
@@ -1893,7 +1899,9 @@
       "challenge": "Professor Peter Kazansky wanted to see if it was possible to store the human genome for eternity using his femtoetch™ onto a crystal, inspired by the passing of a close family member.",
       "solution": "Working with his team and scientists at HelixWorks, human DNA was digitised to binary code before ultra fast lasers etched it into the structure of the 5D Memory Crystal™.",
       "outcome": "The crystal includes a visual key to show details about what data is stored inside and how it could be used by a future intelligence — species or machine — to create a human. The key shows the universal elements (hydrogen, oxygen, carbon and nitrogen); the four bases of the DNA molecule (adenine, cytosine, guanine and thymine) with their molecular structure; their placement in the double helix structure of DNA; and how genes position into a chromosome, which can then be inserted into a cell.",
-      "content": ""
+      "content": "",
+      "imageUrl": "/case-studies/dna_disc.jpg",
+      "imageAlt": "Human Genome Preservation"
     }
   ]
 }

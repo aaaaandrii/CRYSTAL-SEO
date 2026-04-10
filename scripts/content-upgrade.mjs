@@ -128,7 +128,8 @@ try {
   const csUpdate = db.prepare(
     `UPDATE CaseStudy
        SET title = ?, excerpt = ?, challenge = ?, solution = ?,
-           outcome = ?, content = ?, updatedAt = ?
+           outcome = ?, content = ?, imageUrl = ?, imageAlt = ?,
+           updatedAt = ?
      WHERE slug = ?`
   );
   for (const cs of snapshot.caseStudies || []) {
@@ -139,6 +140,8 @@ try {
       cs.solution,
       cs.outcome,
       cs.content,
+      cs.imageUrl ?? null,
+      cs.imageAlt ?? null,
       now,
       cs.slug
     );

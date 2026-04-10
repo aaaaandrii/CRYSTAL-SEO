@@ -1,8 +1,67 @@
 import type { Metadata } from 'next';
 import Container from '@/components/ui/Container';
+import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SITE_URL } from '@/lib/constants';
 import { prisma } from '@/lib/prisma';
 import CaseStudiesGrid from './CaseStudiesGrid';
+import CollectionsGallery from '../collections/CollectionsGallery';
+
+const galleryItems = [
+  {
+    title: 'Magna Carta',
+    subtitle: 'Salisbury Cathedral, 2016',
+    tag: 'Cultural Heritage',
+    image: '/collections/magna-carta.jpg',
+  },
+  {
+    title: 'Universal Declaration of Human Rights',
+    subtitle: 'UNESCO, 2016',
+    tag: 'Cultural Heritage',
+    image: '/collections/udhr.jpg',
+  },
+  {
+    title: 'Holy Bible',
+    subtitle: 'Biblioteca Apostolica Vaticana',
+    tag: 'Cultural Heritage',
+    image: '/collections/udhr-colour.jpg',
+  },
+  {
+    title: "Stephen Hawking's Brief History of Time",
+    subtitle: 'V&A Museum, London',
+    tag: 'Scientific',
+    image: '/collections/asimov-1.jpg',
+  },
+  {
+    title: "Isaac Newton's Opticks",
+    subtitle: 'Classical physics preserved',
+    tag: 'Scientific',
+    image: '/collections/newton-opticks.jpg',
+  },
+  {
+    title: 'Isaac Asimov Collection',
+    subtitle: 'Complete works encoded',
+    tag: 'Art',
+    image: '/collections/asimov-2.jpg',
+  },
+  {
+    title: 'Human Genome',
+    subtitle: 'Complete DNA sequence, 2024',
+    tag: 'DNA',
+    image: '/collections/asimov-3.jpg',
+  },
+  {
+    title: 'SpaceX Falcon Heavy Payload',
+    subtitle: 'Tesla Roadster in space, 2018',
+    tag: 'Scientific',
+    image: '/collections/asimov-closeup.jpg',
+  },
+  {
+    title: 'European Physical Society Milestones',
+    subtitle: '50th anniversary, 2018',
+    tag: 'Scientific',
+    image: '/collections/asimov-detail.jpg',
+  },
+];
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -49,6 +108,28 @@ export default async function CaseStudiesPage() {
               sector: s.sector,
             }))}
           />
+        </Container>
+      </section>
+
+      {/* Gallery */}
+      <section className="bg-white py-20 md:py-[88px]">
+        <Container>
+          <ScrollReveal>
+            <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+              <p className="mb-3 text-xs font-semibold uppercase text-[#888]">
+                Featured Works
+              </p>
+              <h2 className="text-[32px] font-bold leading-none tracking-tight text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
+                Gallery
+              </h2>
+              <p className="mt-4 text-[14px] font-semibold leading-none text-[#555]">
+                A curated selection of crystals produced for institutions,
+                researchers, and private clients worldwide.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <CollectionsGallery items={galleryItems} />
         </Container>
       </section>
     </>
