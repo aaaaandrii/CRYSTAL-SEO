@@ -303,7 +303,7 @@ export default function ServicesPage() {
                           key={bullet}
                           className="flex items-start gap-3 text-[15px] font-semibold text-[#1a1a1a]"
                         >
-                          <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#5a72be]" />
+                          <span className="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-[#5a72be]" />
                           {bullet}
                         </li>
                       ))}
