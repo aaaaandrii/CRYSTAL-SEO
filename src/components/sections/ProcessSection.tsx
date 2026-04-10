@@ -4,10 +4,10 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { getPageContent, getContentItems } from '@/lib/content';
 
 const defaultSteps = [
-  { number: 1, title: 'Secure Data Transfer', description: 'Your data is transferred via encrypted channels or air-gapped physical media — it never passes through unsecured networks.' },
+  { number: 1, title: 'Secure Data Transfer', description: 'Your data is transferred via encrypted channels or air-gapped physical media — it never passes through unsecured networks, and we do not retain any data supplied by clients.' },
   { number: 2, title: 'Certificate of Authority', description: 'Every crystal ships with a formal certificate documenting exactly what data has been encoded — your proof of provenance.' },
   { number: 3, title: 'Data Verification', description: 'After encoding, the crystal is read back and verified against the original data to confirm integrity — bit for bit.' },
-  { number: 4, title: 'Read Service', description: 'Need to access your data? Our read service retrieves information from your crystal using precision optical equipment — on demand.' },
+  { number: 4, title: 'Read Service', description: 'Our read service retrieves information from your crystal using precision optical equipment. On-site individual read machines will be available in late 2027. We also offer a secure Swiss vault service if you want us to store your crystals.' },
 ];
 
 export default async function ProcessSection() {

@@ -8,7 +8,7 @@ export default async function SectorsSection() {
   const content = await getPageContent('home', 'sectors', {
     label: 'What we offer',
     heading: 'Storage Solutions for Every Sector',
-    subheading: 'From personal keepsakes to enterprise-grade archival, luxury goods, and blockchain verification.',
+    subheading: 'From personal legacy preservation and cultural archiving to IP protection, blockchain verification and creativity in luxury goods.',
   });
 
   const sectors = await getContentItems<{ slug: string; title: string; description: string; image: string; icon: string }>(

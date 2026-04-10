@@ -23,7 +23,7 @@ const defaultContent: HeroContent = {
   heading: 'The Most Durable Storage in the World',
   headingSuperscript: '*',
   footnote: '*According to Guinness World Record Book',
-  description: '5D Memory Crystal encodes your most valuable digital assets into fused quartz glass — virtually indestructible, readable for billions of years, with zero ongoing energy cost.',
+  description: '5D Memory Crystal™ stores and preserves your most valuable digital assets using FemtoEtch™ technology into fused quartz glass — virtually indestructible, readable for billions of years, with $0 running storage costs.',
   cta1Text: 'Order Crystal',
   cta1Href: '/contact',
   cta2Text: 'Learn More',

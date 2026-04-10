@@ -23,7 +23,7 @@ const services = [
     eyebrow: 'Space Tech',
     title: 'Built for the Final Frontier',
     description:
-      'The 5D Memory Crystal is engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation. Whether aboard satellites, deep-space probes, or lunar installations, crystal storage ensures mission-critical data survives where no conventional medium can.',
+      'The 5D Memory Crystal™ is engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation. Whether aboard satellites, deep-space probes, or lunar and asteroid installations, crystal storage ensures mission-critical data survives where no conventional medium can.',
     image: '/sectors/Space.png',
     imageAlt: 'Space technology grade crystal data storage',
     bullets: [
@@ -31,6 +31,7 @@ const services = [
       'Survives extreme temperature swings',
       'Ideal for satellites and deep-space missions',
       'No power required for data retention',
+      'Scalable to fit a range of capsules',
     ],
   },
   {
@@ -38,7 +39,7 @@ const services = [
     eyebrow: 'Corporate & Legal',
     title: 'Immutable Business Records',
     description:
-      'Regulatory archives, board resolutions, IP filings, and compliance records that must remain unalterable and retrievable indefinitely. Crystal storage meets the most demanding data retention policies — providing tamper-proof, offline records that satisfy auditors and regulators without ongoing infrastructure cost.',
+      'Regulatory archives, board resolutions, IP filings, patents, designs, research data, legal documents and compliance records that must remain unalterable and retrievable indefinitely. Crystal storage meets the most demanding data retention policies — providing tamper-proof, offline records that satisfy auditors and regulators without ongoing infrastructure cost.',
     image: '/sectors/corporate.png',
     imageAlt: 'Corporate data archival and legal compliance records',
     bullets: [
@@ -68,12 +69,13 @@ const services = [
     eyebrow: 'DNA & Genomics',
     title: 'The Blueprint of Life, Preserved',
     description:
-      'Encode entire human genomes and biological data sets into crystal — preserving the blueprint of life for billions of years. In partnership with LifeShip, we offer a permanent record of your genetic identity. From personal genome preservation to large-scale research archives, crystal ensures biological data outlasts every conventional storage medium.',
+      'Preserve entire human genomes, rare species DNA and biological data sets into crystal — preserving the blueprint of all life on earth for billions of years. In partnership with LifeShip, we offer a permanent record of your genetic identity. From personal genome preservation to large-scale research archives and species protection, 5D optical data storage crystals ensure biological data outlasts every conventional storage medium.',
     image: '/sectors/dna.png',
     imageAlt: 'DNA and genomic data encoded into 5D memory crystal',
     bullets: [
-      'Complete human genome storage',
+      'Immutable preservation of unique DNA',
       'Research dataset archival',
+      'Safe capture and storage of rare species DNA',
       'Partnership with LifeShip',
       'Billion-year data integrity guarantee',
     ],
@@ -83,27 +85,29 @@ const services = [
     eyebrow: 'Cultural Heritage',
     title: 'Preserving Civilisation',
     description:
-      'Partner with museums, libraries, national archives, and UNESCO sites to preserve humanity\'s most irreplaceable documents and artworks. From the Magna Carta to the Universal Declaration of Human Rights, we\'ve encoded some of the world\'s most significant cultural artefacts into 5D crystal — ensuring they survive for billions of years.',
+      "Museums, libraries, foundations, religious organizations, cultural movements, national archives, and UNESCO sites are able to securely preserve humanity's most irreplaceable assets — written, physical and visual. From the Magna Carta to the Universal Declaration of Human Rights, we've encoded some of the world's most significant cultural artefacts into a 5D Memory Crystal™, ensuring they survive for billions of years.",
     image: '/sectors/cultural.png',
     imageAlt: 'Cultural heritage preservation with 5D crystal technology',
     bullets: [
-      'UNESCO and national archive partnerships',
-      'Magna Carta and UDHR already encoded',
       'Museum-grade presentation cases',
       'Full provenance and Certificate of Authority',
+      'Random access to all data',
+      'Write Once Read Many capability',
+      'TBs data per crystal',
     ],
   },
   {
     slug: 'luxury',
     eyebrow: 'Luxury & Jewellery',
-    title: 'Data as a Luxury Object',
+    title: 'Data is a Luxury',
     description:
-      'Crystal as a luxury object in its own right — bespoke data jewellery that encodes personal meaning into wearable, permanent form. Commemorative and collectible pieces combine artistry with embedded data, creating unique objects that tell a story visible only under specialised readers. Ideal for high-net-worth individuals, luxury brands, and special occasions.',
+      'Bring joy into luxury jewellery, cars, bags, watches, art, sculptures and the like that captures and stores data of personal meaning into wearable, permanent form. Commemorative and collectible pieces combine artistry with embedded data, creating unique objects that tell a story visible only under specialised readers. Ideal for those brands or people that want that something exclusive.',
     image: '/sectors/luxury.png',
     imageAlt: 'Luxury crystal jewellery with encoded data',
     bullets: [
-      'Bespoke crystal jewellery and pendants',
-      'Luxury brand collaboration pieces',
+      'Brings 5D to life in luxe pieces',
+      'Exclusive, unique luxury',
+      'One off brand collaborations',
       'Commemorative and limited editions',
       'Embedded authentication data',
     ],
@@ -128,12 +132,13 @@ const services = [
     eyebrow: 'Personal & Family',
     title: 'Memories That Last Forever',
     description:
-      'Family photos, wedding videos, letters, and personal milestones encoded into a crystal keepsake — a permanent gift that outlasts every hard drive, cloud account, and social media platform. Whether it\'s a first birthday or a lifetime archive, your memories are preserved beyond the reach of data loss, format obsolescence, or digital decay.',
+      "Family photos, videos, letters, wills, important documents, collections, legacy assets and personal milestones etched into a crystal keepsake — a permanent gift that outlasts every hard drive, cloud account, and social media platform. Whether it's a first birthday or a lifetime archive, your memories are preserved beyond the reach of data loss, format obsolescence, or digital decay.",
     image: '/sectors/personal.png',
     imageAlt: 'Personal family memories preserved in 5D crystal',
     bullets: [
-      'Photos, videos, documents, and audio files',
-      'Presentation case included as standard',
+      'Preservation of precious digital assets as a forever keepsake',
+      'Immutable, easy to store and permanent archive',
+      'Ultimate backup for personal data',
       'Perfect as a gift or heirloom',
       'No subscription or maintenance required',
     ],
@@ -194,9 +199,9 @@ const processSteps = [
   },
   {
     number: 3,
-    title: 'We Encode',
+    title: 'We Store',
     description:
-      'Femtosecond laser writes your data into fused quartz glass.',
+      'Our FemtoEtch™ laser technology writes your data into the structure of fused quartz glass using 5 dimensions.',
   },
   {
     number: 4,

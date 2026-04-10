@@ -4,14 +4,14 @@ export const sectors: Sector[] = [
   {
     slug: 'space-tech',
     title: 'Space Tech',
-    description: 'The 5D Memory Crystal engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation.',
+    description: 'Of space, travel, orbit and lunar landings — engineered to withstand the vacuum, intense radiation, and extreme temperatures of space without degradation.',
     image: '/sectors/Space.png',
     icon: '🚀',
   },
   {
     slug: 'corporate',
     title: 'Corporate & Legal',
-    description: 'Regulatory archives, intellectual property, and compliance records that must remain immutable and retrievable indefinitely.',
+    description: 'Intellectual property, research data, regulatory archives, and compliance records that must remain immutable and retrievable indefinitely.',
     image: '/sectors/corporate.png',
     icon: '🏢',
   },
@@ -32,7 +32,7 @@ export const sectors: Sector[] = [
   {
     slug: 'cultural',
     title: 'Cultural Heritage',
-    description: "Partner with museums, libraries, and archives to preserve humanity's most irreplaceable documents and artworks.",
+    description: "Partnering with the world's museums, libraries, and archives to preserve humanity's most irreplaceable documents and artworks.",
     image: '/sectors/cultural.png',
     icon: '🏛️',
   },
@@ -53,7 +53,7 @@ export const sectors: Sector[] = [
   {
     slug: 'personal',
     title: 'Personal & Family',
-    description: 'Encode family photos, videos, and memories into a crystal keepsake — a permanent gift for generations to come.',
+    description: 'Preserve personal and family legacies, photos, videos, letters, and milestones into a crystal keepsake — a permanent gift for generations to come.',
     image: '/sectors/personal.png',
     icon: '👨‍👩‍👧‍👦',
   },

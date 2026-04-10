@@ -20,8 +20,8 @@ const defaultContent: RecognitionContent = {
 
 const defaultQuotes: MediaQuote[] = [
   { quote: 'Data storage that could outlast civilisation itself', source: 'WIRED' },
-  { quote: 'Most durable data storage material in the world', source: <>Guinness World<br />Records</> },
-  { quote: 'Groundbreaking university research project', source: 'The Telegraph' },
+  { quote: 'The everlasting ‘memory crystals’ that could slash data emissions', source: 'BBC' },
+  { quote: 'The future of long-term data storage is clear and will last 14 billion years', source: 'The Register' },
 ];
 
 export default function RecognitionBar({

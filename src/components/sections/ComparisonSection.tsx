@@ -12,7 +12,7 @@ const defaultTableRows = [
 ];
 
 const defaultLifespanBars = [
-  { name: '5D Memory Crystal', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YEARS', highlight: true },
+  { name: '5D Memory Crystal™', years: '100,000,000,000,000,000,000', mobileYears: '100Q+', unit: 'YEARS', highlight: true },
   { name: 'Silica Disc', years: '100,000,000', mobileYears: '100M', unit: 'YEARS', highlight: false },
   { name: 'Magnetic Tape (LTO)', years: '30', mobileYears: '30', unit: 'YEARS', highlight: false },
   { name: 'SSD', years: '5-10', mobileYears: '5-10', unit: 'YEARS', highlight: false },
@@ -29,7 +29,7 @@ const stripWidths: Record<string, number> = {
 export default async function ComparisonSection() {
   const content = await getPageContent('home', 'comparison', {
     label: 'Comparison',
-    heading: '5D Memory Crystal vs Conventional Storage',
+    heading: '5D Memory Crystal™ vs Conventional Storage',
     description: 'No degradation. No magnetic fields. No moving parts. Just light encoded into glass.',
   });
 
