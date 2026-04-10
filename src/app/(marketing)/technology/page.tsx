@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 const stats = [
   { value: '10', unit: 'Years', label: 'Data Lifespan', sup: '20' },
-  { value: '360', unit: 'TB', label: 'Per Disc Capacity' },
+  { value: '360', unit: 'TB', label: 'Potential Per Disc Capacity' },
   { value: '1,000°C', unit: '', label: 'Heat Resistance' },
-  { value: '30+', unit: '', label: 'Years of R&D' },
+  { value: '$0', unit: '', label: 'Running Storage Costs' },
 ];
 
 const contentSections = [
@@ -27,7 +27,7 @@ const contentSections = [
     eyebrow: 'Core Technology',
     title: 'The Five Dimensions',
     description:
-      'Unlike conventional storage that records data in two dimensions, 5D optical storage encodes information across five separate dimensions within fused quartz glass. Three spatial dimensions (x, y, z layering) define the physical position of each data point within the crystal. Two additional optical dimensions are derived from birefringence — the slow axis orientation and retardance strength of self-assembled nanogratings — enabling vastly greater data density and permanence.',
+      '5D optical data storage uses a FemtoEtch™ process to store information across five dimensions within the structure of fused quartz glass. Three spatial dimensions (x, y, z layering) define the physical position of each data point within the crystal. Two additional optical dimensions are derived from birefringence — the slow axis orientation and retardance strength of self-assembled nanogratings — enabling vastly greater data density and permanence.',
     image: '/technology/5d-storage.png',
     imageAlt: '5D encoding diagram showing five dimensions of data storage',
     bullets: null,
@@ -52,7 +52,7 @@ const contentSections = [
     eyebrow: 'Sustainability',
     title: 'Environmental Sustainability',
     description:
-      'Global data centres consume 1–2% of the world\'s electricity and generate significant carbon emissions. 5D crystal storage requires zero ongoing energy once data has been written. Write once, store forever — with no cooling infrastructure, no hardware refresh cycles, and no recurring energy cost. A fundamentally more sustainable approach to long-term data preservation.',
+      "Global data centres consume 1.5–3% of the world's electricity and generate significant carbon emissions. 5D Memory Crystal™ storage requires zero ongoing energy once data has been written. Write once, store forever — with no cooling infrastructure, no hardware refresh cycles, and no recurring energy cost. A fundamentally more sustainable approach to long-term data preservation.",
     image: '/technology/enviromental.png',
     imageAlt: 'Sustainable data storage with zero energy maintenance',
     bullets: [
