@@ -4,10 +4,10 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { getPageContent } from '@/lib/content';
 
 const spaceFeatureIcons = [
-  '/icons/space/spacex.svg',
-  '/icons/space/falcon.svg',
-  '/icons/space/astrolab.svg',
-  '/icons/space/radiation.svg',
+  '/space-icons/SpaceX.svg',
+  '/space-icons/Astrolab.svg',
+  '/space-icons/Lifeship.svg',
+  '/space-icons/MoonMars.svg',
 ];
 
 export default async function SpaceProvenSection() {
@@ -19,10 +19,10 @@ export default async function SpaceProvenSection() {
     ctaHref: '/technology',
     image: '/images/space-proven-2.png',
     features: [
-      'Used by AstroLab for off-world data preservation',
+      'Launched aboard SpaceX Falcon Heavy into solar orbit',
+      'Deployed by AstroLab for off-world data preservation',
       'Partnered with LifeShip for genetic preservation',
-      'Featured in the MoonMars Museum collection',
-      'Resistant to cosmic radiation, vacuum, and extreme thermal cycling',
+      'Featured in the MoonMars Museum lunar collection',
     ],
   });
 
