@@ -4,7 +4,7 @@ export const sectors: Sector[] = [
   {
     slug: 'space-tech',
     title: 'Space Tech',
-    description: 'Of space, travel, orbit and lunar landings — engineered to withstand the vacuum, intense radiation, and extreme temperatures of space without degradation.',
+    description: 'The 5D Memory Crystal™ of space, travel, orbit and lunar landings — engineered to withstand the vacuum, intense radiation, and extreme temperature extremes of space without degradation.',
     image: '/sectors/Space.png',
     icon: '🚀',
   },
