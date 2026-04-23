@@ -109,9 +109,6 @@ export default function TechnologyPage() {
               >
                 <p className="text-[36px] font-bold leading-none tracking-[-1px] text-[#1a1a1a] md:text-[42px]">
                   {stat.value}
-                  {'sup' in stat && stat.sup && (
-                    <sup className="relative -top-[20px] text-[0.5em]">{stat.sup}</sup>
-                  )}
                   {stat.unit && (
                     <span
                       className={`text-[36px] font-bold text-[#1a1a1a] md:text-[42px] ${
