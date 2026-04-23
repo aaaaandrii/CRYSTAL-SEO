@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: '10', unit: 'Years', label: 'Data Lifespan', sup: '20' },
+  { value: '10B+', unit: 'Years', label: 'Data Lifespan', stackUnit: true },
   { value: '360', unit: 'TB', label: 'Potential Per Disc Capacity' },
   { value: '1,000°C', unit: '', label: 'Heat Resistance' },
   { value: '$0', unit: '', label: 'Running Storage Costs' },
@@ -62,6 +62,21 @@ const contentSections = [
       'Reduced carbon footprint vs cloud',
     ],
   },
+  {
+    id: 'resilience',
+    eyebrow: 'Durability',
+    title: 'Harsh Environment Resistance',
+    description:
+      '5D Memory Crystal™ survives conditions that destroy conventional storage. The fused quartz substrate is unaffected by ionizing radiation and electromagnetic pulses (EMPs), making it viable for space, near reactor sites, or in the aftermath of grid-scale disruptions. It is chemically inert with a zero water absorption rate, so crystals remain intact in high-humidity environments and can even be stored at the bottom of the ocean without data loss.',
+    image: '/technology/harsh-environment.webp',
+    imageAlt: 'Crystal storage resistant to radiation, EMPs, humidity, and deep ocean exposure',
+    bullets: [
+      'Radiation- and EMP-resistant',
+      'Survives deep-ocean pressure and exposure',
+      'Zero water absorption, fully humidity-resistant',
+      'Chemically inert fused quartz substrate',
+    ],
+  },
 ];
 
 export default function TechnologyPage() {
@@ -90,7 +105,7 @@ export default function TechnologyPage() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-[22px] bg-white p-6 text-center"
+                className="flex flex-col items-center justify-center rounded-[22px] bg-white p-6 text-center"
               >
                 <p className="text-[36px] font-bold leading-none tracking-[-1px] text-[#1a1a1a] md:text-[42px]">
                   {stat.value}
@@ -98,7 +113,11 @@ export default function TechnologyPage() {
                     <sup className="relative -top-[20px] text-[0.5em]">{stat.sup}</sup>
                   )}
                   {stat.unit && (
-                    <span className="ml-1 text-[36px] font-bold text-[#1a1a1a] md:text-[42px]">
+                    <span
+                      className={`text-[36px] font-bold text-[#1a1a1a] md:text-[42px] ${
+                        'stackUnit' in stat && stat.stackUnit ? 'block' : 'ml-1'
+                      }`}
+                    >
                       {stat.unit}
                     </span>
                   )}
