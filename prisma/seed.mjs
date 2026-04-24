@@ -391,7 +391,7 @@ const trustSteps = [
 trustSteps.forEach((s, i) => seedContentItem('trust-step', s, i));
 
 // ── Gallery (case studies page) ──────────────────────────────────────
-const galleryItems = [
+const caseStudiesGallery = [
   { title: 'Universal Declaration of Human Rights', subtitle: 'UNESCO, 2016', tag: 'Cultural Heritage', image: '/collections/udhr.jpg', imageAlt: 'Universal Declaration of Human Rights crystal' },
   { title: 'Holy Bible', subtitle: 'Biblioteca Apostolica Vaticana', tag: 'Cultural Heritage', image: '/case-studies/vatican.png', imageAlt: 'Holy Bible crystal preserved at the Vatican Library' },
   { title: "Stephen Hawking's Brief History of Time", subtitle: 'V&A Museum, London', tag: 'Scientific', image: '/case-studies/brief-history-of-time.png', imageAlt: "Stephen Hawking's Brief History of Time crystal" },
@@ -402,7 +402,7 @@ const galleryItems = [
   { title: 'Moon Mars Museum', subtitle: 'Lunar archive of humanity', tag: 'Cultural Heritage', image: '/case-studies/moon-mars-museum.webp', imageAlt: 'Moon Mars Museum lunar archive crystal' },
   { title: "The Hitchhiker's Guide to the Galaxy", subtitle: 'Douglas Adams', tag: 'Art', image: '/case-studies/douglas-adams.png', imageAlt: "The Hitchhiker's Guide to the Galaxy crystal" },
 ];
-galleryItems.forEach((g, i) => seedContentItem('gallery', g, i));
+caseStudiesGallery.forEach((g, i) => seedContentItem('gallery', g, i));
 
 seedPageContent('process', 'continuous-improvement', {
   eyebrow: 'Looking Ahead',
