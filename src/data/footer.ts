@@ -41,4 +41,12 @@ export const footerColumns: FooterColumn[] = [
       { label: 'Contact', href: '/contact' },
     ],
   },
+  {
+    title: 'Get Started',
+    links: [
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Schedule a Demo', href: '/schedule-demo' },
+      { label: 'Order Crystal', href: '/contact' },
+    ],
+  },
 ];
