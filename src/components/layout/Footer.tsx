@@ -43,18 +43,18 @@ export function Footer() {
           </div>
 
           {/* Link Columns */}
-          <div className="grid flex-1 grid-cols-4 gap-1.5 lg:gap-2">
+          <div className="grid flex-1 grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4 sm:gap-1.5 lg:gap-2">
             {footerColumns.map((column) => (
-              <div key={column.title} className="flex flex-col gap-0.5">
+              <div key={column.title} className="flex flex-col gap-1 sm:gap-0.5">
                 <h3 className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#888]">
                   {column.title}
                 </h3>
-                <ul className="flex flex-col">
+                <ul className="flex flex-col gap-0.5 sm:gap-0">
                   {column.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-[12px] leading-none font-semibold text-[#bbb] transition-colors hover:text-white"
+                        className="text-[12px] leading-tight font-semibold text-[#bbb] transition-colors hover:text-white sm:leading-none"
                       >
                         {link.label}
                       </Link>
