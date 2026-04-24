@@ -1966,6 +1966,7 @@
       "published": 1
     }
   ],
+  "caseStudyDeletes": ["astrolab-space-mission"],
   "caseStudies": [
     {
       "slug": "boucheron-heritage-preservation",
@@ -1990,15 +1991,20 @@
       "imageAlt": "GOG Digital Archive"
     },
     {
-      "slug": "astrolab-space-mission",
-      "title": "Astrolab Space Mission",
-      "excerpt": "Sending humanity knowledge to space on 5D Memory Crystals.",
-      "challenge": "Astrolab required ultra-durable storage for space travel conditions.",
-      "solution": "Custom 5D Memory Crystals designed for space radiation and extreme temperatures.",
-      "outcome": "Human knowledge preserved on the Moon as a backup of civilization.",
-      "content": "<p>Astrolab selected 5D Memory Crystal for lunar knowledge preservation.</p>",
+      "slug": "uplift-moon-mission",
+      "title": "UpLift: Intact data storage of Stories of Space for moon mission",
+      "client": "UpLift",
+      "sector": "space",
+      "excerpt": "Over 3,000+ messages from Moon Mission students and partner organisations preserved for a lunar landing as part of Astrobotic\u2019s Griffin Mission One.",
+      "challenge": "UpLift needed a secure, non-destructible data storage medium that was small enough and could withstand the pressures and atmospheric conditions of a rocket launch, orbit and lunar landing for their participation in AstroLab\u2019s FLEX Lunar Innovation Platform as part of Astrobotic\u2019s Griffin Mission One, launching July 2026.",
+      "solution": "Working with SPhotonix and having seen how 5D Memory Crystal\u2122 technology worked for previous missions, UpLift brought together over 3,000+ messages from Moon Mission students and from the Institute of Noetic Sciences, Global Consciousness Project 2.0, and Space for Humanity. The data size was assessed alongside the space allowed on the FLIP.",
+      "outcome": "A 2.5 cm diameter, 2 mm thickness round 5D Memory Crystal\u2122 was selected to hold up to 1GB of text and images using single-layer writing visible under the microscope. The crystal was delivered five months in advance of the intended launch date.",
+      "content": "<p>UpLift selected 5D Memory Crystal\u2122 technology to preserve Stories of Space for Astrobotic\u2019s Griffin Mission One lunar landing, launching July 2026.</p>",
       "imageUrl": "/case-studies/astrolab2.jpg",
-      "imageAlt": "Astrolab Space Mission"
+      "imageAlt": "UpLift Stories of Space 5D Memory Crystal for Griffin Mission One lunar landing",
+      "published": true,
+      "featured": true,
+      "publishedAt": "2026-01-15T00:00:00.000Z"
     },
     {
       "slug": "human-genome-preservation",

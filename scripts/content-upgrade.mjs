@@ -20,10 +20,10 @@
 // - ContentItem is fully replaced per type. Any type present in the
 //   snapshot has ALL its existing rows deleted and re-inserted from the
 //   snapshot. Types NOT in the snapshot are left untouched.
-// - CaseStudy only has specific text fields (excerpt/challenge/solution/
-//   outcome/content/title) updated by slug. Rows are neither created nor
-//   deleted here — that happens via the admin panel / seed on first boot.
-// - NewsArticle and User are never touched.
+// - CaseStudy: existing rows are updated by slug; rows whose slug appears
+//   in `caseStudyDeletes` are removed; if a snapshot caseStudy has no
+//   matching slug in the DB it is inserted (so new case studies can ship
+//   via snapshot). NewsArticle and User are never touched.
 //
 // Controlled by env var CONTENT_UPGRADE=1 (default on). Set to 0 to skip.
 
@@ -124,7 +124,14 @@ try {
     ciCount++;
   }
 
-  // ── CaseStudy: update text fields by slug ──────────────────────────
+  // ── CaseStudy: delete obsolete, update by slug, insert new ─────────
+  const csDelete = db.prepare('DELETE FROM CaseStudy WHERE slug = ?');
+  for (const slug of snapshot.caseStudyDeletes || []) {
+    const res = csDelete.run(slug);
+    if (res.changes > 0) csCount++;
+  }
+
+  const csGet = db.prepare('SELECT id FROM CaseStudy WHERE slug = ?');
   const csUpdate = db.prepare(
     `UPDATE CaseStudy
        SET title = ?, excerpt = ?, challenge = ?, solution = ?,
@@ -132,20 +139,58 @@ try {
            updatedAt = ?
      WHERE slug = ?`
   );
+  const csInsert = db.prepare(
+    `INSERT INTO CaseStudy (id, title, slug, client, sector, excerpt,
+        challenge, solution, outcome, content, imageUrl, imageAlt,
+        published, featured, publishedAt, createdAt, updatedAt)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  );
   for (const cs of snapshot.caseStudies || []) {
-    const res = csUpdate.run(
-      cs.title,
-      cs.excerpt,
-      cs.challenge,
-      cs.solution,
-      cs.outcome,
-      cs.content,
-      cs.imageUrl ?? null,
-      cs.imageAlt ?? null,
-      now,
-      cs.slug
-    );
-    if (res.changes > 0) csCount++;
+    const existing = csGet.get(cs.slug);
+    if (existing) {
+      const res = csUpdate.run(
+        cs.title,
+        cs.excerpt,
+        cs.challenge,
+        cs.solution,
+        cs.outcome,
+        cs.content,
+        cs.imageUrl ?? null,
+        cs.imageAlt ?? null,
+        now,
+        cs.slug
+      );
+      if (res.changes > 0) csCount++;
+    } else {
+      // Inserts require client/sector; skip (with a warning) if missing,
+      // rather than crashing the boot.
+      if (!cs.client || !cs.sector) {
+        console.warn(
+          `[content-upgrade] skipping insert of "${cs.slug}" — missing client or sector`
+        );
+        continue;
+      }
+      csInsert.run(
+        cuid(),
+        cs.title,
+        cs.slug,
+        cs.client,
+        cs.sector,
+        cs.excerpt ?? '',
+        cs.challenge ?? '',
+        cs.solution ?? '',
+        cs.outcome ?? '',
+        cs.content ?? '',
+        cs.imageUrl ?? '',
+        cs.imageAlt ?? '',
+        cs.published === false ? 0 : 1,
+        cs.featured ? 1 : 0,
+        cs.publishedAt ?? now,
+        now,
+        now
+      );
+      csCount++;
+    }
   }
 
   db.exec('COMMIT');
