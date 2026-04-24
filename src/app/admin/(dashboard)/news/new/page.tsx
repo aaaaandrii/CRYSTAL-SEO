@@ -1,11 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { newsCreateSchema } from '@/lib/validations';
 import type { z } from 'zod';
 import Link from 'next/link';
+import { ImageUpload } from '@/components/admin/ImageUpload';
 
 type NewsFormData = z.input<typeof newsCreateSchema>;
 
@@ -14,6 +15,7 @@ export default function NewNewsPage() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors, isSubmitting },
   } = useForm<NewsFormData>({
     resolver: zodResolver(newsCreateSchema),
@@ -88,13 +90,15 @@ export default function NewNewsPage() {
           />
         </FormField>
 
-        <FormField label="Image URL" error={errors.imageUrl?.message}>
-          <input
-            {...register('imageUrl')}
-            className="admin-input"
-            placeholder="/uploads/image.jpg or https://..."
-          />
-        </FormField>
+        <Controller
+          control={control}
+          name="imageUrl"
+          render={({ field }) => (
+            <FormField label="Image" error={errors.imageUrl?.message}>
+              <ImageUpload value={field.value || ''} onChange={field.onChange} />
+            </FormField>
+          )}
+        />
 
         <FormField label="Image Alt Text" error={errors.imageAlt?.message}>
           <input

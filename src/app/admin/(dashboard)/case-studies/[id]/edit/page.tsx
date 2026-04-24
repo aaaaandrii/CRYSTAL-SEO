@@ -1,12 +1,13 @@
 'use client';
 
 import { useRouter, useParams } from 'next/navigation';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { caseStudyCreateSchema } from '@/lib/validations';
 import type { z } from 'zod';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { ImageUpload } from '@/components/admin/ImageUpload';
 
 type CaseStudyFormData = z.input<typeof caseStudyCreateSchema>;
 
@@ -49,6 +50,7 @@ export default function EditCaseStudyPage() {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors, isSubmitting },
   } = useForm<CaseStudyFormData>({
     resolver: zodResolver(caseStudyCreateSchema),
@@ -222,13 +224,15 @@ export default function EditCaseStudyPage() {
           />
         </FormField>
 
-        <FormField label="Image URL" error={errors.imageUrl?.message}>
-          <input
-            {...register('imageUrl')}
-            className="admin-input"
-            placeholder="/uploads/image.jpg or https://..."
-          />
-        </FormField>
+        <Controller
+          control={control}
+          name="imageUrl"
+          render={({ field }) => (
+            <FormField label="Image" error={errors.imageUrl?.message}>
+              <ImageUpload value={field.value || ''} onChange={field.onChange} />
+            </FormField>
+          )}
+        />
 
         <FormField label="Image Alt Text" error={errors.imageAlt?.message}>
           <input
@@ -238,13 +242,15 @@ export default function EditCaseStudyPage() {
           />
         </FormField>
 
-        <FormField label="Logo URL (optional)" error={errors.logoUrl?.message}>
-          <input
-            {...register('logoUrl')}
-            className="admin-input"
-            placeholder="/uploads/logo.png (optional)"
-          />
-        </FormField>
+        <Controller
+          control={control}
+          name="logoUrl"
+          render={({ field }) => (
+            <FormField label="Logo (optional)" error={errors.logoUrl?.message}>
+              <ImageUpload value={field.value || ''} onChange={field.onChange} />
+            </FormField>
+          )}
+        />
 
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
