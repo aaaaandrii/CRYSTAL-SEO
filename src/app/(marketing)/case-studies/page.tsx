@@ -8,12 +8,6 @@ import CollectionsGallery from '../collections/CollectionsGallery';
 
 const galleryItems = [
   {
-    title: 'Magna Carta',
-    subtitle: 'Salisbury Cathedral, 2016',
-    tag: 'Cultural Heritage',
-    image: '/collections/magna-carta.jpg',
-  },
-  {
     title: 'Universal Declaration of Human Rights',
     subtitle: 'UNESCO, 2016',
     tag: 'Cultural Heritage',
@@ -23,13 +17,13 @@ const galleryItems = [
     title: 'Holy Bible',
     subtitle: 'Biblioteca Apostolica Vaticana',
     tag: 'Cultural Heritage',
-    image: '/collections/udhr-colour.jpg',
+    image: '/case-studies/vatican.png',
   },
   {
     title: "Stephen Hawking's Brief History of Time",
     subtitle: 'V&A Museum, London',
     tag: 'Scientific',
-    image: '/collections/asimov-1.jpg',
+    image: '/case-studies/brief-history-of-time.png',
   },
   {
     title: "Isaac Newton's Opticks",
@@ -41,13 +35,13 @@ const galleryItems = [
     title: 'Isaac Asimov Collection',
     subtitle: 'Complete works encoded',
     tag: 'Art',
-    image: '/collections/asimov-2.jpg',
+    image: '/case-studies/asimov-3.avif',
   },
   {
     title: 'Human Genome',
     subtitle: 'Complete DNA sequence, 2024',
     tag: 'DNA',
-    image: '/collections/asimov-3.jpg',
+    image: '/case-studies/human-genome-collection.png',
   },
   {
     title: 'SpaceX Falcon Heavy Payload',
@@ -56,10 +50,16 @@ const galleryItems = [
     image: '/collections/asimov-closeup.jpg',
   },
   {
-    title: 'European Physical Society Milestones',
-    subtitle: '50th anniversary, 2018',
-    tag: 'Scientific',
-    image: '/collections/asimov-detail.jpg',
+    title: 'Moon Mars Museum',
+    subtitle: 'Lunar archive of humanity',
+    tag: 'Cultural Heritage',
+    image: '/case-studies/moon-mars-museum.webp',
+  },
+  {
+    title: "The Hitchhiker's Guide to the Galaxy",
+    subtitle: 'Douglas Adams',
+    tag: 'Art',
+    image: '/case-studies/douglas-adams.png',
   },
 ];
 
