@@ -600,9 +600,9 @@ seedPageContent('contact', 'hero', {
 seedPageContent('contact', 'info', {
   infoHeading: 'Get in Touch',
   email: 'info@5dmemorycrystal.com',
-  companyName: '5D Memory Crystal AG',
-  location: 'Zurich, Switzerland',
-  businessHours: 'Monday – Friday: 9:00 – 18:00 CET',
+  companyName: 'SPhotonix Inc',
+  location: 'Suite 208, 254 Chapman Rd, Newark, DE 19702, United States',
+  businessHours: 'Monday – Friday: 9:00 – 18:00 ET',
   responseTime: 'We typically respond within one business day.',
 });
 

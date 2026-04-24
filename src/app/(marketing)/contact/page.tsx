@@ -23,9 +23,11 @@ const localBusinessJsonLd = {
     'Manufacturer of 5D Memory Crystal eternal data storage devices, Swiss-made with femtosecond laser writing technology.',
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'CH',
-    addressLocality: 'Zurich',
-    addressRegion: 'ZH',
+    streetAddress: 'Suite 208, 254 Chapman Rd',
+    addressLocality: 'Newark',
+    addressRegion: 'DE',
+    postalCode: '19702',
+    addressCountry: 'US',
   },
   image: `${SITE_URL}/og-image.jpg`,
 };
@@ -82,9 +84,13 @@ export default function ContactPage() {
                       Headquarters
                     </h4>
                     <address className="mt-1 text-[14px] font-semibold not-italic leading-[22px] text-[#555]">
-                      5D Memory Crystal AG
+                      SPhotonix Inc
                       <br />
-                      Zurich, Switzerland
+                      Suite 208, 254 Chapman Rd
+                      <br />
+                      Newark, DE 19702
+                      <br />
+                      United States
                     </address>
                   </div>
 
@@ -93,7 +99,7 @@ export default function ContactPage() {
                       Business Hours
                     </h4>
                     <p className="mt-1 text-[14px] font-semibold text-[#555]">
-                      Monday &ndash; Friday: 9:00 &ndash; 18:00 CET
+                      Monday &ndash; Friday: 9:00 &ndash; 18:00 ET
                     </p>
                   </div>
 
