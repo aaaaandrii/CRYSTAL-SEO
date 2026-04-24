@@ -6,62 +6,13 @@ import { prisma } from '@/lib/prisma';
 import CaseStudiesGrid from './CaseStudiesGrid';
 import CollectionsGallery from '../collections/CollectionsGallery';
 
-const galleryItems = [
-  {
-    title: 'Universal Declaration of Human Rights',
-    subtitle: 'UNESCO, 2016',
-    tag: 'Cultural Heritage',
-    image: '/collections/udhr.jpg',
-  },
-  {
-    title: 'Holy Bible',
-    subtitle: 'Biblioteca Apostolica Vaticana',
-    tag: 'Cultural Heritage',
-    image: '/case-studies/vatican.png',
-  },
-  {
-    title: "Stephen Hawking's Brief History of Time",
-    subtitle: 'V&A Museum, London',
-    tag: 'Scientific',
-    image: '/case-studies/brief-history-of-time.png',
-  },
-  {
-    title: "Isaac Newton's Opticks",
-    subtitle: 'Classical physics preserved',
-    tag: 'Scientific',
-    image: '/collections/newton-opticks.jpg',
-  },
-  {
-    title: 'Isaac Asimov Collection',
-    subtitle: 'Complete works encoded',
-    tag: 'Art',
-    image: '/case-studies/asimov-3.avif',
-  },
-  {
-    title: 'Human Genome',
-    subtitle: 'Complete DNA sequence, 2024',
-    tag: 'DNA',
-    image: '/case-studies/human-genome-collection.png',
-  },
-  {
-    title: 'SpaceX Falcon Heavy Payload',
-    subtitle: 'Tesla Roadster in space, 2018',
-    tag: 'Scientific',
-    image: '/collections/asimov-closeup.jpg',
-  },
-  {
-    title: 'Moon Mars Museum',
-    subtitle: 'Lunar archive of humanity',
-    tag: 'Cultural Heritage',
-    image: '/case-studies/moon-mars-museum.webp',
-  },
-  {
-    title: "The Hitchhiker's Guide to the Galaxy",
-    subtitle: 'Douglas Adams',
-    tag: 'Art',
-    image: '/case-studies/douglas-adams.png',
-  },
-];
+interface GalleryItemData {
+  title?: string;
+  subtitle?: string;
+  tag?: string;
+  image?: string;
+  imageAlt?: string;
+}
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -73,10 +24,28 @@ export const metadata: Metadata = {
 };
 
 export default async function CaseStudiesPage() {
-  const caseStudies = await prisma.caseStudy.findMany({
-    where: { published: true },
-    orderBy: { publishedAt: 'desc' },
-  });
+  const [caseStudies, galleryRows] = await Promise.all([
+    prisma.caseStudy.findMany({
+      where: { published: true },
+      orderBy: { publishedAt: 'desc' },
+    }),
+    prisma.contentItem.findMany({
+      where: { type: 'gallery', published: true },
+      orderBy: { sortOrder: 'asc' },
+    }),
+  ]);
+
+  const galleryItems = galleryRows
+    .map((row) => {
+      const data = JSON.parse(row.data) as GalleryItemData;
+      return {
+        title: data.title ?? '',
+        subtitle: data.subtitle ?? '',
+        tag: data.tag ?? '',
+        image: data.image ?? '',
+      };
+    })
+    .filter((item) => item.title && item.image);
 
   return (
     <>

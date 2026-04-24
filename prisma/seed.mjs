@@ -390,6 +390,20 @@ const trustSteps = [
 ];
 trustSteps.forEach((s, i) => seedContentItem('trust-step', s, i));
 
+// ── Gallery (case studies page) ──────────────────────────────────────
+const galleryItems = [
+  { title: 'Universal Declaration of Human Rights', subtitle: 'UNESCO, 2016', tag: 'Cultural Heritage', image: '/collections/udhr.jpg', imageAlt: 'Universal Declaration of Human Rights crystal' },
+  { title: 'Holy Bible', subtitle: 'Biblioteca Apostolica Vaticana', tag: 'Cultural Heritage', image: '/case-studies/vatican.png', imageAlt: 'Holy Bible crystal preserved at the Vatican Library' },
+  { title: "Stephen Hawking's Brief History of Time", subtitle: 'V&A Museum, London', tag: 'Scientific', image: '/case-studies/brief-history-of-time.png', imageAlt: "Stephen Hawking's Brief History of Time crystal" },
+  { title: "Isaac Newton's Opticks", subtitle: 'Classical physics preserved', tag: 'Scientific', image: '/collections/newton-opticks.jpg', imageAlt: "Isaac Newton's Opticks crystal" },
+  { title: 'Isaac Asimov Collection', subtitle: 'Complete works encoded', tag: 'Art', image: '/case-studies/asimov-3.avif', imageAlt: 'Isaac Asimov collection crystal' },
+  { title: 'Human Genome', subtitle: 'Complete DNA sequence, 2024', tag: 'DNA', image: '/case-studies/human-genome-collection.png', imageAlt: 'Human Genome crystal collection' },
+  { title: 'SpaceX Falcon Heavy Payload', subtitle: 'Tesla Roadster in space, 2018', tag: 'Scientific', image: '/collections/asimov-closeup.jpg', imageAlt: 'SpaceX Falcon Heavy payload crystal' },
+  { title: 'Moon Mars Museum', subtitle: 'Lunar archive of humanity', tag: 'Cultural Heritage', image: '/case-studies/moon-mars-museum.webp', imageAlt: 'Moon Mars Museum lunar archive crystal' },
+  { title: "The Hitchhiker's Guide to the Galaxy", subtitle: 'Douglas Adams', tag: 'Art', image: '/case-studies/douglas-adams.png', imageAlt: "The Hitchhiker's Guide to the Galaxy crystal" },
+];
+galleryItems.forEach((g, i) => seedContentItem('gallery', g, i));
+
 seedPageContent('process', 'continuous-improvement', {
   eyebrow: 'Looking Ahead',
   heading: 'Continuous Improvement',
