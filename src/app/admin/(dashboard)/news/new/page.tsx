@@ -7,6 +7,7 @@ import { newsCreateSchema } from '@/lib/validations';
 import type { z } from 'zod';
 import Link from 'next/link';
 import { ImageUpload } from '@/components/admin/ImageUpload';
+import { SeoSidebar } from '@/components/admin/SeoSidebar';
 
 type NewsFormData = z.input<typeof newsCreateSchema>;
 
@@ -16,6 +17,7 @@ export default function NewNewsPage() {
     register,
     handleSubmit,
     control,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<NewsFormData>({
     resolver: zodResolver(newsCreateSchema),
@@ -24,6 +26,13 @@ export default function NewNewsPage() {
       tags: '',
     },
   });
+
+  const [seoTitle, seoExcerpt, seoContent, seoImageAlt] = watch([
+    'title',
+    'excerpt',
+    'content',
+    'imageAlt',
+  ]);
 
   async function onSubmit(data: NewsFormData) {
     try {
@@ -60,9 +69,10 @@ export default function NewNewsPage() {
         </h1>
       </div>
 
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] max-w-6xl">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-brand-navy border border-brand-border rounded-lg p-8 space-y-6 max-w-3xl"
+        className="bg-brand-navy border border-brand-border rounded-lg p-8 space-y-6 min-w-0"
       >
         <FormField label="Title" error={errors.title?.message}>
           <input
@@ -162,6 +172,14 @@ export default function NewNewsPage() {
           </Link>
         </div>
       </form>
+
+        <SeoSidebar
+          title={seoTitle ?? ''}
+          excerpt={seoExcerpt ?? ''}
+          content={seoContent ?? ''}
+          imageAlt={seoImageAlt ?? ''}
+        />
+      </div>
     </div>
   );
 }

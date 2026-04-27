@@ -7,6 +7,7 @@ import { caseStudyCreateSchema } from '@/lib/validations';
 import type { z } from 'zod';
 import Link from 'next/link';
 import { ImageUpload } from '@/components/admin/ImageUpload';
+import { SeoSidebar } from '@/components/admin/SeoSidebar';
 
 type CaseStudyFormData = z.input<typeof caseStudyCreateSchema>;
 
@@ -27,6 +28,7 @@ export default function NewCaseStudyPage() {
     register,
     handleSubmit,
     control,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<CaseStudyFormData>({
     resolver: zodResolver(caseStudyCreateSchema),
@@ -35,6 +37,13 @@ export default function NewCaseStudyPage() {
       featured: false,
     },
   });
+
+  const [seoTitle, seoExcerpt, seoContent, seoImageAlt] = watch([
+    'title',
+    'excerpt',
+    'content',
+    'imageAlt',
+  ]);
 
   async function onSubmit(data: CaseStudyFormData) {
     try {
@@ -71,9 +80,10 @@ export default function NewCaseStudyPage() {
         </h1>
       </div>
 
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] max-w-6xl">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-brand-navy border border-brand-border rounded-lg p-8 space-y-6 max-w-3xl"
+        className="bg-brand-navy border border-brand-border rounded-lg p-8 space-y-6 min-w-0"
       >
         <FormField label="Title" error={errors.title?.message}>
           <input
@@ -219,6 +229,14 @@ export default function NewCaseStudyPage() {
           </Link>
         </div>
       </form>
+
+        <SeoSidebar
+          title={seoTitle ?? ''}
+          excerpt={seoExcerpt ?? ''}
+          content={seoContent ?? ''}
+          imageAlt={seoImageAlt ?? ''}
+        />
+      </div>
     </div>
   );
 }

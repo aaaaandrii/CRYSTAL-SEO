@@ -8,6 +8,7 @@ import type { z } from 'zod';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ImageUpload } from '@/components/admin/ImageUpload';
+import { SeoSidebar } from '@/components/admin/SeoSidebar';
 
 type NewsFormData = z.input<typeof newsCreateSchema>;
 
@@ -36,10 +37,18 @@ export default function EditNewsPage() {
     handleSubmit,
     reset,
     control,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<NewsFormData>({
     resolver: zodResolver(newsCreateSchema),
   });
+
+  const [seoTitle, seoExcerpt, seoContent, seoImageAlt] = watch([
+    'title',
+    'excerpt',
+    'content',
+    'imageAlt',
+  ]);
 
   useEffect(() => {
     async function loadArticle() {
@@ -124,9 +133,10 @@ export default function EditNewsPage() {
         </h1>
       </div>
 
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] max-w-6xl">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-brand-navy border border-brand-border rounded-lg p-8 space-y-6 max-w-3xl"
+        className="bg-brand-navy border border-brand-border rounded-lg p-8 space-y-6 min-w-0"
       >
         <FormField label="Title" error={errors.title?.message}>
           <input
@@ -226,6 +236,14 @@ export default function EditNewsPage() {
           </Link>
         </div>
       </form>
+
+        <SeoSidebar
+          title={seoTitle ?? ''}
+          excerpt={seoExcerpt ?? ''}
+          content={seoContent ?? ''}
+          imageAlt={seoImageAlt ?? ''}
+        />
+      </div>
     </div>
   );
 }
