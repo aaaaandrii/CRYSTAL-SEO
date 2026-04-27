@@ -26,7 +26,7 @@ export const caseStudyCreateSchema = z.object({
   challenge: z.string().min(1),
   solution: z.string().min(1),
   outcome: z.string().min(1),
-  content: z.string().min(1),
+  content: z.string().optional().default(''),
   imageUrl: z.string().min(1),
   imageAlt: z.string().max(200).optional(),
   logoUrl: z.string().optional(),
