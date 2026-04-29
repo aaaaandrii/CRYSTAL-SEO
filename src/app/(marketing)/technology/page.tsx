@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: '10B+', unit: 'Years', label: 'Data Lifespan' },
+  { value: '13B+', unit: 'Years', label: 'Data Lifespan' },
   { value: '360', unit: 'TB', label: 'Potential Per Disc Capacity' },
   { value: '1,000°C', unit: '', label: 'Heat Resistance' },
   { value: '$0', unit: '', label: 'Running Storage Costs' },
@@ -107,7 +107,7 @@ export default function TechnologyPage() {
                 key={stat.label}
                 className="flex flex-col items-center justify-center rounded-[22px] bg-white p-6 text-center"
               >
-                <p className="text-[32px] font-bold leading-none tracking-[-1px] text-[#1a1a1a] sm:text-[38px] lg:text-[42px]">
+                <p className="text-[32px] font-bold leading-none tracking-[-1.2px] text-[#1a1a1a] sm:text-[38px] sm:tracking-[-1px] lg:text-[42px]">
                   {stat.value}
                   {stat.unit && <> {stat.unit}</>}
                 </p>

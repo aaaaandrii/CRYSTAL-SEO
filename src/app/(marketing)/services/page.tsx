@@ -69,7 +69,7 @@ const services = [
     eyebrow: 'DNA & Genomics',
     title: 'The Blueprint of Life, Preserved',
     description:
-      'Preserve entire human genomes, rare species DNA and biological data sets into crystal — preserving the blueprint of all life on earth for billions of years. In partnership with LifeShip, we offer a permanent record of your genetic identity. From personal genome preservation to large-scale research archives and species protection, 5D optical data storage crystals ensure biological data outlasts every conventional storage medium.',
+      'Preserve entire human genomes, rare species DNA and biological data sets into crystal — preserving the blueprint of all life on earth for billions of years. In partnership with Helix Works, we offer a permanent record of your genetic identity. From personal genome preservation to large-scale research archives and species protection, 5D optical data storage crystals ensure biological data outlasts every conventional storage medium.',
     image: '/sectors/dna.png',
     imageAlt: 'DNA and genomic data encoded into 5D memory crystal',
     bullets: [

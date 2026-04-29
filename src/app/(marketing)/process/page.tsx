@@ -90,7 +90,7 @@ const steps = [
     description:
       'Your data is encoded for eternity — but you may need to access it today. Our read service uses precision optical equipment to retrieve the data stored in your crystal and deliver it back to you in any standard digital format. Available on demand, as many times as you need.',
     bullets: [
-      'On-demand data retrieval from any 5D Memory Crystal',
+      'On-demand data retrieval from any 5D Memory Crystal™',
       'Output delivered in standard digital formats',
       'Secure return shipping and handling',
       'Future-proofed — visual decoding instructions encoded on the crystal itself',

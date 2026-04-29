@@ -72,7 +72,7 @@
       "content": {
         "label": "Security & Provenance",
         "heading": "Swiss Made",
-        "description": "Every 5D Memory Crystal is produced in a secure Swiss facility — combining the highest standards of precision engineering with world-renowned data privacy protections. From raw fused quartz to finished crystal, the entire process takes place under controlled, auditable conditions.",
+        "description": "Every 5D Memory Crystal™ is produced in a secure Swiss facility — combining the highest standards of precision engineering with world-renowned data privacy protections. From raw fused quartz to finished crystal, the entire process takes place under controlled, auditable conditions.",
         "ctaText": "Learn More",
         "ctaHref": "/process",
         "image": "/images/swiss-facility.png",
@@ -1816,7 +1816,7 @@
         "description": "Your data is encoded for eternity — but you may need to access it today. Our read service uses precision optical equipment to retrieve the data stored in your crystal and deliver it back to you in any standard digital format. Available on demand, as many times as you need.",
         "image": "/process/reading-device.JPG.webp",
         "imageAlt": "Crystal reader and optical data retrieval equipment",
-        "bullets": "On-demand data retrieval from any 5D Memory Crystal\nOutput delivered in standard digital formats\nSecure return shipping and handling\nFuture-proofed — visual decoding instructions encoded on the crystal itself"
+        "bullets": "On-demand data retrieval from any 5D Memory Crystal™\nOutput delivered in standard digital formats\nSecure return shipping and handling\nFuture-proofed — visual decoding instructions encoded on the crystal itself"
       },
       "sortOrder": 3,
       "published": 1

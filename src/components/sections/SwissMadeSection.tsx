@@ -14,7 +14,7 @@ export default async function SwissMadeSection() {
   const content = await getPageContent('home', 'swiss-made', {
     label: 'Security & Provenance',
     heading: 'Swiss Made',
-    description: 'Every 5D Memory Crystal is produced in a secure Swiss facility — combining the highest standards of precision engineering with world-renowned data privacy protections. From raw fused quartz to finished crystal, the entire process takes place under controlled, auditable conditions.',
+    description: 'Every 5D Memory Crystal™ is produced in a secure Swiss facility — combining the highest standards of precision engineering with world-renowned data privacy protections. From raw fused quartz to finished crystal, the entire process takes place under controlled, auditable conditions.',
     ctaText: 'Learn More',
     ctaHref: '/process',
     image: '/images/swiss-facility.png',

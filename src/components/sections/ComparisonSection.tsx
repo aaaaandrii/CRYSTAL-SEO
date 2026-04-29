@@ -70,10 +70,10 @@ export default async function ComparisonSection() {
                 <table className="w-full min-w-[360px] border-collapse text-left">
                   <thead>
                     <tr className="bg-[#5a72be]">
-                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">Feature</th>
-                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">5D Crystal</th>
-                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">HDD / SSD</th>
-                      <th className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">Tape / Cloud</th>
+                      <th className="whitespace-nowrap px-3 py-3 text-[11px] font-bold leading-tight text-white sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">Feature</th>
+                      <th className="whitespace-nowrap px-3 py-3 text-[11px] font-bold leading-tight text-white sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">5D Crystal</th>
+                      <th className="whitespace-nowrap px-3 py-3 text-[11px] font-bold leading-tight text-white sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">HDD / SSD</th>
+                      <th className="whitespace-nowrap px-3 py-3 text-[11px] font-bold leading-tight text-white sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">Tape / Cloud</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -82,10 +82,10 @@ export default async function ComparisonSection() {
                         key={row.feature}
                         className={index < tableRows.length - 1 ? 'border-b border-[#444]' : ''}
                       >
-                        <td className="px-3 py-3 text-[13px] font-semibold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.feature}</td>
-                        <td className="px-3 py-3 text-[13px] font-bold leading-tight text-white sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.crystal}</td>
-                        <td className="px-3 py-3 text-[13px] font-semibold leading-tight text-[#888] sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.hdd}</td>
-                        <td className="px-3 py-3 text-[13px] font-semibold leading-tight text-[#888] sm:px-5 sm:py-4 sm:text-[17px] sm:leading-none">{row.tape}</td>
+                        <td className="whitespace-nowrap px-3 py-3 text-[11px] font-semibold leading-tight text-white sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">{row.feature}</td>
+                        <td className="whitespace-nowrap px-3 py-3 text-[11px] font-bold leading-tight text-white sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">{row.crystal}</td>
+                        <td className="whitespace-nowrap px-3 py-3 text-[11px] font-semibold leading-tight text-[#888] sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">{row.hdd}</td>
+                        <td className="whitespace-nowrap px-3 py-3 text-[11px] font-semibold leading-tight text-[#888] sm:whitespace-normal sm:px-5 sm:py-4 sm:text-[15px] sm:leading-tight">{row.tape}</td>
                       </tr>
                     ))}
                   </tbody>
